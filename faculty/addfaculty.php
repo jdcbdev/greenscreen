@@ -10,7 +10,32 @@
     if (!isset($_SESSION['logged-in'])){
         header('location: ../login/login.php');
     }
-    //if the above code is false then html below will be displayed
+    //if the above code is false then code and html below will be executed
+
+    //if add faculty is submitted
+    if(isset($_POST['save'])){
+        //sanitize user inputs
+        $firstname = htmlentities($_POST['fn']);
+        $lastname = htmlentities($_POST['ln']);
+        $email = htmlentities($_POST['email']);
+        $status = 'Inactive';
+        if(isset($_POST['status'])){
+            $status = $_POST['status'];
+        }
+        $faculty = array(
+            "firstname" => $firstname,
+            "lastname" => $lastname,
+            "email" => $email,
+            "academic_rank" => $_POST['rank'],
+            "department" => $_POST['department'],
+            "admission_role" => $_POST['role'],
+            "status" => $status
+        );
+        array_push($_SESSION['faculty'], $faculty);
+
+        //redirect user to faculty page after saving
+        header('location: faculty.php');
+    }
 
 ?>
 
@@ -100,7 +125,7 @@
                 </div>
                 <div class="divider-no-border"></div>
                 <div>
-                    <form class="add-faculty" action="faculty.php" method="post">
+                    <form class="add-faculty" action="addfaculty.php" method="post">
                         <label for="fn">First Name</label>
                         <input type="text" id="fn" name="fn" required placeholder="Enter first name">
                         <label for="ln">Last Name</label>
