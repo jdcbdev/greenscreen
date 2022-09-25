@@ -188,17 +188,24 @@
 
                         //if add faculty is submitted
                         if(isset($_POST['save'])){
+                            //sanitize user inputs
+                            $firstname = htmlentities($_POST['fn']);
+                            $lastname = htmlentities($_POST['ln']);
+                            $status = 'Inactive';
+                            if(isset($_POST['status'])){
+                                $status = $_POST['status'];
+                            }
                         ?>
 
                             <tr>
                                 <!-- always use echo to output PHP values -->
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $_POST['ln'] . ', ' . $_POST['fn'] ?></td>
+                                <td><?php echo $firstname . ', ' . $lastname ?></td>
                                 <td><?php echo $_POST['email'] ?></td>
                                 <td><?php echo $_POST['rank'] ?></td>
                                 <td><?php echo $_POST['department'] ?></td>
                                 <td><?php echo $_POST['role'] ?></td>
-                                <td><?php if(isset($_POST['status'])){ echo $_POST['status']; } else {echo 'Inactive';} ?></td>
+                                <td><?php echo $status ?></td>
                                 <td class="action">
                                     <a class="action-edit" href="#">Edit</a>
                                     <a class="action-delete" href="#">Delete</a>
