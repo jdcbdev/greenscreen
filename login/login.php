@@ -10,39 +10,66 @@
 </head>
 <body>
     <?php
-
+        //we start session since we need to use session values
         session_start();
+        //creating an array for list of users can login to the system
         $accounts = array(
             "user1" => array(
+                "firstname" => 'Jaydee',
+                "lastname" => 'Ballaho',
+                "type" => 'admin',
                 "username" => 'jaydee',
                 "password" => 'jaydee'
             ),
             "user2" => array(
+                "firstname" => 'Root',
+                "lastname" => 'Root',
+                "type" => 'admin',
                 "username" => 'root',
                 "password" => 'root'
             ),
             "user3" => array(
+                "firstname" => 'Natsu',
+                "lastname" => 'Dragneel',
+                "type" => 'staff',
                 "username" => 'natsu',
                 "password" => 'natsu'
             ),
             "user4" => array(
+                "firstname" => 'Erza',
+                "lastname" => 'Scarlet',
+                "type" => 'staff',
                 "username" => 'erza',
                 "password" => 'erza'
             ),
             "user5" => array(
+                "firstname" => 'Lucy',
+                "lastname" => 'Felix',
+                "type" => 'staff',
                 "username" => 'lucy',
                 "password" => 'lucy'
             )
         );
         if(isset($_POST['username']) && isset($_POST['password'])){
-
+            //Sanitizing the inputs of the users. Mandatory to prevent injections!
+            $username = htmlentities($_POST['username']);
+            $password = htmlentities($_POST['password']);
             foreach($accounts as $keys => $value){
-                if($_POST['username'] == $value['username'] && $_POST['password'] == $value['password']){
+                //check if the username and password match in the array
+                if($username == $value['username'] && $password == $value['password']){
+                    //if match then save username, fullname and type as session to be reused somewhere else
                     $_SESSION['logged-in'] = $value['username'];
-                    header('location: ../admin/dashboard.php');
+                    $_SESSION['fullname'] = $value['firstname'] . ' ' . $value['lastname'];
+                    $_SESSION['user_type'] = $value['type'];
+                    //display the appropriate dashboard page for user
+                    if($value['type'] == 'admin'){
+                        header('location: ../admin/dashboard.php');
+                    }else{
+                        header('location: ../faculty/dashboard.php');
+                    }
                 }
             }
-
+            //set the error message if account is invalid
             $error = 'Invalid username/password. Try again.';
         }
     
@@ -60,7 +87,7 @@
             <input type="password" id="password" name="password" placeholder="Enter password" required tabindex="2">
             <input class="button" type="submit" value="Login" name="login" tabindex="3">
             <?php
-            
+                //Display the error message if there is any.
                 if(isset($error)){
                     echo '<div><p class="error">'.$error.'</p></div>';
                 }

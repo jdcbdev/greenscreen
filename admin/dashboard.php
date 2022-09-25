@@ -1,10 +1,16 @@
 <?php
 
+    //resume session here to fetch session values
     session_start();
-
+    /*
+        if user is not login then redirect to login page,
+        this is to prevent users from accessing pages that requires
+        authentication such as the dashboard
+    */
     if (!isset($_SESSION['logged-in'])){
         header('location: ../login/login.php');
     }
+    //if the above code is false then html below will be displayed
 
 ?>
 
@@ -26,7 +32,7 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#" class="active">
+                <a href="../admin/dashboard.php" class="active">
                     <i class='bx bx-grid-alt' ></i>
                     <span class="links-name">Dashboard</span>
                 </a>
@@ -68,7 +74,7 @@
                 </a>
             </li>
             <hr class="line">
-            <li>
+            <li id="logout-link">
                 <a href="../login/logout.php">
                     <i class='bx bx-log-out'></i>
                     <span class="links-name">Logout</span>
@@ -83,7 +89,10 @@
             </div>
             <div class="profile-details">
                 <i class='bx bx-user-circle'></i>
-                <span class="admin-name">Jaydee Ballaho</span>
+                <!-- each time you need to output in PHP, use echo -->
+                <!-- the $_SESSION['fullname'] is set in login page -->
+                <!-- session variables can be accessed anywhere in the page -->
+                <span class="admin-name"><?php echo $_SESSION['fullname']; ?></span>
             </div>
         </nav>
         <div class="home-content">

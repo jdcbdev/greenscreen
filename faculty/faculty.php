@@ -1,10 +1,16 @@
 <?php
 
+    //resume session here to fetch session values
     session_start();
-
+    /*
+        if user is not login then redirect to login page,
+        this is to prevent users from accessing pages that requires
+        authentication such as the dashboard
+    */
     if (!isset($_SESSION['logged-in'])){
         header('location: ../login/login.php');
     }
+    //if the above code is false then html below will be displayed
 
 ?>
 
@@ -56,7 +62,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="active">
+                <a href="../faculty/faculty.php" class="active">
                     <i class='bx bx-group' ></i>
                     <span class="links-name">Faculty</span>
                 </a>
@@ -68,7 +74,7 @@
                 </a>
             </li>
             <hr class="line">
-            <li>
+            <li id="logout-link">
                 <a href="../login/logout.php">
                     <i class='bx bx-log-out'></i>
                     <span class="links-name">Logout</span>
@@ -83,14 +89,14 @@
             </div>
             <div class="profile-details">
                 <i class='bx bx-user-circle'></i>
-                <span class="admin-name">Jaydee Ballaho</span>
+                <span class="admin-name"><?php echo $_SESSION['fullname']; ?></span>
             </div>
         </nav>
         <div class="home-content">
             <div class="table-container">
                 <div class="table-heading">
                     <h3 class="table-title">Faculty Profile</h3>
-                    <input type="button" class="button" value="Add New Faculty">
+                    <a href="addfaculty.php" class="button">Add New Faculty</a>
                 </div>
                 <div class="divider-no-border"></div>
                 <table class="table">
@@ -107,71 +113,102 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Ballaho, Jaydee</td>
-                            <td>jaydee.ballaho@wmsu.edu.ph</td>
-                            <td>Instructor</td>
-                            <td>Computer Science</td>
-                            <td>Admission Officer</td>
-                            <td>Active Employee</td>
-                            <td class="action">
-                                <a class="action-edit" href="#">Edit</a>
-                                <a class="action-delete" href="#">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Belamide, Gadmar</td>
-                            <td>gadmar.belamide@wmsu.edu.ph</td>
-                            <td>Asst. Professor</td>
-                            <td>Computer Science</td>
-                            <td>Interviewer</td>
-                            <td>Active Employee</td>
-                            <td class="action">
-                                <a class="action-edit" href="#">Edit</a>
-                                <a class="action-delete" href="#">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Catadman, Jason</td>
-                            <td>jason.catadman@wmsu.edu.ph</td>
-                            <td>Instructor</td>
-                            <td>Information Technology</td>
-                            <td>Interviewer</td>
-                            <td>Active Employee</td>
-                            <td class="action">
-                                <a class="action-edit" href="#">Edit</a>
-                                <a class="action-delete" href="#">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Gregana, Pauleen</td>
-                            <td>pauleen.gregana@wmsu.edu.ph</td>
-                            <td>Instructor</td>
-                            <td>Information Technology</td>
-                            <td>Admission Officer</td>
-                            <td>Active Employee</td>
-                            <td class="action">
-                                <a class="action-edit" href="#">Edit</a>
-                                <a class="action-delete" href="#">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Rojas, Marjorie</td>
-                            <td>marjorie.rojas@wmsu.edu.ph</td>
-                            <td>Asst. Professor</td>
-                            <td>Computer Science</td>
-                            <td>Interviewer</td>
-                            <td>Active Employee</td>
-                            <td class="action">
-                                <a class="action-edit" href="#">Edit</a>
-                                <a class="action-delete" href="#">Delete</a>
-                            </td>
-                        </tr>
+                        <?php
+                            //create an array for list of faculty
+                            $faculty = array(
+                                "faculty1" => array(
+                                    "firstname" => 'Jaydee',
+                                    "lastname" => 'Ballaho',
+                                    "email" => 'jaydee.ballaho@wmsu.edu.ph',
+                                    "academic_rank" => 'Instructor',
+                                    "department" => 'Computer Science',
+                                    "admission_role" => 'Admission Officer',
+                                    "status" => 'Active Employee'
+                                ),
+                                "faculty2" => array(
+                                    "firstname" => 'Gadmar',
+                                    "lastname" => 'Belamide',
+                                    "email" => 'gadmar.belamide@wmsu.edu.ph',
+                                    "academic_rank" => 'Asst. Professor',
+                                    "department" => 'Computer Science',
+                                    "admission_role" => 'Interviewer',
+                                    "status" => 'Active Employee'
+                                ),
+                                "faculty3" => array(
+                                    "firstname" => 'Jason',
+                                    "lastname" => 'Catadman',
+                                    "email" => 'jason.catadman@wmsu.edu.ph',
+                                    "academic_rank" => 'Instructor',
+                                    "department" => 'Information Technology',
+                                    "admission_role" => 'Interviewer',
+                                    "status" => 'Active Employee'
+                                ),
+                                "faculty4" => array(
+                                    "firstname" => 'Pauleen',
+                                    "lastname" => 'Gregana',
+                                    "email" => 'pauleen.gregana@wmsu.edu.ph',
+                                    "academic_rank" => 'Instructor',
+                                    "department" => 'Information Technology',
+                                    "admission_role" => 'Admission Officer',
+                                    "status" => 'Active Employee'
+                                ),
+                                "faculty5" => array(
+                                    "firstname" => 'Marjorie',
+                                    "lastname" => 'Rojas',
+                                    "email" => 'marjorie.rojas@wmsu.edu.ph',
+                                    "academic_rank" => 'Asst. Professor',
+                                    "department" => 'Computer Science',
+                                    "admission_role" => 'Interviewer',
+                                    "status" => 'Active Employee'
+                                )
+                            );
+                            //use as a counter, not required but suggested for the table
+                            $i = 1;
+                            //loop for each record found in the array
+                            foreach ($faculty as $key => $value){ //start of loop
+                        ?>
+                            <tr>
+                                <!-- always use echo to output PHP values -->
+                                <td><?php echo $i ?></td>
+                                <td><?php echo $value['lastname'] . ', ' . $value['firstname'] ?></td>
+                                <td><?php echo $value['email'] ?></td>
+                                <td><?php echo $value['academic_rank'] ?></td>
+                                <td><?php echo $value['department'] ?></td>
+                                <td><?php echo $value['admission_role'] ?></td>
+                                <td><?php echo $value['status'] ?></td>
+                                <td class="action">
+                                    <a class="action-edit" href="#">Edit</a>
+                                    <a class="action-delete" href="#">Delete</a>
+                                </td>
+                            </tr>
+                        <?php
+                            $i++;
+                        //end of loop
+                        }
+
+                        //if add faculty is submitted
+                        if(isset($_POST['save'])){
+                        ?>
+
+                            <tr>
+                                <!-- always use echo to output PHP values -->
+                                <td><?php echo $i ?></td>
+                                <td><?php echo $_POST['ln'] . ', ' . $_POST['fn'] ?></td>
+                                <td><?php echo $_POST['email'] ?></td>
+                                <td><?php echo $_POST['rank'] ?></td>
+                                <td><?php echo $_POST['department'] ?></td>
+                                <td><?php echo $_POST['role'] ?></td>
+                                <td><?php if(isset($_POST['status'])){ echo $_POST['status']; } else {echo 'Inactive';} ?></td>
+                                <td class="action">
+                                    <a class="action-edit" href="#">Edit</a>
+                                    <a class="action-delete" href="#">Delete</a>
+                                </td>
+                            </tr>
+
+                        <?php
+                        }
+
+                        ?>
                     </tbody>
                 </table>
             </div>
