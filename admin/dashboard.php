@@ -50,7 +50,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+            <a href="../programs/programs.php">
                     <i class='bx bx-book-reader'></i>
                     <span class="links-name">Programs</span>
                 </a>

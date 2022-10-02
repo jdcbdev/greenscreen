@@ -31,7 +31,7 @@ function validate_email($POST){
         $domain = array_pop($parts);
 
         // Check if the domain is WMSU
-        if (strcmp($domain, 'wmsu.edu.ph') != 0)
+        if (strcmp(strtolower($domain), 'wmsu.edu.ph') != 0)
         {
             return false;
         }

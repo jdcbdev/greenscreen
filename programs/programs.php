@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <title>Faculty</title>
+    <title>Department</title>
 </head>
 <body>
     <div class="side-bar">
@@ -50,7 +50,7 @@
                 </a>
             </li>
             <li>
-                <a href="../programs/programs.php">
+                <a href="../programs/programs.php" class="active">
                     <i class='bx bx-book-reader'></i>
                     <span class="links-name">Programs</span>
                 </a>
@@ -62,7 +62,7 @@
                 </a>
             </li>
             <li>
-                <a href="../faculty/faculty.php" class="active">
+                <a href="../faculty/faculty.php">
                     <i class='bx bx-group' ></i>
                     <span class="links-name">Faculty</span>
                 </a>
@@ -95,11 +95,11 @@
         <div class="home-content">
             <div class="table-container">
                 <div class="table-heading">
-                    <h3 class="table-title">Faculty Profile</h3>
+                    <h3 class="table-title">Available Programs</h3>
                     <?php
                         if($_SESSION['user_type'] == 'admin'){ 
                     ?>
-                        <a href="addfaculty.php" class="button">Add New Faculty</a>
+                        <a href="addprogram.php" class="button">Add New Program</a>
                     <?php
                         }
                     ?>
@@ -108,11 +108,11 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Academic Rank</th>
-                            <th>Department</th>
-                            <th>Admission Role</th>
+                            <th>Program Code</th>
+                            <th>Description</th>
+                            <th>Years to Complete</th>
+                            <th>Level</th>
+                            <th>CET Requirements</th>
                             <th>Status</th>
                             <?php
                                 if($_SESSION['user_type'] == 'admin'){ 
@@ -125,53 +125,24 @@
                     </thead>
                     <tbody>
                         <?php
-                            //create an array for list of faculty, use session so we can access this anywhere
-                            if(!isset($_SESSION['faculty'])){
-                                $_SESSION['faculty'] = array(
-                                    "faculty1" => array(
-                                        "firstname" => 'Jaydee',
-                                        "lastname" => 'Ballaho',
-                                        "email" => 'jaydee.ballaho@wmsu.edu.ph',
-                                        "academic_rank" => 'Instructor',
-                                        "department" => 'Computer Science',
-                                        "admission_role" => 'Admission Officer',
-                                        "status" => 'Active Employee'
+                            //create an array for list of programs, use session so we can access this anywhere
+                            if(!isset($_SESSION['programs'])){
+                                $_SESSION['programs'] = array(
+                                    "1" => array(
+                                        "program_code" => 'BSCS',
+                                        "description" => 'BS Computer Science',
+                                        "years_to_complete" => '4',
+                                        "level" => 'Bachelor',
+                                        "cet_requirement" => 'At least 80%',
+                                        "status" => 'Offering'
                                     ),
-                                    "faculty2" => array(
-                                        "firstname" => 'Gadmar',
-                                        "lastname" => 'Belamide',
-                                        "email" => 'gadmar.belamide@wmsu.edu.ph',
-                                        "academic_rank" => 'Asst. Professor',
-                                        "department" => 'Computer Science',
-                                        "admission_role" => 'Interviewer',
-                                        "status" => 'Active Employee'
-                                    ),
-                                    "faculty3" => array(
-                                        "firstname" => 'Jason',
-                                        "lastname" => 'Catadman',
-                                        "email" => 'jason.catadman@wmsu.edu.ph',
-                                        "academic_rank" => 'Instructor',
-                                        "department" => 'Information Technology',
-                                        "admission_role" => 'Interviewer',
-                                        "status" => 'Active Employee'
-                                    ),
-                                    "faculty4" => array(
-                                        "firstname" => 'Pauleen',
-                                        "lastname" => 'Gregana',
-                                        "email" => 'pauleen.gregana@wmsu.edu.ph',
-                                        "academic_rank" => 'Instructor',
-                                        "department" => 'Information Technology',
-                                        "admission_role" => 'Admission Officer',
-                                        "status" => 'Active Employee'
-                                    ),
-                                    "faculty5" => array(
-                                        "firstname" => 'Marjorie',
-                                        "lastname" => 'Rojas',
-                                        "email" => 'marjorie.rojas@wmsu.edu.ph',
-                                        "academic_rank" => 'Asst. Professor',
-                                        "department" => 'Computer Science',
-                                        "admission_role" => 'Interviewer',
-                                        "status" => 'Active Employee'
+                                    "2" => array(
+                                        "program_code" => 'ACS',
+                                        "description" => 'Associate in Computer Science',
+                                        "years_to_complete" => '2',
+                                        "level" => 'Associate',
+                                        "cet_requirement" => 'At least 40%',
+                                        "status" => 'Phase-out'
                                     )
                                 );
                             }
@@ -180,16 +151,16 @@
                             //use as a counter, not required but suggested for the table
                             $i = 1;
                             //loop for each record found in the array
-                            foreach ($_SESSION['faculty'] as $key => $value){ //start of loop
+                            foreach ($_SESSION['programs'] as $key => $value){ //start of loop
                         ?>
                             <tr>
                                 <!-- always use echo to output PHP values -->
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $value['lastname'] . ', ' . $value['firstname'] ?></td>
-                                <td><?php echo $value['email'] ?></td>
-                                <td><?php echo $value['academic_rank'] ?></td>
-                                <td><?php echo $value['department'] ?></td>
-                                <td><?php echo $value['admission_role'] ?></td>
+                                <td><?php echo $value['program_code']?></td>
+                                <td><?php echo $value['description'] ?></td>
+                                <td><?php echo $value['years_to_complete'] ?></td>
+                                <td><?php echo $value['level'] ?></td>
+                                <td><?php echo $value['cet_requirement'] ?></td>
                                 <td><?php echo $value['status'] ?></td>
                                 <?php
                                     if($_SESSION['user_type'] == 'admin'){ 
