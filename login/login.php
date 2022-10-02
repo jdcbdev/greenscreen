@@ -65,7 +65,7 @@
                     if($value['type'] == 'admin'){
                         header('location: ../admin/dashboard.php');
                     }else{
-                        header('location: ../faculty/dashboard.php');
+                        header('location: ../faculty/faculty.php');
                     }
                 }
             }

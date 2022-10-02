@@ -123,7 +123,6 @@
                     <h3 class="table-title">Add New Faculty</h3>
                     <a class="back" href="faculty.php"><i class='bx bx-caret-left'></i>Back</a>
                 </div>
-                <div class="divider-no-border"></div>
                 <div>
                     <form class="add-faculty" action="addfaculty.php" method="post">
                         <label for="fn">First Name</label>
@@ -163,9 +162,7 @@
                             <input type="checkbox" name="status" id="status" value="Active Employee" checked>
                             <span class="checkbox"></span>
                         </label>
-                        <div>
-                            <input type="submit" class="button" value="Save Faculty" name="save" id="save">
-                        </div>
+                        <input type="submit" class="button" value="Save Faculty" name="save" id="save">
                     </form>
                 </div>
             </div>

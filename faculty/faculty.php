@@ -96,9 +96,14 @@
             <div class="table-container">
                 <div class="table-heading">
                     <h3 class="table-title">Faculty Profile</h3>
-                    <a href="addfaculty.php" class="button">Add New Faculty</a>
+                    <?php
+                        if($_SESSION['user_type'] == 'admin'){ 
+                    ?>
+                        <a href="addfaculty.php" class="button">Add New Faculty</a>
+                    <?php
+                        }
+                    ?>
                 </div>
-                <div class="divider-no-border"></div>
                 <table class="table">
                     <thead>
                         <tr>
@@ -109,7 +114,13 @@
                             <th>Department</th>
                             <th>Admission Role</th>
                             <th>Status</th>
-                            <th class="action">Action</th>
+                            <?php
+                                if($_SESSION['user_type'] == 'admin'){ 
+                            ?>
+                                <th class="action">Action</th>
+                            <?php
+                                }
+                            ?>
                         </tr>
                     </thead>
                     <tbody>
@@ -180,10 +191,18 @@
                                 <td><?php echo $value['department'] ?></td>
                                 <td><?php echo $value['admission_role'] ?></td>
                                 <td><?php echo $value['status'] ?></td>
-                                <td class="action">
-                                    <a class="action-edit" href="#">Edit</a>
-                                    <a class="action-delete" href="#">Delete</a>
-                                </td>
+                                <?php
+                                    if($_SESSION['user_type'] == 'admin'){ 
+                                ?>
+                                    <td>
+                                        <div class="action">
+                                            <a class="action-edit" href="#">Edit</a>
+                                            <a class="action-delete" href="#">Delete</a>
+                                        </div>
+                                    </td>
+                                <?php
+                                    }
+                                ?>
                             </tr>
                         <?php
                             $i++;

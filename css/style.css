@@ -24,10 +24,6 @@
     margin: 20px 0;
 }
 
-.divider-no-border{
-    height: 20px;
-}
-
 .button{
     background-color: #107869;
     color: white;
@@ -296,11 +292,16 @@ tr .action, th .action{
     text-align: center;
 }
 
+tr div.action{
+    display: flex;
+    justify-content: center;
+}
+
 td a{
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 5px;
-    margin: 0 2px;
+    margin: 4px;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
@@ -320,8 +321,6 @@ a.action-edit:hover, a.action-delete:hover{
 }
 
 .table-container .button{
-    display: inline;
-    float: right;
     width: fit-content;
 }
 
@@ -330,6 +329,7 @@ a.action-edit:hover, a.action-delete:hover{
     justify-content: space-between;
     height: 25px;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .home-section .home-content{
@@ -566,7 +566,8 @@ a.button{
 
   form.add-faculty .button{
     display: block;
-    right: 0;
+    margin: 0 0 0 auto;
+    float: none;
   }
 
   .form-size{
