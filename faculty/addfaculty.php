@@ -1,5 +1,7 @@
 <?php
 
+    require_once '../function/functions.php';
+
     //resume session here to fetch session values
     session_start();
     /*
@@ -22,19 +24,21 @@
         if(isset($_POST['status'])){
             $status = $_POST['status'];
         }
-        $faculty = array(
-            "firstname" => $firstname,
-            "lastname" => $lastname,
-            "email" => $email,
-            "academic_rank" => $_POST['rank'],
-            "department" => $_POST['department'],
-            "admission_role" => $_POST['role'],
-            "status" => $status
-        );
-        array_push($_SESSION['faculty'], $faculty);
-
-        //redirect user to faculty page after saving
-        header('location: faculty.php');
+        if(validate_all($_POST)){
+            $faculty = array(
+                "firstname" => $firstname,
+                "lastname" => $lastname,
+                "email" => $email,
+                "academic_rank" => $_POST['rank'],
+                "department" => $_POST['department'],
+                "admission_role" => $_POST['role'],
+                "status" => $status
+            );
+            array_push($_SESSION['faculty'], $faculty);
+    
+            //redirect user to faculty page after saving
+            header('location: faculty.php');
+        }
     }
 
 ?>
@@ -47,7 +51,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <title>Faculty</title>
+    <title>Faculty | Add Faculty</title>
 </head>
 <body>
     <div class="side-bar">
@@ -123,28 +127,63 @@
                     <h3 class="table-title">Add New Faculty</h3>
                     <a class="back" href="faculty.php"><i class='bx bx-caret-left'></i>Back</a>
                 </div>
-                <div>
+                <div class="add-form-container">
                     <form class="add-faculty" action="addfaculty.php" method="post">
                         <label for="fn">First Name</label>
-                        <input type="text" id="fn" name="fn" required placeholder="Enter first name">
+                        <input type="text" id="fn" name="fn" required placeholder="Enter first name" value="<?php if(isset($_POST['fn'])) { echo $_POST['fn']; } ?>">
+                        <?php
+                            if(isset($_POST['save']) && !validate_first_name($_POST)){
+                        ?>
+                                    <p class="error">First name is invalid. Trailing spaces will be ignored.</p>
+                        <?php
+                            }
+                        ?>
                         <label for="ln">Last Name</label>
-                        <input type="text" id="ln" name="ln" required placeholder="Enter last name">
+                        <input type="text" id="ln" name="ln" required placeholder="Enter last name" value="<?php if(isset($_POST['ln'])) { echo $_POST['ln']; } ?>">
+                        <?php
+                            if(isset($_POST['save']) && !validate_last_name($_POST)){
+                        ?>
+                                    <p class="error">Last name is invalid. Trailing spaces will be ignored.</p>
+                        <?php
+                            }
+                        ?>
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter email">
+                        <input type="email" id="email" name="email" required placeholder="Enter email" value="<?php if(isset($_POST['email'])) { echo $_POST['email']; } ?>">
+                        <?php
+                            if(isset($_POST['save']) && !validate_email($_POST)){
+                        ?>
+                                    <p class="error">Email is invalid. Use only @wmsu.edu.ph</p>
+                        <?php
+                            }
+                        ?>
                         <label for="rank">Academic Rank</label>
                         <select name="rank" id="rank">
-                            <option value="None">--Select--</option>
-                            <option value="Instructor">Instructor</option>
-                            <option value="Asst. Professor">Asst. Professor</option>
-                            <option value="Asso. Professor">Asso. Professor</option>
-                            <option value="Professor">Professor</option>
+                            <option value="None" <?php if(isset($_POST['rank'])) { if ($_POST['rank'] == 'None') echo ' selected="selected"'; } ?>>--Select--</option>
+                            <option value="Instructor" <?php if(isset($_POST['rank'])) { if ($_POST['rank'] == 'Instructor') echo ' selected="selected"'; } ?>>Instructor</option>
+                            <option value="Asst. Professor" <?php if(isset($_POST['rank'])) { if ($_POST['rank'] == 'Asst. Professor') echo ' selected="selected"'; } ?>>Asst. Professor</option>
+                            <option value="Asso. Professor" <?php if(isset($_POST['rank'])) { if ($_POST['rank'] == 'Asso. Professor') echo ' selected="selected"'; } ?>>Asso. Professor</option>
+                            <option value="Professor" <?php if(isset($_POST['rank'])) { if ($_POST['rank'] == 'Professor') echo ' selected="selected"'; } ?>>Professor</option>
                         </select>
+                        <?php
+                            if(isset($_POST['save']) && !validate_rank($_POST)){
+                        ?>
+                                    <p class="error">Please select a rank from the dropdown.</p>
+                        <?php
+                            }
+                        ?>
                         <label for="department">Department</label>
                         <select name="department" id="department">
-                            <option value="None">--Select--</option>
-                            <option value="Computer Science">Computer Science</option>
-                            <option value="Information Technology">Information Technology</option>
+                            <option value="None" <?php if(isset($_POST['department'])) { if ($_POST['department'] == 'None') echo ' selected="selected"'; } ?>>--Select--</option>
+                            <option value="Computer Science" <?php if(isset($_POST['department'])) { if ($_POST['department'] == 'Computer Science') echo ' selected="selected"'; } ?>>Computer Science</option>
+                            <option value="Information Technology" <?php if(isset($_POST['department'])) { if ($_POST['department'] == 'Information Technology') echo ' selected="selected"'; } ?>>Information Technology</option>
                         </select>
+                        <?php
+                            if(isset($_POST['save']) && !validate_department($_POST)){
+                        ?>
+                                    <p class="error">Please select a department from the dropdown.</p>
+                        <?php
+                            }
+                        ?>
                         <div>
                             <label for="role">Admission Role</label><br>
                             <label class="container" for="admin">Admission Officer
