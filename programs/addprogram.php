@@ -1,6 +1,7 @@
 <?php
 
     require_once '../tools/functions.php';
+    require_once '../classes/program.class.php';
 
     //resume session here to fetch session values
     session_start();
@@ -16,27 +17,23 @@
 
     //if add faculty is submitted
     if(isset($_POST['save'])){
+
+        $program = new Program;
         //sanitize user inputs
-        $code = htmlentities($_POST['code']);
-        $description = htmlentities($_POST['description']);
-        $cet = htmlentities($_POST['cet']);
-        $status = 'Not Set';
+        $program->code = htmlentities($_POST['code']);
+        $program->description = htmlentities($_POST['description']);
+        $program->years = $_POST['years'];
+        $program->level = $_POST['level'];
+        $program->cet = htmlentities($_POST['cet']);
+        $program->status = 'Not Set';
         if(isset($_POST['status'])){
-            $status = $_POST['status'];
+            $program->status = $_POST['status'];
         }
         if(validate_add_program($_POST)){
-            $program = array(
-                "program_code" => $code,
-                "description" => $description,
-                "years_to_complete" => $_POST['years'],
-                "level" => $_POST['level'],
-                "cet_requirement" => $cet,
-                "status" => $status
-            );
-            array_push($_SESSION['programs'], $program);
-    
-            //redirect user to program page after saving
-            header('location: programs.php');
+            if($program->add_program()){
+                //redirect user to program page after saving
+                header('location: programs.php');
+            }
         }
     }
 
