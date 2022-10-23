@@ -1,79 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=p, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <title>Login</title>
-</head>
-<body>
-    <?php
-        //we start session since we need to use session values
-        session_start();
-        //creating an array for list of users can login to the system
-        $accounts = array(
-            "user1" => array(
-                "firstname" => 'Jaydee',
-                "lastname" => 'Ballaho',
-                "type" => 'admin',
-                "username" => 'jaydee',
-                "password" => 'jaydee'
-            ),
-            "user2" => array(
-                "firstname" => 'Root',
-                "lastname" => 'Root',
-                "type" => 'admin',
-                "username" => 'root',
-                "password" => 'root'
-            ),
-            "user3" => array(
-                "firstname" => 'Natsu',
-                "lastname" => 'Dragneel',
-                "type" => 'staff',
-                "username" => 'natsu',
-                "password" => 'natsu'
-            ),
-            "user4" => array(
-                "firstname" => 'Erza',
-                "lastname" => 'Scarlet',
-                "type" => 'staff',
-                "username" => 'erza',
-                "password" => 'erza'
-            ),
-            "user5" => array(
-                "firstname" => 'Lucy',
-                "lastname" => 'Felix',
-                "type" => 'staff',
-                "username" => 'lucy',
-                "password" => 'lucy'
-            )
-        );
-        if(isset($_POST['username']) && isset($_POST['password'])){
-            //Sanitizing the inputs of the users. Mandatory to prevent injections!
-            $username = htmlentities($_POST['username']);
-            $password = htmlentities($_POST['password']);
-            foreach($accounts as $keys => $value){
-                //check if the username and password match in the array
-                if($username == $value['username'] && $password == $value['password']){
-                    //if match then save username, fullname and type as session to be reused somewhere else
-                    $_SESSION['logged-in'] = $value['username'];
-                    $_SESSION['fullname'] = $value['firstname'] . ' ' . $value['lastname'];
-                    $_SESSION['user_type'] = $value['type'];
-                    //display the appropriate dashboard page for user
-                    if($value['type'] == 'admin'){
-                        header('location: ../admin/dashboard.php');
-                    }else{
-                        header('location: ../faculty/faculty.php');
-                    }
+<?php
+    $page_title = 'Forecast - Login';
+
+    //we start session since we need to use session values
+    session_start();
+    //creating an array for list of users can login to the system
+    $accounts = array(
+        "user1" => array(
+            "firstname" => 'Jaydee',
+            "lastname" => 'Ballaho',
+            "type" => 'admin',
+            "username" => 'jaydee',
+            "password" => 'jaydee'
+        ),
+        "user2" => array(
+            "firstname" => 'Root',
+            "lastname" => 'Root',
+            "type" => 'admin',
+            "username" => 'root',
+            "password" => 'root'
+        ),
+        "user3" => array(
+            "firstname" => 'Natsu',
+            "lastname" => 'Dragneel',
+            "type" => 'staff',
+            "username" => 'natsu',
+            "password" => 'natsu'
+        ),
+        "user4" => array(
+            "firstname" => 'Erza',
+            "lastname" => 'Scarlet',
+            "type" => 'staff',
+            "username" => 'erza',
+            "password" => 'erza'
+        ),
+        "user5" => array(
+            "firstname" => 'Lucy',
+            "lastname" => 'Felix',
+            "type" => 'staff',
+            "username" => 'lucy',
+            "password" => 'lucy'
+        )
+    );
+    if(isset($_POST['username']) && isset($_POST['password'])){
+        //Sanitizing the inputs of the users. Mandatory to prevent injections!
+        $username = htmlentities($_POST['username']);
+        $password = htmlentities($_POST['password']);
+        foreach($accounts as $keys => $value){
+            //check if the username and password match in the array
+            if($username == $value['username'] && $password == $value['password']){
+                //if match then save username, fullname and type as session to be reused somewhere else
+                $_SESSION['logged-in'] = $value['username'];
+                $_SESSION['fullname'] = $value['firstname'] . ' ' . $value['lastname'];
+                $_SESSION['user_type'] = $value['type'];
+                //display the appropriate dashboard page for user
+                if($value['type'] == 'admin'){
+                    header('location: ../admin/dashboard.php');
+                }else{
+                    header('location: ../faculty/faculty.php');
                 }
             }
-            //set the error message if account is invalid
-            $error = 'Invalid username/password. Try again.';
         }
-    
-    ?>
+        //set the error message if account is invalid
+        $error = 'Invalid username/password. Try again.';
+    }
+
+    require_once '../includes/header.php';
+
+?>
     <div class="login-container">
         <form class="login-form" action="login.php" method="post">
             <div class="logo-details">
@@ -95,5 +88,6 @@
             ?>
         </form>
     </div>
-</body>
-</html>
+<?php
+    require_once '../includes/footer.php';
+?>
