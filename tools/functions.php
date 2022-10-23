@@ -59,9 +59,81 @@ function validate_department($POST){
     return true;
 }
 
-function validate_all($POST){
+function validate_role($POST){
+    if(!isset($POST['role'])){
+        return false;
+    }
+    return true;
+}
+
+function validate_add_faculty($POST){
     if(!validate_first_name($POST) || !validate_last_name($POST) || !validate_email($POST) ||
-     !validate_rank($POST) || !validate_department($POST)){
+     !validate_rank($POST) || !validate_department($POST) || !validate_role($POST)){
+        return false;
+     }
+    return true;
+}
+
+function validate_program_code($POST){
+    if(!isset($POST['code'])){
+        return false;
+    }else if(strlen(trim($POST['code']))<1){
+        return false;
+    }
+    return true;
+}
+
+function validate_program_code_duplicate($POST){
+    if(!isset($POST['code'])){
+        return false;
+    }else{
+        foreach ($_SESSION['programs'] as $key => $value){
+            if(strcmp(strtolower($value['program_code']), strtolower($_POST['code'])) == 0){
+                return false;
+                break;
+            }
+        }
+    }
+    return true;
+}
+
+function validate_program_desc($POST){
+    if(!isset($POST['description'])){
+        return false;
+    }else if(strlen(trim($POST['description']))<1){
+        return false;
+    }
+    return true;
+}
+
+function validate_level($POST){
+    if(!isset($POST['level'])){
+        return false;
+    }else if(strcmp($POST['level'], 'None') == 0){
+        return false;
+    }
+    return true;
+}
+
+function validate_cet($POST){
+    if(!isset($POST['cet'])){
+        return false;
+    }else if($POST['cet'] < 55){
+        return false;
+    }
+    return true;
+}
+
+function validate_status($POST){
+    if(!isset($POST['status'])){
+        return false;
+    }
+    return true;
+}
+
+function validate_add_program($POST){
+    if(!validate_program_code($POST) || !validate_program_desc($POST) || !validate_cet($POST) ||
+     !validate_level($POST) || !validate_status($POST) || !validate_program_code_duplicate($_POST)){
         return false;
      }
     return true;

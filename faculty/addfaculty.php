@@ -24,7 +24,7 @@
         if(isset($_POST['status'])){
             $status = $_POST['status'];
         }
-        if(validate_all($_POST)){
+        if(validate_add_faculty($_POST)){
             $faculty = array(
                 "firstname" => $firstname,
                 "lastname" => $lastname,
@@ -57,7 +57,7 @@
                 <a class="back" href="faculty.php"><i class='bx bx-caret-left'></i>Back</a>
             </div>
             <div class="add-form-container">
-                <form class="add-faculty" action="addfaculty.php" method="post">
+                <form class="add-form" action="addfaculty.php" method="post">
                     <label for="fn">First Name</label>
                     <input type="text" id="fn" name="fn" required placeholder="Enter first name" value="<?php if(isset($_POST['fn'])) { echo $_POST['fn']; } ?>">
                     <?php
@@ -116,18 +116,25 @@
                     <div>
                         <label for="role">Admission Role</label><br>
                         <label class="container" for="admin">Admission Officer
-                            <input type="radio" name="role" id="admin" value="Admission Officer">
+                            <input type="radio" name="role" id="admin" value="Admission Officer" <?php if(isset($_POST['role'])) { if ($_POST['role'] == 'Admission Officer') echo ' checked'; } ?>>
                             <span class="checkmark"></span>
                         </label>
                         <label class="container" for="interviewer">Interviewer
-                            <input type="radio" name="role" id="interviewer" value="Interviewer" checked>
+                            <input type="radio" name="role" id="interviewer" value="Interviewer" <?php if(isset($_POST['role'])) { if ($_POST['role'] == 'Interviewer') echo ' checked'; } ?>>
                             <span class="checkmark"></span>
                         </label>
                         
                     </div>
+                    <?php
+                        if(isset($_POST['save']) && !validate_role($_POST)){
+                    ?>
+                                <p class="error">Please select admission role.</p>
+                    <?php
+                        }
+                    ?>
                     <label for="status">Is Status of Employee Active?</label><br>
                     <label class="container" for="status">Yes
-                        <input type="checkbox" name="status" id="status" value="Active Employee" checked>
+                        <input type="checkbox" name="status" id="status" value="Active Employee" <?php if(isset($_POST['status'])) { if ($_POST['status'] == 'Active Employee') echo ' checked'; } ?>>
                         <span class="checkbox"></span>
                     </label>
                     <input type="submit" class="button" value="Save Faculty" name="save" id="save">

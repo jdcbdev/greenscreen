@@ -576,11 +576,11 @@ a.button{
     transform: rotate(45deg);
   }
 
-  .add-faculty{
+  .add-form{
     max-width: 400px;
   }
 
-  form.add-faculty .button{
+  form.add-form .button{
     display: block;
     margin: 0 0 0 auto;
   }
