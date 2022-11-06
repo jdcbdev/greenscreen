@@ -1,6 +1,7 @@
 <?php
 
     require_once '../tools/functions.php';
+    require_once '../classes/faculty.class.php';
 
     //resume session here to fetch session values
     session_start();
@@ -16,28 +17,25 @@
 
     //if add faculty is submitted
     if(isset($_POST['save'])){
+
+        $faculty = new Faculty();
         //sanitize user inputs
-        $firstname = htmlentities($_POST['fn']);
-        $lastname = htmlentities($_POST['ln']);
-        $email = htmlentities($_POST['email']);
-        $status = 'Inactive';
+        $faculty->firstname = htmlentities($_POST['fn']);
+        $faculty->lastname = htmlentities($_POST['ln']);
+        $faculty->email = htmlentities($_POST['email']);
+        $faculty->academic_rank = $_POST['rank'];
+        $faculty->department = $_POST['department'];
+        if(isset($_POST['role'])){
+            $faculty->admission_role = $_POST['role'];
+        }
         if(isset($_POST['status'])){
-            $status = $_POST['status'];
+            $faculty->status = $_POST['status'];
         }
         if(validate_add_faculty($_POST)){
-            $faculty = array(
-                "firstname" => $firstname,
-                "lastname" => $lastname,
-                "email" => $email,
-                "academic_rank" => $_POST['rank'],
-                "department" => $_POST['department'],
-                "admission_role" => $_POST['role'],
-                "status" => $status
-            );
-            array_push($_SESSION['faculty'], $faculty);
-    
-            //redirect user to faculty page after saving
-            header('location: faculty.php');
+            if($faculty->add_faculty()){  
+                //redirect user to faculty page after saving
+                header('location: faculty.php');
+            }
         }
     }
 

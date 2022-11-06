@@ -54,42 +54,24 @@
                 </thead>
                 <tbody>
                     <?php
-                        //create an array for list of programs, use session so we can access this anywhere
-                        if(!isset($_SESSION['programs'])){
-                            $_SESSION['programs'] = array(
-                                "1" => array(
-                                    "program_code" => 'BSCS',
-                                    "description" => 'BS Computer Science',
-                                    "years_to_complete" => '4',
-                                    "level" => 'Bachelor',
-                                    "cet_requirement" => 'At least 80%',
-                                    "status" => 'Offering'
-                                ),
-                                "2" => array(
-                                    "program_code" => 'ACS',
-                                    "description" => 'Associate in Computer Science',
-                                    "years_to_complete" => '2',
-                                    "level" => 'Associate',
-                                    "cet_requirement" => 'At least 40%',
-                                    "status" => 'Phase-out'
-                                )
-                            );
-                        }
+                        require_once '../classes/program.class.php';
+
+                        $program = new Program();
                         
                         //We will now fetch all the records in the array using loop
                         //use as a counter, not required but suggested for the table
                         $i = 1;
                         //loop for each record found in the array
-                        foreach ($_SESSION['programs'] as $key => $value){ //start of loop
+                        foreach ($program->show() as $value){ //start of loop
                     ?>
                         <tr>
                             <!-- always use echo to output PHP values -->
                             <td><?php echo $i ?></td>
-                            <td><?php echo $value['program_code']?></td>
+                            <td><?php echo $value['code']?></td>
                             <td><?php echo $value['description'] ?></td>
-                            <td><?php echo $value['years_to_complete'] ?></td>
+                            <td><?php echo $value['years'] ?></td>
                             <td><?php echo $value['level'] ?></td>
-                            <td><?php echo $value['cet_requirement'] ?></td>
+                            <td><?php echo $value['cet'] ?></td>
                             <td><?php echo $value['status'] ?></td>
                             <?php
                                 if($_SESSION['user_type'] == 'admin'){ 

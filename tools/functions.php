@@ -87,10 +87,10 @@ function validate_program_code_duplicate($POST){
     if(!isset($POST['code'])){
         return false;
     }else{
-        foreach ($_SESSION['programs'] as $key => $value){
-            if(strcmp(strtolower($value['program_code']), strtolower($_POST['code'])) == 0){
+        $program = new Program();
+        foreach ($program->show() as $value){
+            if(strcmp(strtolower($value['code']), strtolower($_POST['code'])) == 0){
                 return false;
-                break;
             }
         }
     }

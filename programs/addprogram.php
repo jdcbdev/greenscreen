@@ -30,7 +30,7 @@
             $program->status = $_POST['status'];
         }
         if(validate_add_program($_POST)){
-            if($program->add_program()){
+            if($program->add()){
                 //redirect user to program page after saving
                 header('location: programs.php');
             }

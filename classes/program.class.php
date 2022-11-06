@@ -1,5 +1,7 @@
 <?php
 
+require_once 'database.php';
+
 Class Program{
     //attributes
 
@@ -10,20 +12,41 @@ Class Program{
     public $cet;
     public $status;
 
+    protected $db;
+
+    function __construct()
+    {
+        $this->db = new Database();
+    }
+
     //Methods
-    function add_program(){
-        $program = array(
-            "program_code" => $this->code,
-            "description" => $this->description,
-            "years_to_complete" => $this->years,
-            "level" => $this->level,
-            "cet_requirement" => $this->cet,
-            "status" => $this->status
-        );
-        if(array_push($_SESSION['programs'], $program)){
+
+    function add(){
+        $sql = "INSERT INTO programs (code, description, years, level, cet, status) VALUES 
+        (:code, :description, :years, :level, :cet, :status)";
+
+        $query=$this->db->connect()->prepare($sql);
+        $query->bindParam(':description', $this->description);
+        $query->bindParam(':code', $this->code);
+        $query->bindParam(':years', $this->years);
+        $query->bindParam(':level', $this->level);
+        $query->bindParam(':cet', $this->cet);
+        $query->bindParam(':status', $this->status);
+        
+        if($query->execute()){
             return true;
         }
-        return false;
+        else{
+            return false;
+        }	
+    }
+
+    function show(){
+        $sql = "SELECT * FROM programs ORDER BY code ASC;";
+        $query=$this->db->connect()->prepare($sql);
+        $data = $query->execute();
+        $data = $query->fetchAll();
+        return $data;
     }
 }
 
