@@ -44,8 +44,9 @@ Class Program{
     function show(){
         $sql = "SELECT * FROM programs ORDER BY code ASC;";
         $query=$this->db->connect()->prepare($sql);
-        $data = $query->execute();
-        $data = $query->fetchAll();
+        if($query->execute()){
+            $data = $query->fetchAll();
+        }
         return $data;
     }
 }
