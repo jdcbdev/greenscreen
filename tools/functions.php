@@ -86,10 +86,22 @@ function validate_program_code($POST){
 function validate_program_code_duplicate($POST){
     if(!isset($POST['code'])){
         return false;
+    }
+    elseif(isset($POST['old-code'])){
+        if(strcmp(strtolower($POST['code']), strtolower($POST['old-code'])) == 0){
+            return true;
+        }else{
+            $program = new Program();
+            foreach ($program->show() as $value){
+                if(strcmp(strtolower($value['code']), strtolower($POST['code'])) == 0){
+                    return false;
+                }
+            }
+        }
     }else{
         $program = new Program();
         foreach ($program->show() as $value){
-            if(strcmp(strtolower($value['code']), strtolower($_POST['code'])) == 0){
+            if(strcmp(strtolower($value['code']), strtolower($POST['code'])) == 0){
                 return false;
             }
         }
@@ -133,7 +145,7 @@ function validate_status($POST){
 
 function validate_add_program($POST){
     if(!validate_program_code($POST) || !validate_program_desc($POST) || !validate_cet($POST) ||
-     !validate_level($POST) || !validate_status($POST) || !validate_program_code_duplicate($_POST)){
+     !validate_level($POST) || !validate_status($POST) || !validate_program_code_duplicate($POST)){
         return false;
      }
     return true;

@@ -57,7 +57,6 @@
                         require_once '../classes/program.class.php';
 
                         $program = new Program();
-                        
                         //We will now fetch all the records in the array using loop
                         //use as a counter, not required but suggested for the table
                         $i = 1;
@@ -78,7 +77,7 @@
                             ?>
                                 <td>
                                     <div class="action">
-                                        <a class="action-edit" href="#">Edit</a>
+                                        <a class="action-edit" href="editprogram.php?id=<?php echo $value['id'] ?>">Edit</a>
                                         <a class="action-delete" href="#">Delete</a>
                                     </div>
                                 </td>
