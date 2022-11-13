@@ -53,62 +53,14 @@
                 </thead>
                 <tbody>
                     <?php
-                        //create an array for list of faculty, use session so we can access this anywhere
-                        if(!isset($_SESSION['faculty'])){
-                            $_SESSION['faculty'] = array(
-                                "faculty1" => array(
-                                    "firstname" => 'Jaydee',
-                                    "lastname" => 'Ballaho',
-                                    "email" => 'jaydee.ballaho@wmsu.edu.ph',
-                                    "academic_rank" => 'Instructor',
-                                    "department" => 'Computer Science',
-                                    "admission_role" => 'Admission Officer',
-                                    "status" => 'Active Employee'
-                                ),
-                                "faculty2" => array(
-                                    "firstname" => 'Gadmar',
-                                    "lastname" => 'Belamide',
-                                    "email" => 'gadmar.belamide@wmsu.edu.ph',
-                                    "academic_rank" => 'Asst. Professor',
-                                    "department" => 'Computer Science',
-                                    "admission_role" => 'Interviewer',
-                                    "status" => 'Active Employee'
-                                ),
-                                "faculty3" => array(
-                                    "firstname" => 'Jason',
-                                    "lastname" => 'Catadman',
-                                    "email" => 'jason.catadman@wmsu.edu.ph',
-                                    "academic_rank" => 'Instructor',
-                                    "department" => 'Information Technology',
-                                    "admission_role" => 'Interviewer',
-                                    "status" => 'Active Employee'
-                                ),
-                                "faculty4" => array(
-                                    "firstname" => 'Pauleen',
-                                    "lastname" => 'Gregana',
-                                    "email" => 'pauleen.gregana@wmsu.edu.ph',
-                                    "academic_rank" => 'Instructor',
-                                    "department" => 'Information Technology',
-                                    "admission_role" => 'Admission Officer',
-                                    "status" => 'Active Employee'
-                                ),
-                                "faculty5" => array(
-                                    "firstname" => 'Marjorie',
-                                    "lastname" => 'Rojas',
-                                    "email" => 'marjorie.rojas@wmsu.edu.ph',
-                                    "academic_rank" => 'Asst. Professor',
-                                    "department" => 'Computer Science',
-                                    "admission_role" => 'Interviewer',
-                                    "status" => 'Active Employee'
-                                )
-                            );
-                        }
-                        
+                        require_once '../classes/faculty.class.php';
+
+                        $faculty = new Faculty();
                         //We will now fetch all the records in the array using loop
                         //use as a counter, not required but suggested for the table
                         $i = 1;
                         //loop for each record found in the array
-                        foreach ($_SESSION['faculty'] as $key => $value){ //start of loop
+                        foreach ($faculty->show() as $value){ //start of loop
                     ?>
                         <tr>
                             <!-- always use echo to output PHP values -->

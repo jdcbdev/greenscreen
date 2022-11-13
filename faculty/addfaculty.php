@@ -32,7 +32,7 @@
             $faculty->status = $_POST['status'];
         }
         if(validate_add_faculty($_POST)){
-            if($faculty->add_faculty()){  
+            if($faculty->add()){  
                 //redirect user to faculty page after saving
                 header('location: faculty.php');
             }

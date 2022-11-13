@@ -1,5 +1,7 @@
 <?php
 
+require_once 'database.php';
+
 class Faculty{
     //attributes
 
@@ -11,21 +13,42 @@ class Faculty{
     public $admission_role = 'None';
     public $status = 'Inactive';
 
+    protected $db;
+
+    function __construct()
+    {
+        $this->db = new Database();
+    }
+
     //Methods
-    function add_faculty(){
-        $faculty = array(
-            "firstname" => $this->firstname,
-            "lastname" => $this->lastname,
-            "email" => $this->email,
-            "academic_rank" => $this->academic_rank,
-            "department" => $this->department,
-            "admission_role" => $this->admission_role,
-            "status" => $this->status
-        );
-        if(array_push($_SESSION['faculty'], $faculty)){
+    function add(){
+        $sql = "INSERT INTO faculty (firstname, lastname, email, academic_rank, department, admission_role, status) VALUES 
+        (:firstname, :lastname, :email, :academic_rank, :department, :admission_role, :status);";
+
+        $query=$this->db->connect()->prepare($sql);
+        $query->bindParam(':firstname', $this->firstname);
+        $query->bindParam(':lastname', $this->lastname);
+        $query->bindParam(':email', $this->email);
+        $query->bindParam(':academic_rank', $this->academic_rank);
+        $query->bindParam(':department', $this->department);
+        $query->bindParam(':admission_role', $this->admission_role);
+        $query->bindParam(':status', $this->status);
+        
+        if($query->execute()){
             return true;
         }
-        return false;
+        else{
+            return false;
+        }	
+    }
+
+    function show(){
+        $sql = "SELECT * FROM faculty ORDER BY CONCAT('lastname',', ','firstname') ASC;";
+        $query=$this->db->connect()->prepare($sql);
+        if($query->execute()){
+            $data = $query->fetchAll();
+        }
+        return $data;
     }
 
 }
