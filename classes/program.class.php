@@ -64,13 +64,25 @@ Class Program{
     }
 
     function fetch($record_id){
-        $sql = "SELECT * FROM programs WHERE id = :id ORDER BY code ASC;";
+        $sql = "SELECT * FROM programs WHERE id = :id;";
         $query=$this->db->connect()->prepare($sql);
         $query->bindParam(':id', $record_id);
         if($query->execute()){
             $data = $query->fetch();
         }
         return $data;
+    }
+
+    function delete($record_id){
+        $sql = "DELETE FROM programs WHERE id = :id;";
+        $query=$this->db->connect()->prepare($sql);
+        $query->bindParam(':id', $record_id);
+        if($query->execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     function show(){

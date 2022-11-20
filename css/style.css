@@ -600,3 +600,11 @@ a.button{
     font-size: 24px;
     color: #107869;
   }
+
+  div.dialog p{
+    text-align: center;
+  }
+
+  .bx-menu.large{
+    display: none;
+  }
