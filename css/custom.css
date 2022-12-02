@@ -1,0 +1,130 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+.logo-name{
+    font-weight: 600;
+}
+
+.banner-1{
+    background: linear-gradient(45deg,
+    rgba(98, 156, 148, 0.75),
+    rgba(19, 115, 104, 0.75)),
+    url('../img/banner-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-2{
+    background: linear-gradient(45deg,
+    rgba(98, 156, 148, 0.75),
+    rgba(19, 115, 104, 0.75)),
+    url('../img/banner-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-3{
+    background: linear-gradient(45deg,
+    rgba(98, 156, 148, 0.75),
+    rgba(19, 115, 104, 0.75)),
+    url('../img/banner-3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.course-1{
+    background: url('../img/course-1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.course-2{
+    background: url('../img/course-2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.pricing-header {
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.programs-section {
+    max-width: 960px;
+    margin: auto;
+}
+
+.featurette-divider.sec-divider{
+    margin: 2rem 0;
+    height: 0;
+}
+
+.featurette-heading{
+    margin-top: 4rem;
+}
+
+p.justify{
+    text-align: justify;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.green{
+    color: #107869;
+}
+
+.green-bold{
+    color: #107869;
+    font-weight: 600;
+}
+
+.background-color-green{
+    background-color: #107869 !important;
+    border: #107869;
+}
+
+.btn-login{
+    border: 1px solid white;
+    color: white;
+}
+
+#featured-3 .border-bottom{
+    border-bottom: none !important;
+}
+
+#featured-3{
+    margin-top: 20px;
+    padding-bottom: 0 !important;
+}
+
+.rounded-circle{
+    margin-bottom: 20px;
+}
+
+.faculty h3{
+    font-size: 20px !important;
+}
+
+.faculty h4{
+    font-size: 18px !important;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
