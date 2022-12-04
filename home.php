@@ -109,29 +109,29 @@
     </p>
   </div>
   <div class="container marketing">
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2" style="padding: 0 0 0 40px;">
-        <h2 class="featurette-heading">BS in Computer Science</span></h2>
+    <div class="row featurette featurette-1">
+      <div class="col-md-7 course-cs">
+        <h2 class="featurette-heading course-title">BS in Computer Science</span></h2>
         <p class="lead justify">
           The computer science course is intended for students with a solid background in mathematics 
           and an interest in the theory, practice, art, and science of computer programming. This course provides 
           graduates with an educational foundation for careers in computer software or computer system design, 
           including careers as software engineers, application software designers, system programmers, or system engineers.
         </p>
-        <p><a class="btn btn-lg btn-success background-color-green" href="#">Apply Now</a></p>
+        <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green" href="#">Apply Now</a></p>
       </div>
-      <div class="col-md-5 order-md-1 course-1"></div>
+      <div class="col-md-5 course-1"></div>
     </div>
     <hr class="featurette-divider sec-divider">
-    <div class="row featurette">
-      <div class="col-md-7" style="padding: 0 40px 0 0;">
-        <h2 class="featurette-heading">BS in Information Technology</span></h2>
+    <div class="row featurette featurette-2">
+      <div class="col-md-7 course-it">
+        <h2 class="featurette-heading course-title">BS in Information Technology</span></h2>
         <p class="lead justify">
           The BS in Information Systems program focuses on the design, development and implementation of information 
           and communications technology (ICT) resources to ensure information systems applications can be used in various 
           industry sectors (business, education, media and entertainment, healthcare, government, and service).
         </p>
-        <p><a class="btn btn-lg btn-success background-color-green" href="#">Apply Now</a></p>
+        <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green" href="#">Apply Now</a></p>
       </div>
       <div class="col-md-5 course-2"></div>
     </div>
@@ -165,9 +165,9 @@
         </div>
       </div>
     </div>
-    <div class="container px-4 py-5" id="featured-3">
-      <h1 class="pb-2 border-bottom text-center">Features</h1>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="container px-4" id="featured-3">
+      <h1 class="pb-2 border-bottom text-center my-4">Features</h1>
+      <div class="row g-4 py-2 row-cols-1 row-cols-lg-3">
         <div class="feature col">
           <div class="feature-icon bg-primary bg-gradient background-color-green">
             <i class='bx bxs-timer'></i>
@@ -339,7 +339,7 @@
       </div><!-- /.col-lg-4 -->
     </div>
     <hr class="featurette-divider">
-  </div><!-- /.container -->
+  </div>
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">Back to top</a></p>
