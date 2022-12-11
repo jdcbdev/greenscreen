@@ -1,37 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jaydee C. Ballaho">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./css/carousel.css" rel="stylesheet">
-    <link href="./css/features.css" rel="stylesheet">
-    <link href="./css/custom.css" rel="stylesheet">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-    <title>Forcast | Home</title>
-</head>
+<?php
+  $page_title = 'Forecast - A Decision Support System';
+  require_once '../includes/header.php';
+?>
 <body id="home-page">
   <!-- Header -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top background-color-green">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../home/">
           <i class='bx bx-meteor'></i>
           <span class="logo-name">forecast</span>
         </a>
@@ -53,7 +29,7 @@
               <a class="nav-link" href="#faculty" id="faculty">Faculty</a>
             </li>
           </ul>
-          <a href="./login/login.php"><button class="btn btn-outline-success btn-login">Sign in</button></a>
+          <a href="../login/login.php"><button class="btn btn-outline-success btn-login">Sign in</button></a>
         </div>
       </div>
     </nav>
@@ -72,7 +48,7 @@
             <div class="carousel-caption">
               <h1>Student-Centered College.</h1>
               <p>The College of Computing Studies allows students to explore their passions for problem-solving and producing creative experiences.</p>
-              <p><a class="btn btn-lg btn-success background-color-green" href="#">Learn More</a></p>
+              <p><a class="btn btn-lg btn-success background-color-green btn-apply" href="#">Learn More</a></p>
             </div>
           </div>
         </div>
@@ -81,7 +57,7 @@
             <div class="carousel-caption">
               <h1>Innovative and Supportive Faculty and Staff.</h1>
               <p>The College of Computing Studies is united by a common goal: to make the world a better place through education, research, and innovation.</p>
-              <p><a class="btn btn-lg btn-success background-color-green" href="#">Learn More</a></p>
+              <p><a class="btn btn-lg btn-success background-color-green btn-apply" href="#">Learn More</a></p>
             </div>
           </div>
         </div>
@@ -90,7 +66,7 @@
             <div class="carousel-caption">
               <h1>Convenient Facilities.</h1>
               <p>The College of Computing Studies is equipped with spacious and fully-aircon classrooms, high-tech laboratories, media rooms, and free wifi for all students.</p>
-              <p><a class="btn btn-lg btn-success background-color-green" href="#">Learn More</a></p>
+              <p><a class="btn btn-lg btn-success background-color-green btn-apply" href="#">Learn More</a></p>
             </div>
           </div>
         </div>
@@ -121,7 +97,7 @@
             graduates with an educational foundation for careers in computer software or computer system design, 
             including careers as software engineers, application software designers, system programmers, or system engineers.
           </p>
-          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green" href="#">Apply Now</a></p>
+          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply" href="../login/signup.php">Apply Now</a></p>
         </div>
         <div class="col-md-5 course-1"></div>
       </div>
@@ -134,7 +110,7 @@
             and communications technology (ICT) resources to ensure information systems applications can be used in various 
             industry sectors (business, education, media and entertainment, healthcare, government, and service).
           </p>
-          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green" href="#">Apply Now</a></p>
+          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply" href="../login/signup.php">Apply Now</a></p>
         </div>
         <div class="col-md-5 course-2"></div>
       </div>
@@ -144,7 +120,7 @@
         <p class="fs-5">
         Our admissions process is now powered by a decision-support system called - <span class="green-bold fs-5">forecast</span>.
         </p>
-        <p><a class="btn btn-lg btn-success background-color-green text-center" href="#">Apply Now</a></p>
+        <p><a class="btn btn-lg btn-success background-color-green text-center btn-apply" href="../login/signup.php">Apply Now</a></p>
       </div>
       <div class="row align-items-md-stretch">
         <div class="col-md-6">
@@ -221,122 +197,122 @@
       </div>
       <div class="row faculty">
         <div class="col-lg-4">
-          <img src="./img/faculty/go.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/go.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Dr. Roderick P. Go</h3>
           <h4>Dean</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/odon.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/odon.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Engr. Odon A. Maravillas, Jr., MSCS</h3>
           <h4>Associate Dean</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/belamide.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/belamide.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Engr. Gadmar M. Belamide, MEnggEd-ICT</h3>
           <h4>Secretary</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/sadiwa.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/sadiwa.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Ms. Lucy Felix-Sadiwa, MSCS</h3>
           <h4>CS Department Head</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/escorialj.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/escorialj.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mr. John Augustus A. Escorial, MIT</h3>
           <h4>IT Department Head</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/escoriala.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/escoriala.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mrs. Aida A. Escorial, MIT</h3>
           <h4>Graduate Program Chair</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/aripE.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/aripE.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Engr. Edwip I. Arip, MEnggEd-ICT</h3>
           <h4>External Studies Unit Technical Associate</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/aripJ.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/aripJ.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mr. John Paul I. Arip</h3>
           <h4>LMS Quality Assurance</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/female.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/female.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mrs. Justin Anne Albay-Arip</h3>
           <h4>Visiting Lecturer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/ballaho.png" alt="" class="bd-placeholder-img rounded-circle photo" width="140" height="140">
+          <img src="../img/faculty/ballaho.png" alt="" class="bd-placeholder-img rounded-circle photo" width="140" height="140">
           <h3>Mr. Jaydee C. Ballaho</h3>
           <h4>LMS Lead Developer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/catadman.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/catadman.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mr. Jason A. Catadman</h3>
           <h4>LMS Asst. Developer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/flores.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/flores.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Engr. Mark L. Flores, MEnggEd-ICT</h3>
           <h4>Director, Data Protection and Security</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/gregana.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/gregana.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Ms. Pauleen Jean E. Gregana</h3>
           <h4>Visiting Lecturer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/female.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/female.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Ms. Aradzna M. Kamman</h3>
           <h4>Visiting Lecturer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/female.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/female.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Ms. Mara Marie Liao</h3>
           <h4>Visiting Lecturer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/lines.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/lines.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Engr. Marvic A. Lines, MEnggEd-ICT</h3>
           <h4>LMS Training and Management</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/female.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/female.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Ms. Ceed Janelle B. Lorenzo</h3>
           <h4>Visiting Lecturer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/lorenzo.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/lorenzo.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Engr. Ceed Jezreel B. Lorenzo, MIT</h3>
           <h4>Research Coordinator</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/rojas.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/rojas.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Engr. Marjorie A. Rojas</h3>
           <h4>Student Affairs and Guidance Coordinator</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/male.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/male.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mr. Theo Jay M'lleno Sanson</h3>
           <h4>Visiting Lecturer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/tahil.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/tahil.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mr. Salimar B. Tahil, MEnggEd-ICT</h3>
           <h4>Asst. Director, MISTO</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/timpangco.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/timpangco.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mr. Whesley G. Timpangco</h3>
           <h4>LMS Network Engineer</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/jackaria.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/jackaria.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Ms. Alhadzra M. Jackaria</h3>
           <h4>Laboratory Technician</h4>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img src="./img/faculty/male.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <img src="../img/faculty/male.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140">
           <h3>Mr. John Roy S. Velario</h3>
           <h4>Administrative Assistant</h4>
         </div><!-- /.col-lg-4 -->

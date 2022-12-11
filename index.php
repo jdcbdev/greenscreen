@@ -13,7 +13,7 @@
         header('location: faculty/faculty.php');
     }
     else{
-        header('location: home.php');
+        header('location: home');
     }
 
 ?>
