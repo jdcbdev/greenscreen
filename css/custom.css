@@ -254,6 +254,11 @@ div.sign-up{
     padding-top: 1.5rem;
 }
 
+div.sign-in{
+    max-width: 500px;
+    padding-top: 1.5rem;
+}
+
 .fa-people-line, .fa-right-left{
     font-size: 2rem;
 }
@@ -296,6 +301,11 @@ p.continue-google .fa-google{
     float: left;
 }
 
+div.sign-in p.continue-google .fa-google{
+    font-size: 1.5rem;
+    float: left;
+}
+
 body#sign-up{
     padding-top: 0;
 }
@@ -303,6 +313,10 @@ body#sign-up{
 form .btn-continue{
     max-width: 100%;
     background-color: #107869;
+}
+
+form .btn-forgot{
+    max-width: 170px;
 }
 
 hr:not([size]) {
@@ -321,6 +335,45 @@ span.or{
 
 .shortcut{
     display: none;
+}
+
+.fa-envelope-open-text{
+    font-size: 3rem;
+}
+
+.g-recaptcha div{
+    margin: 0 auto;
+}
+
+.form-check-input:checked{
+    background-color: #107869 !important;
+    border: 0;
+ }
+ .form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+    color: black;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0 0.1rem 107869 !important;
+ }
+
+.btn-apply:hover{
+    background-color: #1b9885 !important;
+}
+
+.btn-login:hover{
+    background-color: #1b9885 !important;
+}
+
+.btn-continue:hover{
+    background-color: #1b9885 !important;
+}
+
+a.green:hover{
+    color: #1b9885 !important;
+}
+
+.continue-google .btn-continue:hover{
+    opacity: 0.9;
 }
 
 @media (min-width: 576px) {
@@ -352,6 +405,11 @@ span.or{
     }
 
     div.sign-up {
+        border: 1px solid lightgray;
+        border-radius: 20px;
+    }
+
+    div.sign-in {
         border: 1px solid lightgray;
         border-radius: 20px;
     }

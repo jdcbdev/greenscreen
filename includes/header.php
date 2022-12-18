@@ -22,11 +22,13 @@
     <link href="../css/features.css" rel="stylesheet">
     <link href="../css/custom.css" rel="stylesheet">
 
-    <!-- jQuery -->
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://kit.fontawesome.com/30ff5f2a0c.js" crossorigin="anonymous"></script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <title><?php echo $page_title; ?></title>
 </head>

@@ -29,7 +29,7 @@
               <a class="nav-link" href="#faculty" id="faculty">Faculty</a>
             </li>
           </ul>
-          <a href="../login/signin.php"><button class="btn btn-outline-success btn-login">Sign in</button></a>
+          <a href="../account/signin.php"><button class="btn btn-outline-success btn-login">Sign in</button></a>
         </div>
       </div>
     </nav>
@@ -97,7 +97,7 @@
             graduates with an educational foundation for careers in computer software or computer system design, 
             including careers as software engineers, application software designers, system programmers, or system engineers.
           </p>
-          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply btn-font" href="../login/signup.php">Apply Now</a></p>
+          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply btn-font" href="../account/signup.php">Apply Now</a></p>
         </div>
         <div class="col-md-5 course-1"></div>
       </div>
@@ -110,7 +110,7 @@
             and communications technology (ICT) resources to ensure information systems applications can be used in various 
             industry sectors (business, education, media and entertainment, healthcare, government, and service).
           </p>
-          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply btn-font" href="../login/signup.php">Apply Now</a></p>
+          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply btn-font" href="../account/signup.php">Apply Now</a></p>
         </div>
         <div class="col-md-5 course-2"></div>
       </div>
@@ -118,9 +118,9 @@
       <div class="pricing-header p-3 pb-md-4 mx-auto text-center" id="admissions">
         <h1 class="display-4 fw-normal">Admissions</h1>
         <p class="fs-5">
-        Our admissions process is now powered by a decision-support system called - <span class="green-bold fs-5">forecast</span>.
+        Our admission process is now powered by a decision-support system called - <span class="green-bold fs-5">forecast</span>.
         </p>
-        <p><a class="btn btn-lg btn-success background-color-green text-center btn-apply btn-font" href="../login/signup.php">Apply Now</a></p>
+        <p><a class="btn btn-lg btn-success background-color-green text-center btn-apply btn-font" href="../account/signup.php">Apply Now</a></p>
       </div>
       <div class="row align-items-md-stretch">
         <div class="col-md-6">
