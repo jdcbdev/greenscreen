@@ -8,5 +8,6 @@
     $students = "";
     $faculty = "";
     $settings = "";
-
+    $profile = "";
+    $announcement = "";
 ?>

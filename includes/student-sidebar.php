@@ -5,45 +5,21 @@
     </div>
     <ul class="nav-links">
         <li>
-            <a href="../admin/dashboard.php" class="<?php echo $dashboard; ?>" title="Dashboard">
+            <a href="../student/dashboard.php" class="<?php echo $dashboard; ?>" title="Dashboard">
                 <i class='bx bx-grid-alt' ></i>
                 <span class="links-name">Dashboard</span>
             </a>
         </li>
         <li>
-            <a href="#" class="<?php echo $application; ?>" title="Applications">
-                <i class='bx bx-send'></i>
-                <span class="links-name">Applications</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="<?php echo $screening; ?>" title="Screening">
+            <a href="#" class="<?php echo $profile; ?>" title="My Profile">
                 <i class='bx bx-phone-call'></i>
-                <span class="links-name">Screening</span>
+                <span class="links-name">My Profile</span>
             </a>
         </li>
         <li>
-        <a href="../programs/programs.php" class="<?php echo $programs; ?>" title="Programs">
-                <i class='bx bx-book-reader'></i>
-                <span class="links-name">Programs</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="<?php echo $students; ?>" title="Students">
-                <i class='bx bx-user'></i>
-                <span class="links-name">Students</span>
-            </a>
-        </li>
-        <li>
-            <a href="../faculty/faculty.php" class="<?php echo $faculty; ?>" title="Faculty">
-                <i class='bx bx-group' ></i>
-                <span class="links-name">Faculty</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="<?php echo $settings; ?>" title="Settings">
-                <i class='bx bx-cog'></i>
-                <span class="links-name">Settings</span>
+            <a href="#" class="<?php echo $application; ?>" title="My Applications">
+                <i class='bx bx-send'></i>
+                <span class="links-name">My Applications</span>
             </a>
         </li>
         <hr class="line">

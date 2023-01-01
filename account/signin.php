@@ -1,6 +1,37 @@
 <?php
   $page_title = 'Forecast - Sign In';
   require_once '../includes/header.php';
+  require_once '../classes/account.class.php';
+
+  session_start();
+
+  $account_obj = new Account();
+
+  if(isset($_POST['username']) && isset($_POST['password'])){
+    //Sanitizing the inputs of the users. Mandatory to prevent injections!
+    $account_obj->username = htmlentities($_POST['username']);
+    $account_obj->password = htmlentities($_POST['password']);
+    if($account_obj->sign_in()){
+        $account = $account_obj->get_account_info();
+        var_dump($account_obj->get_account_info());
+        foreach($account as $value){
+            $_SESSION['logged-in'] = $value['type'];
+            $_SESSION['fullname'] = 'Temporary';
+            $_SESSION['user_type'] = $value['type'];
+            //display the appropriate dashboard page for user
+            if($value['type'] == 'admin'){
+                header('location: ../admin/dashboard.php');
+            }else if($value['type'] == 'faculty'){
+                header('location: ../faculty/dashboard.php');
+            }else if($value['type'] == 'student'){
+                header('location: ../student/application.php');
+            }
+        }
+    }else{
+        //set the error message if account is invalid
+        $error = 'Invalid username/password. Try again.';
+    }
+  }
 ?>
 <body id="sign-up">
     <!-- Header -->
@@ -36,18 +67,18 @@
                             <hr class="mt-4 mb-1">
                             <span class="p-2 or">or</span>
                         </div>
-                        <form class="needs-validation">
+                        <form class="needs-validation" action="signin.php" method="post">
                             <div class="row g-3">
                                 <div class="col-12">
-                                    <label for="email" class="form-label">Email Address<span class="text-muted"></span></label>
-                                    <input type="email" class="form-control" id="email" placeholder="" required>
+                                    <label for="username" class="form-label">Email Address<span class="text-muted"></span></label>
+                                    <input type="text" class="form-control" id="username" placeholder="" name="username" required>
                                     <div class="invalid-feedback">
                                         Please enter a valid email address.
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="addpasswordress" placeholder="" required>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="" required>
                                     <div class="invalid-feedback">
                                         Please enter valid password.
                                     </div>
@@ -62,8 +93,15 @@
                                     </div>
                                 </div>
                                 <div class="col-12 pt-2 mb-3">
-                                    <button class="btn btn-lg btn-success background-color-green btn-continue btn-font" type="submit">Continue with Email</button>
+                                    <input class="btn btn-lg btn-success background-color-green btn-continue btn-font" type="submit" value="Continue with Email" name="login">
                                 </div>
+                                <?php
+                                    //Display the error message if there is any.
+                                    if(isset($error)){
+                                        echo '<div><p class="error">'.$error.'</p></div>';
+                                    }
+                                    
+                                ?>
                             </div>
                         </form>
                     </div>

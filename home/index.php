@@ -1,4 +1,17 @@
 <?php
+
+  //start session
+  session_start();
+
+  //check if user is login already otherwise send to login page
+  if($_SESSION['logged-in'] == 'admin'){
+      header('location: ../admin/dashboard.php');
+  }else if($_SESSION['logged-in'] == 'faculty'){
+      header('location: ../faculty/dashboard.php');
+  }else if($_SESSION['logged-in'] == 'student'){
+      header('location: ../student/application.php');
+  }
+
   $page_title = 'Forecast - A Decision Support System';
   require_once '../includes/header.php';
 ?>
@@ -28,8 +41,11 @@
             <li class="nav-item">
               <a class="nav-link" href="#faculty" id="faculty">Faculty</a>
             </li>
+            <li class="nav-item d-md-none">
+              <a class="nav-link" href="../account/signin.php" id="signin">Sign in</a>
+            </li>
           </ul>
-          <a href="../account/signin.php"><button class="btn btn-outline-success btn-login">Sign in</button></a>
+          <a href="../account/signin.php" class="d-none d-md-block"><button class="btn btn-outline-success btn-login">Sign in</button></a>
         </div>
       </div>
     </nav>
@@ -324,7 +340,6 @@
   <footer class="container background-color-green">
     <p class="text-center">&copy; 2022 Forecast &middot; <a href="#">Privacy Policy</a></p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
     $(document).ready(function(){
       $('a#home').on('click', function(){

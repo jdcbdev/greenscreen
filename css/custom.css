@@ -5,7 +5,6 @@
 
 .logo-name{
     font-weight: 600;
-    padding-left: 5px;
     padding-bottom: 2px;
 }
 
@@ -138,8 +137,9 @@ div.feature.col{
     flex-direction: column;
 }
 
-.bx{
-    font-size: 1.7rem;
+#sidebarMenu .bx, .navbar-brand .bx {
+    font-size: 1.5rem;
+    margin-right: 10px;
 }
 
 .marketing .featurette-1{
@@ -308,6 +308,7 @@ div.sign-in p.continue-google .fa-google{
 
 body#sign-up{
     padding-top: 0;
+    padding-bottom: 3rem;
 }
 
 form .btn-continue{
@@ -376,6 +377,141 @@ a.green:hover{
     opacity: 0.9;
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 70px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.nav-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.sidebar .nav-link:hover{
+    background-color: #1A5653;
+    color: white;
+}
+
+.sidebar .nav-link.active{
+    background-color: #1A5653;
+    color: white;
+}
+
+hr.line{
+    margin: 10px auto;
+    width: 90%;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid white;
+}
+
+.background-color-green-visible{
+    background-color: #107869;
+}
+
+.card.profile {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bxs-check-circle{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #107869;
+}
+
+.bxs-edit-alt{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #333;
+}
+
+.profile-menu .card, .profile-screen .card-profile{
+    border-radius: 4px;
+}
+
+.card-profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid lightgray;
+    border-radius: .25rem;
+}
+
+.card-profile{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-profile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    display: none;
+}
+
+input.upload-photo{
+    display: none;
+}
+
+.upload-photo-container{
+    display: flex;
+    align-items: center;
+}
+
+.custom-btn{
+    border: 1px solid #107869;
+    color: #107869;
+}
+
+.custom-btn:hover{
+    border: 1px solid #107869;
+    background-color: #107869;
+    color: white;
+}
+
+.custom-file-input::before {
+    content: 'Select some files';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+.custom-file-input::after {
+    content: '';
+}
+.custom-file-input:hover::before {
+    border-color: black;
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
 @media (min-width: 576px) {
     .shortcut{
         display: block;
@@ -432,6 +568,10 @@ a.green:hover{
 
     div.sign-up{
         max-width: 700px;
+    }
+
+    .background-color-green-visible{
+        background-color: white;
     }
 }
 
