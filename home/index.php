@@ -3,13 +3,13 @@
   //start session
   session_start();
 
-  //check if user is login already otherwise send to login page
-  if($_SESSION['logged-in'] == 'admin'){
+  //check if user is login already
+  if(isset($_SESSION['logged_id']) && $_SESSION['user_type'] == 'admin'){
       header('location: ../admin/dashboard.php');
-  }else if($_SESSION['logged-in'] == 'faculty'){
+  }else if(isset($_SESSION['logged_id']) && $_SESSION['user_type'] == 'faculty'){
       header('location: ../faculty/dashboard.php');
-  }else if($_SESSION['logged-in'] == 'student'){
-      header('location: ../student/application.php');
+  }else if(isset($_SESSION['logged_id']) && $_SESSION['user_type'] == 'student'){
+      header('location: ../student/index.php');
   }
 
   $page_title = 'Forecast - A Decision Support System';
@@ -338,7 +338,7 @@
   </main>
   <!-- FOOTER -->
   <footer class="container background-color-green">
-    <p class="text-center">&copy; 2022 Forecast &middot; <a href="#">Privacy Policy</a></p>
+    <p class="text-center">&copy; <?=date('Y')?> Forecast &middot; <a href="#">Privacy Policy</a></p>
   </footer>
   <script>
     $(document).ready(function(){

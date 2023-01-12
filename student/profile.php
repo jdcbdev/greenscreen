@@ -7,8 +7,8 @@
         this is to prevent users from accessing pages that requires
         authentication such as the dashboard
     */
-    if (!isset($_SESSION['logged-in'])){
-        header('location: ../login/login.php');
+    if (!isset($_SESSION['logged_id'])){
+        header('location: ../account/signin.php');
     }
     //if the above code is false then html below will be displayed
 
@@ -34,31 +34,9 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-3 col-xl-2 d-md-block background-color-green sidebar collapse">
-                <div class="position-sticky h-100">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="application.php" class="nav-link<?php echo $application; ?>" title="Applications">
-                                <i class='bx bx-send'></i>
-                                <span class="links-name">Applications</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="profile.php" class="nav-link <?php echo $profile; ?>" title="Profile">
-                                <i class='bx bx-user'></i>
-                                <span class="links-name">Profile</span>
-                            </a>
-                        </li>
-                        <hr class="line">
-                        <li id="logout-link" class="nav-item">
-                            <a class="logout-link nav-link" href="../account/logout.php" title="Logout">
-                                <i class='bx bx-log-out'></i>
-                                <span class="links-name">Logout</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <?php
+                require_once '../includes/sidebar.php';
+            ?>
             <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-md-4">
                 <div class="row">
                     <div class="col-12 mt-3 mt-md-0 d-md-none">

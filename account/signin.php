@@ -6,30 +6,28 @@
   session_start();
 
   $account_obj = new Account();
-
-  if(isset($_POST['username']) && isset($_POST['password'])){
+  if(isset($_POST['email']) && isset($_POST['password'])){
     //Sanitizing the inputs of the users. Mandatory to prevent injections!
-    $account_obj->username = htmlentities($_POST['username']);
+    $account_obj->email = htmlentities($_POST['email']);
     $account_obj->password = htmlentities($_POST['password']);
     if($account_obj->sign_in()){
         $account = $account_obj->get_account_info();
-        var_dump($account_obj->get_account_info());
-        foreach($account as $value){
-            $_SESSION['logged-in'] = $value['type'];
+        foreach($account as $row){
+            $_SESSION['logged_id'] = $row['id'];
             $_SESSION['fullname'] = 'Temporary';
-            $_SESSION['user_type'] = $value['type'];
+            $_SESSION['user_type'] = $row['type'];
             //display the appropriate dashboard page for user
-            if($value['type'] == 'admin'){
+            if($row['type'] == 'admin'){
                 header('location: ../admin/dashboard.php');
-            }else if($value['type'] == 'faculty'){
+            }else if($row['type'] == 'faculty'){
                 header('location: ../faculty/dashboard.php');
-            }else if($value['type'] == 'student'){
-                header('location: ../student/application.php');
+            }else if($row['type'] == 'student'){
+                header('location: ../student/index.php');
             }
         }
     }else{
         //set the error message if account is invalid
-        $error = 'Invalid username/password. Try again.';
+        $error = 'Invalid email/password. Try again.';
     }
   }
 ?>
@@ -70,8 +68,8 @@
                         <form class="needs-validation" action="signin.php" method="post">
                             <div class="row g-3">
                                 <div class="col-12">
-                                    <label for="username" class="form-label">Email Address<span class="text-muted"></span></label>
-                                    <input type="text" class="form-control" id="username" placeholder="" name="username" required>
+                                    <label for="email" class="form-label">Email Address<span class="text-muted"></span></label>
+                                    <input type="text" class="form-control" id="email" placeholder="" name="email" required>
                                     <div class="invalid-feedback">
                                         Please enter a valid email address.
                                     </div>
