@@ -10,7 +10,7 @@
         <div class="card-profile p-4 mt-3">
             <div class="row">
                 <h5 class="col-12 fw-bold mb-3">Personal Information</h5>
-                <form class="needs-validation" action="" method="post">
+                <form class="needs-validation" action="" method="post" name="personal-info" id="personal-info">
                     <div class="row g-3">
                         <div class="col-12 col-md-6 d-none">
                             <label for="upload-photo" class="form-label">Upload Photo<span class="text-muted"></span></label>
@@ -100,7 +100,7 @@
                             <hr class="my-4 mx-auto w-">
                         </div>
                         <div class="col-6 text-start m-0">
-                            <a class="btn btn-lg btn-success btn-font w-100 back-button m-0 d-none">
+                            <a class="btn btn-lg btn-success btn-font w-100 back-button m-0 d-none" name="personal" id="personal">
                                 <i class="fa-solid fa-arrow-left-long pe-1"></i>
                                 Back
                             </a>

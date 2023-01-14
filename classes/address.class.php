@@ -55,6 +55,15 @@ class Address{
         return $data;
     }
 
+    function get_work(){
+        $sql = "SELECT * FROM refoccupation ORDER BY occupation ASC;";
+        $query=$this->db->connect()->prepare($sql);
+        if($query->execute()){
+            $data = $query->fetchAll();
+        }
+        return $data;
+    }
+
 }
 
 ?>

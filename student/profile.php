@@ -163,31 +163,31 @@
                                     <h5 class="col-12 fw-bold mb-3">College Entrance Test (CET)</h5>
                                     <form class="needs-validation" action="signin.php" method="post">
                                         <div class="row g-2">
-                                            <div class="col-12">
+                                            <div class="col-12 col-md-6">
                                                 <label for="cetappno" class="form-label">CET Application Number<span class="text-muted"></span></label>
                                                 <input type="text" class="form-control" id="cetappno" placeholder="" name="cetappno" required="">
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-12 col-md-6">
                                                 <label for="oapr" class="form-label">Overall Percentile Rank (OAPR)<span class="text-muted"></span></label>
                                                 <input type="text" class="form-control" id="oapr" placeholder="" name="oapr" required="">
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-12 col-md-6">
                                                 <label for="english" class="form-label">English Proficiency Skills<span class="text-muted"></span></label>
                                                 <input type="text" class="form-control" id="english" placeholder="" name="english" required="">
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-12 col-md-6">
                                                 <label for="reading" class="form-label">Reading Comprehension Skills<span class="text-muted"></span></label>
                                                 <input type="text" class="form-control" id="reading" placeholder="" name="reading" required="">
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-12 col-md-6">
                                                 <label for="science" class="form-label">Science Process Skills<span class="text-muted"></span></label>
                                                 <input type="text" class="form-control" id="science" placeholder="" name="science" required="">
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-12 col-md-6">
                                                 <label for="math" class="form-label">Quantitative Skills<span class="text-muted"></span></label>
                                                 <input type="text" class="form-control" id="math" placeholder="" name="math" required="">
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-12 col-md-6">
                                                 <label for="abstract" class="form-label">Abstract Thinking Skills<span class="text-muted"></span></label>
                                                 <input type="text" class="form-control" id="abstract" placeholder="" name="abstract" required="">
                                             </div>

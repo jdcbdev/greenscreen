@@ -45,8 +45,17 @@
     background-color: white !important;
 }
 
+.bg-green{
+    background-color: #107869 !important;
+    color: white;
+}
+
 .color-green{
     color: #107869 !important;
+}
+
+.color-white{
+    color: white !important;
 }
 
 a.back-button{
