@@ -22,14 +22,14 @@
                 <form class="needs-validation">
                     <div class="row g-3">
                         <div class="col-sm-6">
-                            <label for="firstName" class="form-label">First name</label>
+                            <label for="firstName" class="form-label">First Name</label>
                             <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <label for="lastName" class="form-label">Last name</label>
+                            <label for="lastName" class="form-label">Last Name</label>
                             <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid last name is required.
