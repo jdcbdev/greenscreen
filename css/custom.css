@@ -83,6 +83,18 @@ a.back-button{
     font-size: 16px;
 }
 
+.feature i.bx{
+    font-size: 30px;
+}
+
+footer p a:hover{
+    color: white;
+}
+
+upload-container{
+    height: 150px;
+}
+
 .profile-progress-container.wrapper::before {
     content: '';
     position: relative;
@@ -291,12 +303,16 @@ div.feature.col{
     margin-bottom: 2rem;
 }
 
-.col-md-7{
-    width: 100%;
-}
-
 .photo{
     border: 3.4px solid #0B390B;
+}
+
+h4 span.progress-counter{
+    font-size: calc(1.275rem + .3vw);
+}
+
+.course-1, .course-2{
+    height: 250px;
 }
 
 .logo-photo{
@@ -673,6 +689,14 @@ input.upload-photo{
 }
 
 @media (min-width: 768px) {
+    .course-1, .course-2{
+        height: 350px;
+    }
+
+    .upload-container{
+        height: 180px;
+    }
+
     .next-button, .back-button{
         max-width: 100px;
     }
@@ -701,13 +725,17 @@ input.upload-photo{
 }
 
 @media (min-width: 992px) {
+    .course-1, .course-2{
+        height: 400px;
+    }
+
+    upload-container{
+        height: 200px;
+    }
+
     .course-title{
         text-align: left;
         margin: 0rem 0 2rem 0;
-    }
-
-    .col-md-7{
-        width: 58.33333333%;
     }
 
     .course-cs{

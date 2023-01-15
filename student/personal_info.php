@@ -59,10 +59,10 @@
                             <select type="text" class="form-control" id="region" placeholder="" name="region" required="">
                                 <option value="none">--Select--</option>
                                 <?php
-                                    require_once '../classes/address.class.php';
-                                    $address_obj = new Address();
-                                    $address = $address_obj->get_region();
-                                    foreach($address as $row){
+                                    require_once '../classes/reference.class.php';
+                                    $ref_obj = new Reference();
+                                    $ref = $ref_obj->get_region();
+                                    foreach($ref as $row){
                                 ?>
                                         <option value="<?=$row['regCode']?>"><?=$row['regDesc']?></option>
                                 <?php
@@ -90,11 +90,11 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="drive" class="form-label">Street Name<span class="text-muted"></span></label>
-                            <input type="text" class="form-control" id="drive" placeholder="" name="drive" required="">
+                            <input type="text" class="form-control" id="drive" placeholder="Optional" name="drive" required="">
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="house_no" class="form-label">Building/House No.<span class="text-muted"></span></label>
-                            <input type="text" class="form-control" id="house_no" placeholder="" name="house_no">
+                            <input type="text" class="form-control" id="house_no" placeholder="Optional" name="house_no">
                         </div>
                         <div class="col-12 m-0">
                             <hr class="my-4 mx-auto w-">

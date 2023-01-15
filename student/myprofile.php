@@ -48,7 +48,7 @@
                     <div class="col-12 text-center mb-md-4 mt-4">
                         <h4 class="fw-bold text-center green">Welcome to forecast!</h4>
                         <h5>Complete the 6 steps to get started</h5>
-                        <h4 class="fw-bold mt-3 d-md-none">1 of 6</h4>
+                        <h4 class="fw-bold mt-3 d-md-none"><span class="progress-counter">1</span> of 6</h4>
                     </div>
                     <div class="col-md-12 text-center d-none d-md-flex progress-bar-profile">
                         <div class="col-md profile-progress-container wrapper" id="step-1">
@@ -91,6 +91,7 @@
                     <?php require_once 'personal_info.php'; ?>
                     <?php require_once 'economic_status.php'; ?>
                     <?php require_once 'cet.php'; ?>
+                    <?php require_once 'shs.php'; ?>
                 </div>
             </main>
         </div>
@@ -99,6 +100,9 @@
         $(document).ready(function(){
             $('a.upload-photo').on('click', function(){
                 $('input#upload-photo').trigger('click');
+            });
+            $('a#upload_cet').on('click', function(){
+                $('input#upload_cet_hidden').trigger('click');
             });
             $('#personal.next-button').click(function(e){
                 e.preventDefault();
@@ -117,6 +121,7 @@
                 $('#step-2 div').addClass('bg-white');
                 $('#step-2 div i').addClass('color-green');
                 
+                $('span.progress-counter').text('2');
             });
             $('#economic-status.back-button').click(function(){
                 $('div.profile-screen').hide();
@@ -133,6 +138,8 @@
                 $('#step-1 div').addClass('bg-white');
                 $('#step-1 div i').removeClass('color-white');
                 $('#step-1 div i').addClass('color-green');
+
+                $('span.progress-counter').text('1');
             });
             $('#economic-status.next-button').click(function(e){
                 e.preventDefault();
@@ -150,6 +157,8 @@
                 $('#step-3 div').addClass('bg-pending');
                 $('#step-3 div').addClass('bg-white');
                 $('#step-3 div i').addClass('color-green');
+
+                $('span.progress-counter').text('3');
             });
             $('#cet.back-button').click(function(){
                 $('div.profile-screen').hide();
@@ -166,6 +175,8 @@
                 $('#step-2 div').addClass('bg-white');
                 $('#step-2 div i').removeClass('color-white');
                 $('#step-2 div i').addClass('color-green');
+
+                $('span.progress-counter').text('2');
             });
             $('#cet.next-button').click(function(e){
                 e.preventDefault();
@@ -183,6 +194,45 @@
                 $('#step-4 div').addClass('bg-pending');
                 $('#step-4 div').addClass('bg-white');
                 $('#step-4 div i').addClass('color-green');
+
+                $('span.progress-counter').text('4');
+            });
+            $('#shs.back-button').click(function(){
+                $('div.profile-screen').hide();
+                $('div#cet').show();
+                $('#step-4').removeClass('wrapper-green');
+                $('#step-4').addClass('wrapper');
+                $('#step-4 div').removeClass('bg-pending');
+                $('#step-4 div').removeClass('bg-white');
+                $('#step-4 div i').removeClass('color-green');
+
+                $('#step-3').removeClass('wrapper');
+                $('#step-3').addClass('wrapper-green');
+                $('#step-3 div').removeClass('bg-green');
+                $('#step-3 div').addClass('bg-white');
+                $('#step-3 div i').removeClass('color-white');
+                $('#step-3 div i').addClass('color-green');
+
+                $('span.progress-counter').text('3');
+            });
+            $('#shs.next-button').click(function(e){
+                e.preventDefault();
+                $('div.profile-screen').hide();
+                $('div#personality-type').show();
+                $('#step-4').removeClass('wrapper');
+                $('#step-4').addClass('wrapper-green');
+                $('#step-4 div').removeClass('bg-white');
+                $('#step-4 div').addClass('bg-green');
+                $('#step-4 div i').removeClass('color-green');
+                $('#step-4 div i').addClass('color-white');
+                
+                $('#step-5').removeClass('wrapper');
+                $('#step-5').addClass('wrapper-green');
+                $('#step-5 div').addClass('bg-pending');
+                $('#step-5 div').addClass('bg-white');
+                $('#step-5 div i').addClass('color-green');
+
+                $('span.progress-counter').text('5');
             });
             $('#region').on('change', function(){
                 var formData = {

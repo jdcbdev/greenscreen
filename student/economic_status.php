@@ -9,17 +9,16 @@
                             <label for="father_acads" class="form-label">What is your father's highest academic degree or level of education? If he is currently enrolled, the highest degree he earned.<span class="text-muted"></span></label>
                             <select class="form-control" id="father_acads" placeholder="" name="father_acads" required="">
                                 <option value="">--Select--</option>
-                                <option value="Doctorate degree">Doctorate degree</option>
-                                <option value="Professional degree">Professional degree</option>
-                                <option value="Master’s degree">Master’s degree</option>
-                                <option value="Bachelor’s degree">Bachelor’s degree</option>
-                                <option value="Associate degree">Associate degree</option>
-                                <option value="Trade/technical/vocational training">Trade/technical/vocational training</option>
-                                <option value="Some college credit, no degree">Some college credit, no degree</option>
-                                <option value="High school graduate, diploma or the equivalent">High school graduate, diploma or the equivalent</option>
-                                <option value="Some high school, no diploma">Some high school, no diploma</option>
-                                <option value="Nursery school to 8th grade">Nursery school to 8th grade</option>
-                                <option value="No schooling completed">No schooling completed</option>
+                                <?php
+                                    require_once '../classes/reference.class.php';
+                                    $ref_obj = new Reference();
+                                    $ref = $ref_obj->get_education();
+                                    foreach($ref as $row){
+                                ?>
+                                        <option value="<?=$row['education']?>"><?=$row['education']?></option>
+                                <?php
+                                    }
+                                ?>
                                 <option value="Not Applicable (no work, not known, deceased, etc.)">Not Applicable (no work, not known, deceased, etc.)</option>
                             </select>
                         </div>
@@ -27,17 +26,16 @@
                             <label for="father_employment_status" class="form-label">Which of the following categories best describes your father's employment status?<span class="text-muted"></span></label>
                             <select class="form-control" id="father_employment_status" placeholder="" name="father_employment_status" required="">
                                 <option value="">--Select--</option>
-                                <option value="Employed, working 40 hours or more per week (fulltime)">Employed, working 40 hours or more per week (fulltime)</option>
-                                <option value="Employed, working 1 to 39 hours or more per week (part-time)">Employed, working 1 to 39 hours or more per week (part-time)</option>
-                                <option value="Self-employed (doing business, etc.)">Self-employed (doing business, etc.)</option>
-                                <option value="Not employed, looking for work">Not employed, looking for work</option>
-                                <option value="Not employed, not looking for work">Not employed, not looking for work</option>
-                                <option value="Retired">Retired</option>
-                                <option value="Disabled, not able to work">Disabled, not able to work</option>
-                                <option value="High school graduate, diploma or the equivalent">High school graduate, diploma or the equivalent</option>
-                                <option value="Some high school, no diploma">Some high school, no diploma</option>
-                                <option value="Nursery school to 8th grade">Nursery school to 8th grade</option>
-                                <option value="No schooling completed">No schooling completed</option>
+                                <?php
+                                    require_once '../classes/reference.class.php';
+                                    $ref_obj = new Reference();
+                                    $ref = $ref_obj->get_employment();
+                                    foreach($ref as $row){
+                                ?>
+                                        <option value="<?=$row['employment']?>"><?=$row['employment']?></option>
+                                <?php
+                                    }
+                                ?>
                                 <option value="Not Applicable (no work, not known, deceased, etc.)">Not Applicable (no work, not known, deceased, etc.)</option>
                             </select>
                         </div>
@@ -46,10 +44,10 @@
                             <select class="form-control" id="father_employment_work" placeholder="" name="father_employment_work" required="">
                                 <option value="">--Select--</option>
                                 <?php
-                                    require_once '../classes/address.class.php';
-                                    $work_obj = new Address();
-                                    $work = $work_obj->get_work();
-                                    foreach($work as $row){
+                                    require_once '../classes/reference.class.php';
+                                    $ref_obj = new Reference();
+                                    $ref = $ref_obj->get_work();
+                                    foreach($ref as $row){
                                 ?>
                                         <option value="<?=$row['occupation']?>"><?=$row['occupation']?></option>
                                 <?php
@@ -62,35 +60,33 @@
                             <label for="mother_acads" class="form-label">What is your mother's highest academic degree or level of education? If she is currently enrolled, the highest degree she earned.<span class="text-muted"></span></label>
                             <select class="form-control" id="mother_acads" placeholder="" name="mother_acads" required="">
                                 <option value="">--Select--</option>
-                                <option value="Doctorate degree">Doctorate degree</option>
-                                <option value="Professional degree">Professional degree</option>
-                                <option value="Master’s degree">Master’s degree</option>
-                                <option value="Bachelor’s degree">Bachelor’s degree</option>
-                                <option value="Associate degree">Associate degree</option>
-                                <option value="Trade/technical/vocational training">Trade/technical/vocational training</option>
-                                <option value="Some college credit, no degree">Some college credit, no degree</option>
-                                <option value="High school graduate, diploma or the equivalent">High school graduate, diploma or the equivalent</option>
-                                <option value="Some high school, no diploma">Some high school, no diploma</option>
-                                <option value="Nursery school to 8th grade">Nursery school to 8th grade</option>
-                                <option value="No schooling completed">No schooling completed</option>
+                                <?php
+                                    require_once '../classes/reference.class.php';
+                                    $ref_obj = new Reference();
+                                    $ref = $ref_obj->get_education();
+                                    foreach($ref as $row){
+                                ?>
+                                        <option value="<?=$row['education']?>"><?=$row['education']?></option>
+                                <?php
+                                    }
+                                ?>
                                 <option value="Not Applicable (no work, not known, deceased, etc.)">Not Applicable (no work, not known, deceased, etc.)</option>
                             </select>
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="mother_employment_status" class="form-label">Which of the following categories best describes your mother's employment status?<span class="text-muted"></span></label>
                             <select class="form-control" id="mother_employment_status" placeholder="" name="mother_employment_status" required="">
-                                <option value="">--Select--</option>
-                                <option value="Employed, working 40 hours or more per week (fulltime)">Employed, working 40 hours or more per week (fulltime)</option>
-                                <option value="Employed, working 1 to 39 hours or more per week (part-time)">Employed, working 1 to 39 hours or more per week (part-time)</option>
-                                <option value="Self-employed (doing business, etc.)">Self-employed (doing business, etc.)</option>
-                                <option value="Not employed, looking for work">Not employed, looking for work</option>
-                                <option value="Not employed, not looking for work">Not employed, not looking for work</option>
-                                <option value="Retired">Retired</option>
-                                <option value="Disabled, not able to work">Disabled, not able to work</option>
-                                <option value="High school graduate, diploma or the equivalent">High school graduate, diploma or the equivalent</option>
-                                <option value="Some high school, no diploma">Some high school, no diploma</option>
-                                <option value="Nursery school to 8th grade">Nursery school to 8th grade</option>
-                                <option value="No schooling completed">No schooling completed</option>
+                                <option value="none">--Select--</option>
+                                <?php
+                                    require_once '../classes/reference.class.php';
+                                    $ref_obj = new Reference();
+                                    $ref = $ref_obj->get_employment();
+                                    foreach($ref as $row){
+                                ?>
+                                        <option value="<?=$row['employment']?>"><?=$row['employment']?></option>
+                                <?php
+                                    }
+                                ?>
                                 <option value="Not Applicable (no work, not known, deceased, etc.)">Not Applicable (no work, not known, deceased, etc.)</option>
                             </select>
                         </div>
@@ -99,16 +95,35 @@
                             <select class="form-control" id="mother_employment_work" placeholder="" name="mother_employment_work" required="">
                                 <option value="">--Select--</option>
                                 <?php
-                                    require_once '../classes/address.class.php';
-                                    $work_obj = new Address();
-                                    $work = $work_obj->get_work();
-                                    foreach($work as $row){
+                                    require_once '../classes/reference.class.php';
+                                    $ref_obj = new Reference();
+                                    $ref = $ref_obj->get_work();
+                                    foreach($ref as $row){
                                 ?>
                                         <option value="<?=$row['occupation']?>"><?=$row['occupation']?></option>
                                 <?php
                                     }
                                 ?>
                                 <option value="Not Applicable (no work, not known, deceased, etc.)">Not Applicable (no work, not known, deceased, etc.)</option>
+                            </select>
+                        </div>
+                        <h5 class="col-12 fw-bold my-4 mb-1">Availability of Resources</h5>
+                        <div class="col-12 col-md-12">
+                            <label for="laptop" class="form-label">Do you have a personal computer or laptop?<span class="text-muted"></span></label>
+                            <select class="form-control" id="laptop" placeholder="" name="laptop" required="">
+                                <option value="none">--Select--</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Planning to purchase">Planning to purchase</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-12">
+                            <label for="internet" class="form-label">What type of internet connection do you have at home?<span class="text-muted"></span></label>
+                            <select class="form-control" id="internet" placeholder="" name="internet" required="">
+                                <option value="none">--Select--</option>
+                                <option value="Post-paid plan(Unlimited Data Subscription to PLDT, GLOBE, SMART, Sky, etc.)">Post-paid plan(Unlimited Data Subscription to PLDT, GLOBE, SMART, Sky, etc.)</option>
+                                <option value="Pre-paid plan(Limited Data Subscription)">Pre-paid plan(Limited Data Subscription)</option>
+                                <option value="No internet subscription, including no access to internet connection at all">No internet subscription, including no access to internet connection at all</option>
                             </select>
                         </div>
                         <div class="col-12 m-0">

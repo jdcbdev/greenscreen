@@ -105,7 +105,7 @@
     </div>
     <div class="container marketing">
       <div class="row featurette featurette-1">
-        <div class="col-md-7 course-cs">
+        <div class="col-12 col-md-12 col-lg-7 course-cs">
           <h2 class="featurette-heading course-title">BS in Computer Science</span></h2>
           <p class="lead justify">
             The computer science course is intended for students with a solid background in mathematics 
@@ -115,11 +115,11 @@
           </p>
           <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply btn-font" href="../account/signup.php">Apply Now</a></p>
         </div>
-        <div class="col-md-5 course-1"></div>
+        <div class="col-12 col-md-10 col-lg-5 mx-auto mx-lg-0 course-1"></div>
       </div>
       <hr class="featurette-divider sec-divider">
       <div class="row featurette featurette-2">
-        <div class="col-md-7 course-it">
+        <div class="col-12 col-md-12 col-lg-7 course-it">
           <h2 class="featurette-heading course-title">BS in Information Technology</span></h2>
           <p class="lead justify">
             The BS in Information Systems program focuses on the design, development and implementation of information 
@@ -128,7 +128,7 @@
           </p>
           <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply btn-font" href="../account/signup.php">Apply Now</a></p>
         </div>
-        <div class="col-md-5 course-2"></div>
+        <div class="col-12 col-md-10 col-lg-5 mx-auto mx-lg-0 course-1 course-2"></div>
       </div>
       <hr class="featurette-divider">
       <div class="pricing-header p-3 pb-md-4 mx-auto text-center" id="admissions">
@@ -140,7 +140,7 @@
       </div>
       <div class="row align-items-md-stretch">
         <div class="col-md-6">
-          <div class="h-100 p-5 text-white background-color-green rounded-3">
+          <div class="h-100 p-3 p-md-4 p-lg-5 text-white background-color-green rounded-3">
             <h2>What is forecast?</h2>
             <p class="justify">
             The forecast is a decision-support system programmed using machine learning algorithms to predict 
@@ -150,7 +150,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="h-100 p-5 bg-light border rounded-3">
+          <div class="h-100 p-3 p-md-4 p-lg-5 bg-light border rounded-3">
             <h2>How it works?</h2>
             <p class="justify">
             The forecast can predict the student's success based on the student's attributes prior to college. The student has 
@@ -160,7 +160,7 @@
           </div>
         </div>
       </div>
-      <div class="container px-4" id="featured-3">
+      <div class="container px-4 mt-5" id="featured-3">
         <h1 class="pb-2 border-bottom text-center my-4">Features</h1>
         <div class="row g-4 py-2 row-cols-1 row-cols-lg-3">
           <div class="feature col">
