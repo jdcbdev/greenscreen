@@ -38,7 +38,7 @@
     }
 
     require_once '../tools/variables.php';
-    $page_title = 'Forecast | Add Program';
+    $page_title = 'GreenScreen | Add Program';
     $programs = 'active';
 
     require_once '../includes/header.php';

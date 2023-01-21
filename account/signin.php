@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Forecast - Sign In';
+  $page_title = 'GreenScreen - Sign In';
   require_once '../includes/header.php';
   require_once '../classes/account.class.php';
 
@@ -37,8 +37,8 @@
         <nav class="navbar navbar-expand-md navbar-dark background-color-green">
         <div class="container-fluid">
             <a class="navbar-brand" href="../home/">
-                <i class='bx bx-meteor'></i>
-                <span class="logo-name">forecast</span>
+                <img class="logo-icon green" src="../img/greenscreen_logo.png" alt="">
+                <!-- <span class="logo-name">GreenScreen</span> -->
             </a>
         </div>
         </nav>

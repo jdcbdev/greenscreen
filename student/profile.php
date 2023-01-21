@@ -13,7 +13,7 @@
     //if the above code is false then html below will be displayed
 
     require_once '../tools/variables.php';
-    $page_title = 'Forecast | My Profile';
+    $page_title = 'GreenScreen | My Profile';
     $profile = 'active';
 
     require_once '../includes/header.php';
@@ -24,7 +24,7 @@
         <div class="container-fluid p-0 pe-3 pe-md-0">
             <a class="navbar-brand col-md-3 col-lg-3 col-xl-2 me-0 px-3 py-3 background-color-green" href="../home/">
                 <i class='bx bx-meteor'></i>
-                <span class="logo-name">forecast</span>
+                <span class="logo-name">GreenScreen</span>
             </a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -12,7 +12,7 @@
       header('location: ../student/index.php');
   }
 
-  $page_title = 'Forecast - A Decision Support System';
+  $page_title = 'GreenScreen - A Decision Support System';
   require_once '../includes/header.php';
 ?>
 <body id="home-page">
@@ -21,8 +21,8 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top background-color-green">
       <div class="container-fluid">
         <a class="navbar-brand" href="../home/">
-          <i class='bx bx-meteor'></i>
-          <span class="logo-name">forecast</span>
+          <img class="logo-icon" src="../img/greenscreen_logo.png" alt="">
+          <!-- <span class="logo-name">GreenScreen</span> -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -134,16 +134,16 @@
       <div class="pricing-header p-3 pb-md-4 mx-auto text-center" id="admissions">
         <h1 class="display-4 fw-normal">Admissions</h1>
         <p class="fs-5">
-        Our admission process is now powered by a decision-support system called - <span class="green-bold fs-5">forecast</span>.
+        Our admission process is now powered by a decision-support system called - <span class="green-bold fs-5">GreenScreen</span>.
         </p>
         <p><a class="btn btn-lg btn-success background-color-green text-center btn-apply btn-font" href="../account/signup.php">Apply Now</a></p>
       </div>
       <div class="row align-items-md-stretch">
         <div class="col-md-6">
           <div class="h-100 p-3 p-md-4 p-lg-5 text-white background-color-green rounded-3">
-            <h2>What is forecast?</h2>
+            <h2>What is GreenScreen?</h2>
             <p class="justify">
-            The forecast is a decision-support system programmed using machine learning algorithms to predict 
+            The GreenScreen is a decision-support system programmed using machine learning algorithms to predict 
             the success of incoming first-year students in computer programming courses which will be used as 
             a reliable factor for admitting students to their chosen programs in the College of Computing Studies.
             </p>
@@ -153,7 +153,7 @@
           <div class="h-100 p-3 p-md-4 p-lg-5 bg-light border rounded-3">
             <h2>How it works?</h2>
             <p class="justify">
-            The forecast can predict the student's success based on the student's attributes prior to college. The student has 
+            The GreenScreen can predict the student's success based on the student's attributes prior to college. The student has 
             to sign-up and completes their profile. They need to answer some tests and participate in a short survey. Once the 
             Admission Officer verifies their account, they will receive their admission result immediately.
             </p>
@@ -338,7 +338,7 @@
   </main>
   <!-- FOOTER -->
   <footer class="container background-color-green">
-    <p class="text-center">&copy; <?=date('Y')?> Forecast &middot; <a href="#">Privacy Policy</a></p>
+    <p class="text-center">&copy; <?=date('Y')?> GreenScreen &middot; <a href="#">Privacy Policy</a></p>
   </footer>
   <script>
     $(document).ready(function(){

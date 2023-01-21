@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Forecast - Forgot Password';
+  $page_title = 'GreenScreen - Forgot Password';
   require_once '../includes/header.php';
 ?>
 <body id="sign-up">
@@ -8,8 +8,8 @@
         <nav class="navbar navbar-expand-md navbar-dark background-color-green">
         <div class="container-fluid">
             <a class="navbar-brand" href="../home/">
-                <i class='bx bx-meteor'></i>
-                <span class="logo-name">forecast</span>
+                <img class="logo-icon green" src="../img/greenscreen_logo.png" alt="">
+                <!-- <span class="logo-name">GreenScreen</span> -->
             </a>
             <span class="mx-3 shortcut">Don't have an account? <a href="./signup.php" class="green text-decoration-none">Sign up</a></span>
         </div>

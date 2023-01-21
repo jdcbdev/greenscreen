@@ -3,8 +3,8 @@
 class Database{
     private $host = 'localhost';
     private $username = 'root';
-    private $password = '';
-    private $database = 'forecast';
+    private $password = 'root';
+    private $database = 'greenscreen';
     protected $connection;
 
     function connect(){

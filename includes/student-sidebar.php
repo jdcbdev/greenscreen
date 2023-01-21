@@ -1,7 +1,7 @@
 <div class="side-bar">
-    <div class="logo-details" title="Forecast">
-        <i class='bx bx-meteor'></i>
-        <span class="logo-name">forecast</span>
+    <div class="logo-details" title="GreenScreen">
+        <img class="logo-icon" src="../img/greenscreen_logo.png" alt="">
+        <span class="logo-name">GreenScreen</span>
     </div>
     <ul class="nav-links">
         <li>

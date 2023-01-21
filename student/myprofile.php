@@ -13,7 +13,7 @@
     //if the above code is false then html below will be displayed
 
     require_once '../tools/variables.php';
-    $page_title = 'Forecast | My Profile';
+    $page_title = 'GreenScreen | My Profile';
     $profile = 'active';
 
     require_once '../includes/header.php';
@@ -25,7 +25,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="../home/">
                     <i class='bx bx-meteor'></i>
-                    <span class="logo-name">forecast</span>
+                    <span class="logo-name">GreenScreen</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
             <main class="col-md-10 mx-md-auto mb-md-5 p-4 pt-2 pt-md-4">
                 <div class="row g-3">
                     <div class="col-12 text-center mb-md-4 mt-4">
-                        <h4 class="fw-bold text-center green">Welcome to forecast!</h4>
+                        <h4 class="fw-bold text-center green">Welcome to GreenScreen!</h4>
                         <h5>Complete the 6 steps to get started</h5>
                         <h4 class="fw-bold mt-3 d-md-none"><span class="progress-counter">1</span> of 6</h4>
                     </div>

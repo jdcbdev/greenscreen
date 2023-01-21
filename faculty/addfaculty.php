@@ -40,7 +40,7 @@
     }
 
     require_once '../tools/variables.php';
-    $page_title = 'Forecast | Add Faculty';
+    $page_title = 'GreenScreen | Add Faculty';
     $faculty = 'active';
 
     require_once '../includes/header.php';

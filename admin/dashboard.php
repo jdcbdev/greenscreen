@@ -13,7 +13,7 @@
     //if the above code is false then html below will be displayed
 
     require_once '../tools/variables.php';
-    $page_title = 'Forecast | Dashboard';
+    $page_title = 'GreenScreen | Dashboard';
     $dashboard = 'active';
 
     require_once '../includes/header.php';

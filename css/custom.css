@@ -73,6 +73,14 @@ a.back-button{
     align-items: center;
 }
 
+img.logo-icon{
+    width: 44px;
+}
+
+img.logo-icon.green{
+    filter: opacity(0.5) drop-shadow(0 0 0 #107869) drop-shadow(0 0 0 #107869) drop-shadow(0 0 0 #107869) drop-shadow(0 0 0 #107869); 
+}
+
 .profile-progress-container i.bx{
     color: white;
     font-size: 22px;

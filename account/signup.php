@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Forecast - Sign Up';
+  $page_title = 'GreenScreen - Sign Up';
   require_once '../includes/header.php';
 ?>
 <body id="sign-up">
@@ -8,8 +8,8 @@
         <nav class="navbar navbar-expand-md navbar-dark background-color-green">
         <div class="container-fluid">
             <a class="navbar-brand" href="../home/">
-                <i class='bx bx-meteor'></i>
-                <span class="logo-name">forecast</span>
+                <img class="logo-icon green" src="../img/greenscreen_logo.png" alt="">
+                <!-- <span class="logo-name">GreenScreen</span> -->
             </a>
             <?php
             if(isset($_GET['student']) &&  $_GET['student'] == 'new'){
