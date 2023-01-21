@@ -104,6 +104,9 @@
             $('a#upload_cet').on('click', function(){
                 $('input#upload_cet_hidden').trigger('click');
             });
+            $('a#upload_shs_card').on('click', function(){
+                $('input#upload_shs_card_hidden').trigger('click');
+            });
             $('#personal.next-button').click(function(e){
                 e.preventDefault();
                 $('div.profile-screen').hide();
@@ -122,6 +125,8 @@
                 $('#step-2 div i').addClass('color-green');
                 
                 $('span.progress-counter').text('2');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
             $('#economic-status.back-button').click(function(){
                 $('div.profile-screen').hide();
@@ -140,6 +145,8 @@
                 $('#step-1 div i').addClass('color-green');
 
                 $('span.progress-counter').text('1');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -400}, 'fast');
             });
             $('#economic-status.next-button').click(function(e){
                 e.preventDefault();
@@ -159,6 +166,8 @@
                 $('#step-3 div i').addClass('color-green');
 
                 $('span.progress-counter').text('3');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
             $('#cet.back-button').click(function(){
                 $('div.profile-screen').hide();
@@ -177,6 +186,8 @@
                 $('#step-2 div i').addClass('color-green');
 
                 $('span.progress-counter').text('2');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
             $('#cet.next-button').click(function(e){
                 e.preventDefault();
@@ -196,6 +207,8 @@
                 $('#step-4 div i').addClass('color-green');
 
                 $('span.progress-counter').text('4');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
             $('#shs.back-button').click(function(){
                 $('div.profile-screen').hide();
@@ -214,6 +227,8 @@
                 $('#step-3 div i').addClass('color-green');
 
                 $('span.progress-counter').text('3');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
             $('#shs.next-button').click(function(e){
                 e.preventDefault();
@@ -233,6 +248,8 @@
                 $('#step-5 div i').addClass('color-green');
 
                 $('span.progress-counter').text('5');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
             $('#region').on('change', function(){
                 var formData = {
