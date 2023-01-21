@@ -408,6 +408,10 @@ div.sign-in{
     font-size: 2rem;
 }
 
+.fa-network-wired, .fa-laptop-code{
+    font-size: 2rem;
+}
+
 div.card-hover{
     border: 1px solid #107869;
     background-color: #F2F7F2;
@@ -416,6 +420,20 @@ div.card-hover{
 div.card:hover{
     border: 1px solid #107869;
     background-color: #F2F7F2;
+}
+
+a.link-here{
+    text-decoration: none;
+    color: #107869;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+a.link-here:hover, a.link-here:active, a.link-here:focus{
+    text-decoration: none;
+    color: #107869;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 p.continue{

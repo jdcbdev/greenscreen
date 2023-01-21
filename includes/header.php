@@ -27,4 +27,5 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <title><?php echo $page_title; ?></title>
+    <link rel="icon" href="../img/greenscreen_logo_green.png" type="image/icon type">
 </head>

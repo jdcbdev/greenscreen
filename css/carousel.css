@@ -17,7 +17,7 @@ body#home-page {
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
-    bottom: 3rem;
+    bottom: 7rem;
     z-index: 10;
   }
   
@@ -83,11 +83,21 @@ body#home-page {
     .featurette-heading {
       font-size: 50px;
     }
+
+    .carousel-caption {
+      bottom: 8rem;
+      z-index: 10;
+    }
   }
   
   @media (min-width: 62em) {
     .featurette-heading {
       margin-top: 7rem;
+    }
+
+    .carousel-caption {
+      bottom: 9.5rem;
+      z-index: 10;
     }
   }
   

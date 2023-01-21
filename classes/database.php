@@ -3,7 +3,7 @@
 class Database{
     private $host = 'localhost';
     private $username = 'root';
-    private $password = 'root';
+    private $password = '';
     private $database = 'greenscreen';
     protected $connection;
 

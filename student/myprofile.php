@@ -24,8 +24,8 @@
         <nav class="navbar navbar-expand-md navbar-dark fixed-top background-color-green">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../home/">
-                    <i class='bx bx-meteor'></i>
-                    <span class="logo-name">GreenScreen</span>
+                    <img class="logo-icon" src="../img/greenscreen_logo.png" alt="">
+                    <!-- <span class="logo-name">GreenScreen</span> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

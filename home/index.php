@@ -64,7 +64,7 @@
             <div class="carousel-caption">
               <h1>Student-Centered College.</h1>
               <p>The College of Computing Studies allows students to explore their passions for problem-solving and producing creative experiences.</p>
-              <p><a class="btn btn-lg btn-success background-color-green btn-apply" href="#">Learn More</a></p>
+              <p><a class="btn btn-lg btn-success background-color-green btn-apply d-none" href="#">Learn More</a></p>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@
             <div class="carousel-caption">
               <h1>Innovative and Supportive Faculty and Staff.</h1>
               <p>The College of Computing Studies is united by a common goal: to make the world a better place through education, research, and innovation.</p>
-              <p><a class="btn btn-lg btn-success background-color-green btn-apply" href="#">Learn More</a></p>
+              <p><a class="btn btn-lg btn-success background-color-green btn-apply d-none" href="#">Learn More</a></p>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
             <div class="carousel-caption">
               <h1>Convenient Facilities.</h1>
               <p>The College of Computing Studies is equipped with spacious and fully-aircon classrooms, high-tech laboratories, media rooms, and free wifi for all students.</p>
-              <p><a class="btn btn-lg btn-success background-color-green btn-apply" href="#">Learn More</a></p>
+              <p><a class="btn btn-lg btn-success background-color-green btn-apply d-none" href="#">Learn More</a></p>
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@
             graduates with an educational foundation for careers in computer software or computer system design, 
             including careers as software engineers, application software designers, system programmers, or system engineers.
           </p>
-          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply btn-font" href="../account/signup.php">Apply Now</a></p>
+          <p class="btn-apply-center"><a class="btn btn-lg btn-success background-color-green btn-apply btn-font" href="../student/apply.php">Apply Now</a></p>
         </div>
         <div class="col-12 col-md-10 col-lg-5 mx-auto mx-lg-0 course-1"></div>
       </div>

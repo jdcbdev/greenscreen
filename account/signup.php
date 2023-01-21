@@ -8,7 +8,7 @@
         <nav class="navbar navbar-expand-md navbar-dark background-color-green">
         <div class="container-fluid">
             <a class="navbar-brand" href="../home/">
-                <img class="logo-icon green" src="../img/greenscreen_logo.png" alt="">
+                <img class="logo-icon" src="../img/greenscreen_logo_green.png" alt="">
                 <!-- <span class="logo-name">GreenScreen</span> -->
             </a>
             <?php
