@@ -277,12 +277,107 @@ p.justify{
     padding-bottom: 0 !important;
 }
 
-.rounded-circle{
+.dropdown-user{
+    position: absolute;
+    inset: 0px 0px auto auto !important;
+    margin: 0;
+    transform: translate3d(0px, 34px, 0px);
+}
+
+.faculty .rounded-circle{
     margin-bottom: 2rem;
 }
 
 .faculty h3{
     font-size: 1.5rem !important;
+}
+
+ul.application .nav-item.active{
+    border-bottom: 2px solid #107869;
+}
+
+ul.application a.nav-link{
+    color: #107869;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+ul.application .counter{
+    background-color: #107869;
+    color: white;
+    margin: 0 0 0 5px;
+    padding: 5px;
+    border-radius: 6px;
+    line-height: 15px;
+}
+
+.page-item.active .page-link{
+    background-color: #107869;
+    border-color: #107869;
+    color: white;
+}
+
+.page-link{
+    color: #107869
+}
+
+.status-pending{
+    background-color: darkorange;
+    padding: 6px;
+    border-radius: 8px;
+    color: white;
+}
+
+.status-qualified{
+    background-color: #107869;
+    padding: 6px;
+    border-radius: 8px;
+    color: white;
+}
+
+.status-declined{
+    background-color: #c51244;
+    padding: 6px;
+    border-radius: 8px;
+    color: white;
+}
+
+.status-interview{
+    background-color: #3367D6;
+    padding: 6px;
+    border-radius: 8px;
+    color: white;
+}
+
+.status-approved{
+    background-color: #107869;
+    padding: 6px;
+    border-radius: 8px;
+    color: white;
+}
+
+td div.action-button{
+    margin-left: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.table-filter-option{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.table-container{
+    overflow-x: hidden;
+}
+
+table#table-pending tr td{
+    vertical-align: middle;
 }
 
 .faculty h4{
@@ -580,6 +675,21 @@ a.green:hover{
     color: white;
 }
 
+.sidebar .nav-link:focus{
+    background-color: #1A5653;
+    color: white;
+}
+
+.sidebar .nav-link:visited{
+    background-color: #1A5653;
+    color: white;
+}
+
+.sidebar .nav-link:active{
+    background-color: #1A5653;
+    color: white;
+}
+
 .sidebar .nav-link.active{
     background-color: #1A5653;
     color: white;
@@ -735,6 +845,11 @@ input.upload-photo{
 @media (min-width: 768px) {
     .course-1, .course-2{
         height: 350px;
+    }
+
+    .table-filter-option{
+        flex-direction: row;
+        align-items: center;
     }
 
     .upload-container{

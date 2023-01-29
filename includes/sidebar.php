@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="application.php" class="nav-link <?php echo $application; ?>" title="Applications">
+                <a href="../application" class="nav-link <?php echo $application; ?>" title="Applications">
                     <i class='bx bx-send'></i>
                     <span class="links-name">Applications</span>
                 </a>
@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="settings.php" class="nav-link <?php echo $settings; ?>" title="Settings">
+                <a href="../admin/settings.php" class="nav-link <?php echo $settings; ?>" title="Settings">
                     <i class='bx bx-cog'></i>
                     <span class="links-name">Settings</span>
                 </a>
@@ -47,7 +47,7 @@
             <li id="logout-link" class="nav-item">
                 <a class="logout-link nav-link" href="../account/logout.php" title="Logout">
                     <i class='bx bx-log-out'></i>
-                    <span class="links-name">Logout</span>
+                    <span class="links-name">Sign out</span>
                 </a>
             </li>
         </ul>
