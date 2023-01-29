@@ -4,27 +4,9 @@
 ?>
 <body id="sign-up">
     <!-- Header -->
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark background-color-green">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../home/">
-                <img class="logo-icon" src="../img/greenscreen_logo_green.png" alt="">
-                <!-- <span class="logo-name">GreenScreen</span> -->
-            </a>
-            <?php
-            if(isset($_GET['student']) &&  $_GET['student'] == 'new'){
-            ?>
-                <span class="mx-3 shortcut">Are you a shiftee or transferee? <a href="./signup.php?student=old" class="green text-decoration-none">Sign up here</a></span>
-            <?php
-            }else if(isset($_GET['student']) &&  $_GET['student'] == 'old'){
-            ?>
-                <span class="mx-3 shortcut">Are you an incoming college student? <a href="./signup.php?student=new" class="green text-decoration-none">Sign up here</a></span>
-            <?php
-            }
-            ?>
-        </div>
-        </nav>
-    </header>
+    <?php
+        require_once '../includes/topnav_account.php';
+    ?>
     <main class="py-md-4">
         <?php
             if(isset($_GET['student']) &&  $_GET['student'] == 'new'){

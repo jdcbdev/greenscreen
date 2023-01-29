@@ -1,57 +1,32 @@
-<section class="home-section">
-    <nav>
-        <div class="side-bar-button">
-            <i class='bx bx-menu small'></i>
-            <i class='bx bx-menu large'></i>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top background-color-green">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../home/">
+          <img class="logo-icon" src="../img/greenscreen_logo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home" id="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#academics" id="academics">Academics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#admissions" id="admissions">Admissions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faculty" id="faculty">Faculty</a>
+            </li>
+            <li class="nav-item d-md-none">
+              <a class="nav-link" href="../account/signin.php" id="signin">Sign in</a>
+            </li>
+          </ul>
+          <a href="../account/signin.php" class="d-none d-md-block"><button class="btn btn-outline-success btn-login">Sign in</button></a>
         </div>
-        <div class="profile-details">
-            <i class='bx bx-user-circle'></i>
-            <!-- each time you need to output in PHP, use echo -->
-            <!-- the $_SESSION['fullname'] is set in login page -->
-            <!-- session variables can be accessed anywhere in the page -->
-            <span class="admin-name"><?php echo $_SESSION['fullname']; ?></span>
-        </div>
+      </div>
     </nav>
-
-    <script>
-        var reference = (function self(){
-            if(sessionStorage.getItem("sidebar") == "small"){
-                small();
-            }else{
-                large();
-            }
-        }());
-
-        $('.bx-menu.small').on('click', function(){
-            small();
-        });
-        $('.bx-menu.large').on('click', function(){
-            large();
-        });
-
-        function small(){
-            $('.bx-menu.small').hide();
-            $('.bx-menu.large').show();
-
-            $('.side-bar').css('width', '60px');
-            $('.home-section').css('width', 'calc(100% - 60px)');
-            $('.home-section').css('left', '60px');
-            $('.home-section nav').css('width', 'calc(100% - 60px)');
-            $('.home-section nav').css('left', '60px');
-
-            sessionStorage.setItem("sidebar", "small");
-        }
-
-        function large(){
-            $('.bx-menu.small').show();
-            $('.bx-menu.large').hide();
-
-            $('.side-bar').css('width', '250px');
-            $('.home-section').css('width', 'calc(100% - 250px)');
-            $('.home-section').css('left', '250px');
-            $('.home-section nav').css('width', 'calc(100% - 250px)');
-            $('.home-section nav').css('left', '250px');
-
-            sessionStorage.setItem("sidebar", "large");
-        }
-    </script>
+</header>

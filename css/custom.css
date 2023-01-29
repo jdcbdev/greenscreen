@@ -15,6 +15,24 @@
     padding-top: 8px;
 }
 
+.red, .red:hover{
+    color: #c51244;
+    text-align: center;
+    line-height: 20px;
+}
+
+.orange, .orange:hover{
+    color: #FF6347;
+    text-align: center;
+    line-height: 20px;
+}
+
+.yellow, .yellow:hover{
+    color:darkorange;
+    text-align: center;
+    line-height: 20px;
+}
+
 .bx-user-circle{
     font-size: 1.5rem;
 }
@@ -331,7 +349,7 @@ h4 span.progress-counter{
 }
 
 .logo-name{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .navbar-brand{
@@ -546,7 +564,7 @@ a.green:hover{
     bottom: 0;
     left: 0;
     z-index: 100;
-    padding: 70px 0 0;
+    padding: 76px 0 0;
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
@@ -751,6 +769,10 @@ input.upload-photo{
 }
 
 @media (min-width: 992px) {
+    .logo-name{
+        font-size: 1.4rem;
+    }
+    
     .course-1, .course-2{
         height: 400px;
     }

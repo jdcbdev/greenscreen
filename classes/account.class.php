@@ -17,7 +17,20 @@ class Account{
     }
 
     function sign_in(){
-        $sql = "SELECT * FROM account WHERE BINARY email = :email AND BINARY password = :password;";
+        $sql = "SELECT * FROM account WHERE BINARY email = :email AND BINARY password = :password AND type = 'student';";
+        $query=$this->db->connect()->prepare($sql);
+        $query->bindParam(':email', $this->email);
+        $query->bindParam(':password', $this->password);
+        if($query->execute()){
+            if($query->rowCount()>0){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function sign_in_admin(){
+        $sql = "SELECT * FROM account WHERE BINARY email = :email AND BINARY password = :password AND type != 'student';";
         $query=$this->db->connect()->prepare($sql);
         $query->bindParam(':email', $this->email);
         $query->bindParam(':password', $this->password);

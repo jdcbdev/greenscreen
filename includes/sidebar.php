@@ -2,22 +2,7 @@
     <div class="position-sticky h-100">
         <ul class="nav flex-column">
             <?php
-                if($_SESSION['logged-in'] == 'student'){
-            ?>
-            <li class="nav-item">
-                <a href="application.php" class="nav-link <?php echo $application; ?>" title="Applications">
-                    <i class='bx bx-send'></i>
-                    <span class="links-name">Applications</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="profile.php" class="nav-link <?php echo $profile; ?>" title="Profile">
-                    <i class='bx bx-user'></i>
-                    <span class="links-name">Profile</span>
-                </a>
-            </li>
-            <?php
-                }else{
+                if($_SESSION['user_type'] == 'admin'){
             ?>
             <li class="nav-item">
                 <a href="../admin/dashboard.php" class="nav-link <?php echo $dashboard; ?>" title="Dashboard">
@@ -50,7 +35,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link <?php echo $settings; ?>" title="Settings">
+                <a href="settings.php" class="nav-link <?php echo $settings; ?>" title="Settings">
                     <i class='bx bx-cog'></i>
                     <span class="links-name">Settings</span>
                 </a>

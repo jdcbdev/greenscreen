@@ -33,16 +33,9 @@
 ?>
 <body id="sign-up">
     <!-- Header -->
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark background-color-green">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../home/">
-                <img class="logo-icon" src="../img/greenscreen_logo_green.png" alt="">
-                <!-- <span class="logo-name">GreenScreen</span> -->
-            </a>
-        </div>
-        </nav>
-    </header>
+    <?php
+        require_once '../includes/topnav_account.php';
+    ?>
     <main class="py-md-4">
         <div class="container-fluid d-flex align-items-md-center justify-content-md-center">
             <div class="container-fluid sign-in p-sm-5">
@@ -87,7 +80,7 @@
                                         <label class="form-check-label" for="inlineCheckbox1">Remember me</label>
                                     </div>
                                     <div class="form-check form-check-inline float-end me-0">
-                                        <a class="green fw-bold text-decoration-none text-end" href="forgotpassword.php">Forgot password?</a>
+                                        <a class="green fw-bold text-decoration-none text-end" href="forgotpassword.php?reset=yes">Forgot password?</a>
                                     </div>
                                 </div>
                                 <div class="col-12 pt-2 mb-3">
