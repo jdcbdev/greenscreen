@@ -38,6 +38,7 @@
         <tr>
             <td>
                 <div class="action-button">
+                    <a href="" class="me-2 green"><i class="fa-solid fa-user-check"></i></a>
                     <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
@@ -53,6 +54,7 @@
         <tr>
             <td>
                 <div class="action-button">
+                    <a href="" class="me-2 green"><i class="fa-solid fa-user-check"></i></a>
                     <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
@@ -68,6 +70,7 @@
         <tr>
             <td>
                 <div class="action-button">
+                    <a href="" class="me-2 green"><i class="fa-solid fa-user-check"></i></a>
                     <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
@@ -83,6 +86,7 @@
         <tr>
             <td>
                 <div class="action-button">
+                    <a href="" class="me-2 green"><i class="fa-solid fa-user-check"></i></a>
                     <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
