@@ -7,7 +7,7 @@
                     <div class="row g-3">
                         <div class="col-12 col-md-12">
                             <label for="father_acads" class="form-label">What is your father's highest academic degree or level of education? If he is currently enrolled, the highest degree he earned.<span class="text-muted"></span></label>
-                            <select class="form-control" id="father_acads" placeholder="" name="father_acads" required="">
+                            <select class="form-control form-select" id="father_acads" placeholder="" name="father_acads" required="">
                                 <option value="">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -24,7 +24,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="father_employment_status" class="form-label">Which of the following categories best describes your father's employment status?<span class="text-muted"></span></label>
-                            <select class="form-control" id="father_employment_status" placeholder="" name="father_employment_status" required="">
+                            <select class="form-control form-select" id="father_employment_status" placeholder="" name="father_employment_status" required="">
                                 <option value="">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="father_employment_work" class="form-label">Which of the following best describes your father's current occupation?<span class="text-muted"></span></label>
-                            <select class="form-control" id="father_employment_work" placeholder="" name="father_employment_work" required="">
+                            <select class="form-control form-select" id="father_employment_work" placeholder="" name="father_employment_work" required="">
                                 <option value="">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -58,7 +58,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="mother_acads" class="form-label">What is your mother's highest academic degree or level of education? If she is currently enrolled, the highest degree she earned.<span class="text-muted"></span></label>
-                            <select class="form-control" id="mother_acads" placeholder="" name="mother_acads" required="">
+                            <select class="form-control form-select" id="mother_acads" placeholder="" name="mother_acads" required="">
                                 <option value="">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -75,7 +75,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="mother_employment_status" class="form-label">Which of the following categories best describes your mother's employment status?<span class="text-muted"></span></label>
-                            <select class="form-control" id="mother_employment_status" placeholder="" name="mother_employment_status" required="">
+                            <select class="form-control form-select" id="mother_employment_status" placeholder="" name="mother_employment_status" required="">
                                 <option value="none">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -92,7 +92,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="mother_employment_work" class="form-label">Which of the following best describes your mother's current occupation?<span class="text-muted"></span></label>
-                            <select class="form-control" id="mother_employment_work" placeholder="" name="mother_employment_work" required="">
+                            <select class="form-control form-select" id="mother_employment_work" placeholder="" name="mother_employment_work" required="">
                                 <option value="">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -110,7 +110,7 @@
                         <h5 class="col-12 fw-bold my-4 mb-1">Availability of Resources</h5>
                         <div class="col-12 col-md-12">
                             <label for="laptop" class="form-label">Do you have a personal computer or laptop?<span class="text-muted"></span></label>
-                            <select class="form-control" id="laptop" placeholder="" name="laptop" required="">
+                            <select class="form-control form-select" id="laptop" placeholder="" name="laptop" required="">
                                 <option value="none">--Select--</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
@@ -119,7 +119,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="internet" class="form-label">What type of internet connection do you have at home?<span class="text-muted"></span></label>
-                            <select class="form-control" id="internet" placeholder="" name="internet" required="">
+                            <select class="form-control form-select" id="internet" placeholder="" name="internet" required="">
                                 <option value="none">--Select--</option>
                                 <option value="Post-paid plan(Unlimited Data Subscription to PLDT, GLOBE, SMART, Sky, etc.)">Post-paid plan(Unlimited Data Subscription to PLDT, GLOBE, SMART, Sky, etc.)</option>
                                 <option value="Pre-paid plan(Limited Data Subscription)">Pre-paid plan(Limited Data Subscription)</option>

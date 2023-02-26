@@ -25,7 +25,6 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="../home/">
                     <img class="logo-icon" src="../img/greenscreen_logo.png" alt="">
-                    <!-- <span class="logo-name">GreenScreen</span> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -59,21 +58,21 @@
                         </div>
                         <div class="col-md profile-progress-container wrapper" id="step-2">
                             <div class="profile-progress">
-                                <i class="fa-solid fa-house-chimney-user"></i>
-                            </div>
-                            <p class="text-center my-2 small">Economic Status</p>
-                        </div>
-                        <div class="col-md profile-progress-container wrapper" id="step-3">
-                            <div class="profile-progress">
                                 <i class="fa-solid fa-file-circle-check"></i>
                             </div>
                             <p class="text-center my-2 small">College Entrance Test</p>
                         </div>
-                        <div class="col-md profile-progress-container wrapper" id="step-4">
+                        <div class="col-md profile-progress-container wrapper" id="step-3">
                             <div class="profile-progress">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <p class="text-center my-2 small">Senior High School Background</p>
+                        </div>
+                        <div class="col-md profile-progress-container wrapper" id="step-4">
+                            <div class="profile-progress">
+                                <i class="fa-solid fa-house-chimney-user"></i>
+                            </div>
+                            <p class="text-center my-2 small">Economic Status</p>
                         </div>
                         <div class="col-md profile-progress-container wrapper" id="step-5">
                             <div class="profile-progress">
@@ -89,9 +88,11 @@
                         </div>
                     </div>
                     <?php require_once 'personal_info.php'; ?>
-                    <?php require_once 'economic_status.php'; ?>
                     <?php require_once 'cet.php'; ?>
                     <?php require_once 'shs.php'; ?>
+                    <?php require_once 'economic_status.php'; ?>
+                    <?php require_once 'personality_test.php'; ?>
+                    <?php require_once 'study_habits.php'; ?>
                 </div>
             </main>
         </div>
@@ -110,7 +111,7 @@
             $('#personal.next-button').click(function(e){
                 e.preventDefault();
                 $('div.profile-screen').hide();
-                $('div#economic-status').show();
+                $('div#cet').show();
                 $('#step-1').removeClass('wrapper');
                 $('#step-1').addClass('wrapper-green');
                 $('#step-1 div').removeClass('bg-white');
@@ -128,7 +129,7 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
-            $('#economic-status.back-button').click(function(){
+            $('#cet.back-button').click(function(){
                 $('div.profile-screen').hide();
                 $('div#personal-info').show();
                 $('#step-2').removeClass('wrapper-green');
@@ -148,10 +149,10 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -400}, 'fast');
             });
-            $('#economic-status.next-button').click(function(e){
+            $('#cet.next-button').click(function(e){
                 e.preventDefault();
                 $('div.profile-screen').hide();
-                $('div#cet').show();
+                $('div#shs').show();
                 $('#step-2').removeClass('wrapper');
                 $('#step-2').addClass('wrapper-green');
                 $('#step-2 div').removeClass('bg-white');
@@ -169,9 +170,9 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
-            $('#cet.back-button').click(function(){
+            $('#shs.back-button').click(function(){
                 $('div.profile-screen').hide();
-                $('div#economic-status').show();
+                $('div#cet').show();
                 $('#step-3').removeClass('wrapper-green');
                 $('#step-3').addClass('wrapper');
                 $('#step-3 div').removeClass('bg-pending');
@@ -189,10 +190,10 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
-            $('#cet.next-button').click(function(e){
+            $('#shs.next-button').click(function(e){
                 e.preventDefault();
                 $('div.profile-screen').hide();
-                $('div#shs').show();
+                $('div#economic-status').show();
                 $('#step-3').removeClass('wrapper');
                 $('#step-3').addClass('wrapper-green');
                 $('#step-3 div').removeClass('bg-white');
@@ -210,9 +211,9 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
-            $('#shs.back-button').click(function(){
+            $('#economic-status.back-button').click(function(){
                 $('div.profile-screen').hide();
-                $('div#cet').show();
+                $('div#shs').show();
                 $('#step-4').removeClass('wrapper-green');
                 $('#step-4').addClass('wrapper');
                 $('#step-4 div').removeClass('bg-pending');
@@ -230,10 +231,10 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
-            $('#shs.next-button').click(function(e){
+            $('#economic-status.next-button').click(function(e){
                 e.preventDefault();
                 $('div.profile-screen').hide();
-                $('div#personality-type').show();
+                $('div#personality-test').show();
                 $('#step-4').removeClass('wrapper');
                 $('#step-4').addClass('wrapper-green');
                 $('#step-4 div').removeClass('bg-white');

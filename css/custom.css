@@ -803,6 +803,14 @@ input.upload-photo{
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
+.instructions{
+    padding: 0 30px;
+}
+
+div.question-group .form-label{
+    margin-top: .25rem;
+}
+
 @media (min-width: 576px) {
     .shortcut{
         display: block;

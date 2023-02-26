@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="sex" class="form-label">Sex<span class="text-muted"></span></label>
-                            <select class="form-control" id="sex" placeholder="" name="sex" required="">
+                            <select class="form-control form-select" id="sex" placeholder="" name="sex" required="">
                                 <option value="">--Select--</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
@@ -56,7 +56,7 @@
                         <h5 class="col-12 fw-bold my-4 mb-1">Home Address</h5>
                         <div class="col-12 col-md-6">
                             <label for="region" class="form-label">Region<span class="text-muted"></span></label>
-                            <select type="text" class="form-control" id="region" placeholder="" name="region" required="">
+                            <select type="text" class="form-control form-select" id="region" placeholder="" name="region" required="">
                                 <option value="none">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -72,19 +72,19 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="province" class="form-label">Province<span class="text-muted"></span></label>
-                            <select type="text" class="form-control" id="province" placeholder="" name="province" required="">
+                            <select class="form-control form-select" id="province" placeholder="" name="province" required="">
                                 <option value="none">--Select--</option>
                             </select>
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="city" class="form-label">City/Municipality<span class="text-muted"></span></label>
-                            <select type="text" class="form-control" id="city" placeholder="" name="city" required="">
+                            <select class="form-control form-select" id="city" placeholder="" name="city" required="">
                                 <option value="none">--Select--</option>
                             </select>
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="barangay" class="form-label">Barangay<span class="text-muted"></span></label>
-                            <select type="text" class="form-control" id="barangay" placeholder="" name="barangay" required="">
+                            <select class="form-control form-select" id="barangay" placeholder="" name="barangay" required="">
                                 <option value="none">--Select--</option>
                             </select>
                         </div>

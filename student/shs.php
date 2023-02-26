@@ -7,7 +7,7 @@
                     <div class="row g-3">
                         <div class="col-12 col-md-12">
                             <label for="strand" class="form-label">What strand did you take in SHS?<span class="text-muted"></span></label>
-                            <select class="form-control" id="strand" placeholder="" name="strand" required="">
+                            <select class="form-control form-select" id="strand" placeholder="" name="strand" required="">
                                 <option value="">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="class_rank" class="form-label">What was your last Class Rank when you finished the SHS Program?<span class="text-muted"></span></label>
-                            <select class="form-control" id="class_rank" placeholder="" name="class_rank" required="">
+                            <select class="form-control form-select" id="class_rank" placeholder="" name="class_rank" required="">
                                 <option value="">--Select--</option>
                                 <option value="Top 5">Top 5</option>
                                 <option value="Top 10">Top 10</option>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="awards" class="form-label">Academic Awards Received in SHS<span class="text-muted"></span></label>
-                            <select class="form-control" id="awards" placeholder="" name="awards" required="">
+                            <select class="form-control form-select" id="awards" placeholder="" name="awards" required="">
                                 <option value="">--Select--</option>
                                 <option value="Highest Honor">Highest Honor</option>
                                 <option value="High Honor">High Honor</option>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="class_org" class="form-label">Membership in the Classroom Organization (last position before finishing SHS)<span class="text-muted"></span></label>
-                            <select class="form-control" id="class_org" placeholder="" name="class_org" required="">
+                            <select class="form-control form-select" id="class_org" placeholder="" name="class_org" required="">
                                 <option value="none">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';
@@ -63,7 +63,7 @@
                         </div>
                         <div class="col-12 col-md-12">
                             <label for="scg_org" class="form-label">Membership in the Student Supreme Council/Government (last position before finishing SHS)<span class="text-muted"></span></label>
-                            <select class="form-control" id="scg_org" placeholder="" name="scg_org" required="">
+                            <select class="form-control form-select" id="scg_org" placeholder="" name="scg_org" required="">
                                 <option value="none">--Select--</option>
                                 <?php
                                     require_once '../classes/reference.class.php';

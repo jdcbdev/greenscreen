@@ -32,7 +32,7 @@
         <div class="carousel-item banner-1 active">
           <div class="container">  
             <div class="carousel-caption">
-              <h1>Student-Centered College1111111.</h1>
+              <h1>Student-Centered College.</h1>
               <p>The College of Computing Studies allows students to explore their passions for problem-solving and producing creative experiences.</p>
               <p><a class="btn btn-lg btn-success background-color-green btn-apply d-none" href="#">Learn More</a></p>
             </div>
