@@ -479,17 +479,521 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="question-group question-group-5">
+                            <div class="col-12 col-md-12">
+                                <label for="pq-21" class="form-label col-12">21. I want to work in laboratories.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-21" id="q-21.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-21.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-21" id="q-21.2" value="Agree">
+                                    <label class="form-check-label" for="q-21.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-21" id="q-21.3" value="Neutral">
+                                    <label class="form-check-label" for="q-21.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-21" id="q-21.4" value="Disagree">
+                                    <label class="form-check-label" for="q-21.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-21" id="q-21.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-21.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-22" class="form-label col-12">22. Reading a book excites me more than parties.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-22" id="q-22.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-22.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-22" id="q-22.2" value="Agree">
+                                    <label class="form-check-label" for="q-22.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-22" id="q-22.3" value="Neutral">
+                                    <label class="form-check-label" for="q-22.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-22" id="q-22.4" value="Disagree">
+                                    <label class="form-check-label" for="q-22.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-22" id="q-22.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-22.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-23" class="form-label col-12">23. I am more spontaneous than planned.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-23" id="q-23.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-23.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-23" id="q-23.2" value="Agree">
+                                    <label class="form-check-label" for="q-23.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-23" id="q-23.3" value="Neutral">
+                                    <label class="form-check-label" for="q-23.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-23" id="q-23.4" value="Disagree">
+                                    <label class="form-check-label" for="q-23.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-23" id="q-23.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-23.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-24" class="form-label col-12">24. I am most comfortable following a schedule.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-24" id="q-24.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-24.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-24" id="q-24.2" value="Agree">
+                                    <label class="form-check-label" for="q-24.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-24" id="q-24.3" value="Neutral">
+                                    <label class="form-check-label" for="q-24.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-24" id="q-24.4" value="Disagree">
+                                    <label class="form-check-label" for="q-24.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-24" id="q-24.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-24.5">Strongly Disagree</label>  
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-25" class="form-label col-12">25. I prefer a plan that is set in stone.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-25" id="q-25.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-25.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-25" id="q-25.2" value="Agree">
+                                    <label class="form-check-label" for="q-25.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-25" id="q-25.3" value="Neutral">
+                                    <label class="form-check-label" for="q-25.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-25" id="q-25.4" value="Disagree">
+                                    <label class="form-check-label" for="q-25.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-25" id="q-25.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-25.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-group question-group-6">
+                            <div class="col-12 col-md-12">
+                                <label for="pq-26" class="form-label col-12">26. I am good with numbers and statistics.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-26" id="q-26.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-26.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-26" id="q-26.2" value="Agree">
+                                    <label class="form-check-label" for="q-26.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-26" id="q-26.3" value="Neutral">
+                                    <label class="form-check-label" for="q-26.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-26" id="q-26.4" value="Disagree">
+                                    <label class="form-check-label" for="q-26.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-26" id="q-26.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-26.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-27" class="form-label col-12">27. People who know me well say I am passionate and sensitive.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-27" id="q-27.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-27.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-27" id="q-27.2" value="Agree">
+                                    <label class="form-check-label" for="q-27.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-27" id="q-27.3" value="Neutral">
+                                    <label class="form-check-label" for="q-27.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-27" id="q-27.4" value="Disagree">
+                                    <label class="form-check-label" for="q-27.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-27" id="q-27.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-27.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-28" class="form-label col-12">28. I am keen to do volunteering for non-profit organisations.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-28" id="q-28.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-28.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-28" id="q-28.2" value="Agree">
+                                    <label class="form-check-label" for="q-28.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-28" id="q-28.3" value="Neutral">
+                                    <label class="form-check-label" for="q-28.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-28" id="q-28.4" value="Disagree">
+                                    <label class="form-check-label" for="q-28.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-28" id="q-28.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-28.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-29" class="form-label col-12">29. I want to know more about negotiating.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-29" id="q-29.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-29.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-29" id="q-29.2" value="Agree">
+                                    <label class="form-check-label" for="q-29.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-29" id="q-29.3" value="Neutral">
+                                    <label class="form-check-label" for="q-29.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-29" id="q-29.4" value="Disagree">
+                                    <label class="form-check-label" for="q-29.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-29" id="q-29.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-29.5">Strongly Disagree</label>  
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-30" class="form-label col-12">30. I enjoy fixing hands-on problems.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-30" id="q-30.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-30.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-30" id="q-30.2" value="Agree">
+                                    <label class="form-check-label" for="q-30.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-30" id="q-30.3" value="Neutral">
+                                    <label class="form-check-label" for="q-30.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-30" id="q-30.4" value="Disagree">
+                                    <label class="form-check-label" for="q-30.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-30" id="q-30.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-30.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-group question-group-7">
+                            <div class="col-12 col-md-12">
+                                <label for="pq-31" class="form-label col-12">31. I am keen on new ideas.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-31" id="q-31.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-31.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-31" id="q-31.2" value="Agree">
+                                    <label class="form-check-label" for="q-31.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-31" id="q-31.3" value="Neutral">
+                                    <label class="form-check-label" for="q-31.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-31" id="q-31.4" value="Disagree">
+                                    <label class="form-check-label" for="q-31.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-31" id="q-31.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-31.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-32" class="form-label col-12">32. My friends say I am practical and realistic.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-32" id="q-32.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-32.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-32" id="q-32.2" value="Agree">
+                                    <label class="form-check-label" for="q-32.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-32" id="q-32.3" value="Neutral">
+                                    <label class="form-check-label" for="q-32.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-32" id="q-32.4" value="Disagree">
+                                    <label class="form-check-label" for="q-32.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-32" id="q-32.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-32.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-33" class="form-label col-12">33. Doing experiments often excites me.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-33" id="q-33.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-33.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-33" id="q-33.2" value="Agree">
+                                    <label class="form-check-label" for="q-33.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-33" id="q-33.3" value="Neutral">
+                                    <label class="form-check-label" for="q-33.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-33" id="q-33.4" value="Disagree">
+                                    <label class="form-check-label" for="q-33.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-33" id="q-33.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-33.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-34" class="form-label col-12">34. I often give advice to others.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-34" id="q-34.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-34.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-34" id="q-34.2" value="Agree">
+                                    <label class="form-check-label" for="q-34.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-34" id="q-34.3" value="Neutral">
+                                    <label class="form-check-label" for="q-34.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-34" id="q-34.4" value="Disagree">
+                                    <label class="form-check-label" for="q-34.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-34" id="q-34.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-34.5">Strongly Disagree</label>  
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-35" class="form-label col-12">35. I prefer ideas that have been proven.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-35" id="q-35.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-35.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-35" id="q-35.2" value="Agree">
+                                    <label class="form-check-label" for="q-35.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-35" id="q-35.3" value="Neutral">
+                                    <label class="form-check-label" for="q-35.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-35" id="q-35.4" value="Disagree">
+                                    <label class="form-check-label" for="q-35.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-35" id="q-35.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-35.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-group question-group-8">
+                            <div class="col-12 col-md-12">
+                                <label for="pq-36" class="form-label col-12">36. I don't mind being the center of attention.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-36" id="q-36.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-36.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-36" id="q-36.2" value="Agree">
+                                    <label class="form-check-label" for="q-36.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-36" id="q-36.3" value="Neutral">
+                                    <label class="form-check-label" for="q-36.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-36" id="q-36.4" value="Disagree">
+                                    <label class="form-check-label" for="q-36.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-36" id="q-36.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-36.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-37" class="form-label col-12">37. I am good at disassembling things and putting them back together.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-37" id="q-37.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-37.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-37" id="q-37.2" value="Agree">
+                                    <label class="form-check-label" for="q-37.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-37" id="q-37.3" value="Neutral">
+                                    <label class="form-check-label" for="q-37.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-37" id="q-37.4" value="Disagree">
+                                    <label class="form-check-label" for="q-37.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-37" id="q-37.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-37.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-38" class="form-label col-12">38. I like to improvise.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-38" id="q-38.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-38.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-38" id="q-38.2" value="Agree">
+                                    <label class="form-check-label" for="q-38.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-38" id="q-38.3" value="Neutral">
+                                    <label class="form-check-label" for="q-38.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-38" id="q-38.4" value="Disagree">
+                                    <label class="form-check-label" for="q-38.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-38" id="q-38.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-38.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-39" class="form-label col-12">39. I often find myself figuring out how things work.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-39" id="q-39.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-39.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-39" id="q-39.2" value="Agree">
+                                    <label class="form-check-label" for="q-39.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-39" id="q-39.3" value="Neutral">
+                                    <label class="form-check-label" for="q-39.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-39" id="q-39.4" value="Disagree">
+                                    <label class="form-check-label" for="q-39.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-39" id="q-39.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-39.5">Strongly Disagree</label>  
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="pq-40" class="form-label col-12">40. I am good at giving advice and guidance.<span class="text-muted"></span></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-40" id="q-40.1" value="Strongly Agree">
+                                    <label class="form-check-label" for="q-40.1">Strongly Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-40" id="q-40.2" value="Agree">
+                                    <label class="form-check-label" for="q-40.2">Agree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-40" id="q-40.3" value="Neutral">
+                                    <label class="form-check-label" for="q-40.3">Neutral</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-40" id="q-40.4" value="Disagree">
+                                    <label class="form-check-label" for="q-40.4">Disagree</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="q-40" id="q-40.5" value="Strongly Disagree">
+                                    <label class="form-check-label" for="q-40.5">Strongly Disagree</label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-12 m-0">
                             <hr class="my-4 mx-auto w-">
                         </div>
-                        <div class="col-6 text-start m-0">
-                            <a class="btn btn-lg btn-success btn-font w-100 back-button m-0" name="economic-status" id="economic-status">
+                        <div class="col-6 text-start m-0 back-button back-button-1">
+                            <a class="btn btn-lg btn-success btn-font w-100 back-button back-button-1 m-0" name="personality-test" id="personality-test">
                                 <i class="fa-solid fa-arrow-left-long pe-1"></i>
                                 Back
                             </a>
                         </div>
-                        <div class="col-6 text-end m-0">
-                            <button class="btn btn-lg btn-success background-color-green w-100 next-button btn-font m-0" type="submit" value="Next" name="economic-status" id="economic-status">
+                        <div class="col-6 text-start m-0 back-button back-button-2">
+                            <a class="btn btn-lg btn-success btn-font w-100 back-button back-button-2 m-0" name="personality-test" id="personality-test">
+                                <i class="fa-solid fa-arrow-left-long pe-1"></i>
+                                Back
+                            </a>
+                        </div>
+                        <div class="col-6 text-start m-0 back-button back-button-3">
+                            <a class="btn btn-lg btn-success btn-font w-100 back-button back-button-3 m-0" name="personality-test" id="personality-test">
+                                <i class="fa-solid fa-arrow-left-long pe-1"></i>
+                                Back
+                            </a>
+                        </div>
+                        <div class="col-6 text-start m-0 back-button back-button-4">
+                            <a class="btn btn-lg btn-success btn-font w-100 back-button back-button-4 m-0" name="personality-test" id="personality-test">
+                                <i class="fa-solid fa-arrow-left-long pe-1"></i>
+                                Back
+                            </a>
+                        </div>
+                        <div class="col-6 text-end m-0 next-button next-button-1">
+                            <button class="btn btn-lg btn-success background-color-green w-100 next-button next-button-1 btn-font m-0" type="submit" value="Next" name="personality-test" id="personality-test">
+                                Next
+                                <i class="ps-1 fa-solid fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                        <div class="col-6 text-end m-0 next-button next-button-2">
+                            <button class="btn btn-lg btn-success background-color-green w-100 next-button next-button-2 btn-font m-0" type="submit" value="Next" name="personality-test" id="personality-test">
+                                Next
+                                <i class="ps-1 fa-solid fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                        <div class="col-6 text-end m-0 next-button next-button-3">
+                            <button class="btn btn-lg btn-success background-color-green w-100 next-button next-button-3 btn-font m-0" type="submit" value="Next" name="personality-test" id="personality-test">
+                                Next
+                                <i class="ps-1 fa-solid fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                        <div class="col-6 text-end m-0 next-button next-button-4">
+                            <button class="btn btn-lg btn-success background-color-green w-100 next-button next-button-4 btn-font m-0" type="submit" value="Next" name="personality-test" id="personality-test">
                                 Next
                                 <i class="ps-1 fa-solid fa-arrow-right-long"></i>
                             </button>

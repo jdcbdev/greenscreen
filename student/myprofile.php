@@ -251,6 +251,127 @@
                 $('span.progress-counter').text('5');
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+
+                $('.question-group').hide();
+                $('.question-group-1').show();
+                $('.question-group-2').show();
+                $('#personality-test div.back-button').hide();
+                $('#personality-test div.next-button').hide();
+                $('#personality-test div.back-button-1').show();
+                $('#personality-test div.next-button-1').show();
+            });
+            $('#personality-test.back-button-1').click(function(){
+                $('div.profile-screen').hide();
+                $('div#economic-status').show();
+                $('#step-5').removeClass('wrapper-green');
+                $('#step-5').addClass('wrapper');
+                $('#step-5 div').removeClass('bg-pending');
+                $('#step-5 div').removeClass('bg-white');
+                $('#step-5 div i').removeClass('color-green');
+
+                $('#step-4').removeClass('wrapper');
+                $('#step-4').addClass('wrapper-green');
+                $('#step-4 div').removeClass('bg-green');
+                $('#step-4 div').addClass('bg-white');
+                $('#step-4 div i').removeClass('color-white');
+                $('#step-4 div i').addClass('color-green');
+
+                $('span.progress-counter').text('4');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#personality-test.next-button-1').click(function(e){
+                e.preventDefault();
+                $('.question-group').hide();
+                $('.question-group-3').show();
+                $('.question-group-4').show();
+                $('#personality-test div.back-button').hide();
+                $('#personality-test div.next-button').hide();
+                $('#personality-test div.back-button-2').show();
+                $('#personality-test div.next-button-2').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#personality-test.back-button-2').click(function(e){
+                e.preventDefault();
+                $('.question-group').hide();
+                $('.question-group-1').show();
+                $('.question-group-2').show();
+                $('#personality-test div.back-button').hide();
+                $('#personality-test div.next-button').hide();
+                $('#personality-test div.back-button-1').show();
+                $('#personality-test div.next-button-1').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#personality-test.next-button-2').click(function(e){
+                e.preventDefault();
+                $('.question-group').hide();
+                $('.question-group-5').show();
+                $('.question-group-6').show();
+                $('#personality-test div.back-button').hide();
+                $('#personality-test div.next-button').hide();
+                $('#personality-test div.back-button-3').show();
+                $('#personality-test div.next-button-3').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#personality-test.back-button-3').click(function(e){
+                e.preventDefault();
+                $('.question-group').hide();
+                $('.question-group-3').show();
+                $('.question-group-4').show();
+                $('#personality-test div.back-button').hide();
+                $('#personality-test div.next-button').hide();
+                $('#personality-test div.back-button-2').show();
+                $('#personality-test div.next-button-2').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#personality-test.next-button-3').click(function(e){
+                e.preventDefault();
+                $('.question-group').hide();
+                $('.question-group-7').show();
+                $('.question-group-8').show();
+                $('#personality-test div.back-button').hide();
+                $('#personality-test div.next-button').hide();
+                $('#personality-test div.back-button-4').show();
+                $('#personality-test div.next-button-4').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#personality-test.back-button-4').click(function(e){
+                e.preventDefault();
+                $('.question-group').hide();
+                $('.question-group-5').show();
+                $('.question-group-6').show();
+                $('#personality-test div.back-button').hide();
+                $('#personality-test div.next-button').hide();
+                $('#personality-test div.back-button-3').show();
+                $('#personality-test div.next-button-3').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#personality-test.next-button-4').click(function(e){
+                e.preventDefault();
+                $('div.profile-screen').hide();
+                $('div#study-habit').show();
+                $('#step-5').removeClass('wrapper');
+                $('#step-5').addClass('wrapper-green');
+                $('#step-5 div').removeClass('bg-white');
+                $('#step-5 div').addClass('bg-green');
+                $('#step-5 div i').removeClass('color-green');
+                $('#step-5 div i').addClass('color-white');
+                
+                $('#step-6').removeClass('wrapper');
+                $('#step-6').addClass('wrapper-green');
+                $('#step-6 div').addClass('bg-pending');
+                $('#step-6 div').addClass('bg-white');
+                $('#step-6 div i').addClass('color-green');
+
+                $('span.progress-counter').text('6');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
             $('#region').on('change', function(){
                 var formData = {

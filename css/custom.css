@@ -145,15 +145,15 @@ upload-container{
     width: 0;
 }
 
-.next-button, .back-button{
+button.next-button, a.back-button{
     max-width: 100px;
 }
 
-.back-button:hover, .back-button:focus{
+a.back-button:hover, a.back-button:focus{
     background-color: #107869;
 }
 
-.next-button:hover, .next-button:focus{
+button.next-button:hover, button.next-button:focus{
     opacity: 0.9;
 }
 
@@ -864,7 +864,7 @@ div.question-group .form-label{
         height: 180px;
     }
 
-    .next-button, .back-button{
+    button.next-button, a.back-button{
         max-width: 100px;
     }
 
