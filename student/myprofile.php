@@ -129,7 +129,7 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
-            $('#cet.back-button').click(function(){
+            $('#cet.back-button').click(function(e){
                 $('div.profile-screen').hide();
                 $('div#personal-info').show();
                 $('#step-2').removeClass('wrapper-green');
@@ -170,7 +170,7 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
-            $('#shs.back-button').click(function(){
+            $('#shs.back-button').click(function(e){
                 $('div.profile-screen').hide();
                 $('div#cet').show();
                 $('#step-3').removeClass('wrapper-green');
@@ -211,7 +211,7 @@
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
             });
-            $('#economic-status.back-button').click(function(){
+            $('#economic-status.back-button').click(function(e){
                 $('div.profile-screen').hide();
                 $('div#shs').show();
                 $('#step-4').removeClass('wrapper-green');
@@ -260,7 +260,7 @@
                 $('#personality-test div.back-button-1').show();
                 $('#personality-test div.next-button-1').show();
             });
-            $('#personality-test.back-button-1').click(function(){
+            $('#personality-test.back-button-1').click(function(e){
                 $('div.profile-screen').hide();
                 $('div#economic-status').show();
                 $('#step-5').removeClass('wrapper-green');
@@ -355,7 +355,7 @@
             $('#personality-test.next-button-4').click(function(e){
                 e.preventDefault();
                 $('div.profile-screen').hide();
-                $('div#study-habit').show();
+                $('div#study-habits').show();
                 $('#step-5').removeClass('wrapper');
                 $('#step-5').addClass('wrapper-green');
                 $('#step-5 div').removeClass('bg-white');
@@ -372,6 +372,84 @@
                 $('span.progress-counter').text('6');
                 $('html,body').animate({
                     scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+                
+                $('.question-group-study').hide();
+                $('.question-group-study-1').show();
+                $('.question-group-study-2').show();
+                $('#study-habits div.back-button').hide();
+                $('#study-habits div.next-button').hide();
+                $('#study-habits div.back-button-1').show();
+                $('#study-habits div.next-button-1').show();
+            });
+            $('#study-habits.back-button-1').click(function(e){
+                $('div.profile-screen').hide();
+                $('div#personality-test').show();
+                $('#step-6').removeClass('wrapper-green');
+                $('#step-6').addClass('wrapper');
+                $('#step-6 div').removeClass('bg-pending');
+                $('#step-6 div').removeClass('bg-white');
+                $('#step-6 div i').removeClass('color-green');
+
+                $('#step-5').removeClass('wrapper');
+                $('#step-5').addClass('wrapper-green');
+                $('#step-5 div').removeClass('bg-green');
+                $('#step-5 div').addClass('bg-white');
+                $('#step-5 div i').removeClass('color-white');
+                $('#step-5 div i').addClass('color-green');
+
+                $('span.progress-counter').text('5');
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#study-habits.next-button-1').click(function(e){
+                e.preventDefault();
+                $('.question-group-study').hide();
+                $('.question-group-study-3').show();
+                $('.question-group-study-4').show();
+                $('#study-habits div.back-button').hide();
+                $('#study-habits div.next-button').hide();
+                $('#study-habits div.back-button-2').show();
+                $('#study-habits div.next-button-2').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#study-habits.back-button-2').click(function(e){
+                e.preventDefault();
+                $('.question-group-study').hide();
+                $('.question-group-study-1').show();
+                $('.question-group-study-2').show();
+                $('#study-habits div.back-button').hide();
+                $('#study-habits div.next-button').hide();
+                $('#study-habits div.back-button-1').show();
+                $('#study-habits div.next-button-1').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#study-habits.next-button-2').click(function(e){
+                e.preventDefault();
+                $('.question-group-study').hide();
+                $('.question-group-study-5').show();
+                $('#study-habits div.back-button').hide();
+                $('#study-habits div.next-button').hide();
+                $('#study-habits div.back-button-3').show();
+                $('#study-habits div.next-button-3').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#study-habits.back-button-3').click(function(e){
+                e.preventDefault();
+                $('.question-group-study').hide();
+                $('.question-group-study-3').show();
+                $('.question-group-study-4').show();
+                $('#study-habits div.back-button').hide();
+                $('#study-habits div.next-button').hide();
+                $('#study-habits div.back-button-2').show();
+                $('#study-habits div.next-button-2').show();
+                $('html,body').animate({
+                    scrollTop:$('div.profile-screen').offset().top -90}, 'fast');
+            });
+            $('#study-habits.next-button-3').click(function(e){
+                e.preventDefault();
             });
             $('#region').on('change', function(){
                 var formData = {

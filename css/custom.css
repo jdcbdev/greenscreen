@@ -149,6 +149,11 @@ button.next-button, a.back-button{
     max-width: 100px;
 }
 
+button.next-button.submit{
+    max-width: 120px;
+    width: 120px;
+}
+
 a.back-button:hover, a.back-button:focus{
     background-color: #107869;
 }
@@ -866,6 +871,11 @@ div.question-group .form-label{
 
     button.next-button, a.back-button{
         max-width: 100px;
+    }
+
+    button.next-butto.submitn{
+        max-width: 120px;
+        width: 120px;
     }
 
     .bd-placeholder-img-lg {
