@@ -816,6 +816,14 @@ div.question-group .form-label{
     margin-top: .25rem;
 }
 
+#form-settings .form-switch{
+    padding-left: 2.8em;
+}
+
+.apply-settings{
+    width: 100%;
+}
+
 @media (min-width: 576px) {
     .shortcut{
         display: block;
@@ -899,6 +907,11 @@ div.question-group .form-label{
     .background-color-green-visible{
         background-color: white;
     }
+
+    .apply-settings{
+        width: fit-content;
+    }
+    
 }
 
 @media (min-width: 992px) {
