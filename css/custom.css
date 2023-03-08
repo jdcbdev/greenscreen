@@ -504,13 +504,13 @@ main#home{
     padding-top: 0;
 }
 
-div.card{
+#sign-up div.card{
     border: 1px solid lightgray;
     border-radius: 20px;
     cursor: pointer;
 }
 
-div.card.active {
+#sign-up div.card.active {
     -webkit-box-shadow: 0 0 40px #107869;
        -moz-box-shadow: 0 0 40px #107869;
             box-shadow: 0 0 40px #107869;
@@ -534,12 +534,12 @@ div.sign-in{
     font-size: 2rem;
 }
 
-div.card-hover{
+#sign-up div.card-hover{
     border: 1px solid #107869;
     background-color: #F2F7F2;
 }
 
-div.card:hover{
+#sign-up div.card:hover{
     border: 1px solid #107869;
     background-color: #F2F7F2;
 }
@@ -852,6 +852,56 @@ div.question-group .form-label{
 .fab i {
     font-size: 24px;
     line-height: 60px;
+}
+
+.card-title-total{
+    font-size: 18px;
+}
+
+.card-text-number{
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.view-all{
+    text-decoration: none;
+    color: #107869;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+span.pending{
+    background-color: orange;
+    padding: 5px;
+    color: white;
+    border-radius: 6px;
+}
+
+span.interview{
+    background-color: #3367D6;
+    padding: 5px;
+    color: white;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+span.rejected{
+    background-color: #c51244;
+    padding: 5px;
+    color: white;
+    border-radius: 6px;
+}
+
+span.approved{
+    background-color: #107869;
+    padding: 5px;
+    color: white;
+    border-radius: 6px;
+}
+
+.chart-container {
+    height: 400px !important;
+    overflow: scroll;
 }
 
 @media (min-width: 576px) {

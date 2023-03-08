@@ -210,7 +210,7 @@
                             <div class="col-12 m-0">
                                 <hr class="my-4 mx-auto w-">
                             </div>
-                            <div class="col-12 pt-2 pt-xl-3 mb-3 mb-xl-0 mt-0">
+                            <div class="col-12 pt-2 pt-xl-3 mb-3 mb-xl-5 mt-0">
                                 <input class="btn btn-lg btn-success background-color-green btn-font apply-settings" type="submit" value="Apply New Settings" name="login">
                             </div>
                         </div>
