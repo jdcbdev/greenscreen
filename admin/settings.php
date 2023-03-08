@@ -47,7 +47,7 @@
                             </div>
                             <h5 class="col-12 fw-bold mt-4 mb-1">Admission Period Settings</h5>
                             <div class="col-12 col-md-4">
-                                <label for="currentadmissionperiod" class="form-label">Current Admission Period<span class="text-muted"></span></label>
+                                <label for="currentadmissionperiod" class="form-label">Admission Period<span class="text-muted"></span></label>
                                 <input type="text" disabled="true" class="form-control" value="Jul 01, 2023 - Aug 01, 2023" id="currentadmissionperiod" placeholder="" name="currentadmissionperiod">
                             </div>
                             <div class="col-12 col-md-4">

@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../faculty/faculty.php" class="nav-link <?php echo $faculty; ?>" title="Faculty">
+                <a href="../faculty/" class="nav-link <?php echo $faculty; ?>" title="Faculty">
                     <i class='bx bx-group' ></i>
                     <span class="links-name">Faculty</span>
                 </a>

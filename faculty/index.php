@@ -13,8 +13,8 @@
     //if the above code is false then html below will be displayed
 
     require_once '../tools/variables.php';
-    $page_title = 'GreenScreen | Application';
-    $application = 'active';
+    $page_title = 'GreenScreen | Faculty';
+    $faculty = 'active';
 
     require_once '../includes/header.php';
 ?>
@@ -29,27 +29,13 @@
             ?>
             <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-md-4">
                 <div class="w-100">
-                    <h5 class="col-12 fw-bold mb-3">Applications</h5>
-                    <ul class="nav nav-tabs application">
-                        <li class="nav-item active">
-                            <a class="nav-link">Pending <span class="counter">5</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Interview <span class="counter">2</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Ranking</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Qualified <span class="counter">12</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">All</a>
-                        </li>
-                    </ul>
+                    <h5 class="col-12 fw-bold mb-3">Faculty</h5>
                     <div class="table-responsive py-3 table-container">
                         
                     </div>
+                    <a href="#" class="fab" title="Add New Faculty">
+                        <i class="fa fa-plus"></i>
+                    </a>
                 </div>
             </main>
         </div>
@@ -59,11 +45,11 @@
             if(status == 'pending'){
                 $.ajax({
                     type: "GET",
-                    url: 'pending.php',
+                    url: 'view.php',
                     success: function(result)
                     {
                         $('div.table-responsive').html(result);
-                        dataTable = $("#table-pending").DataTable({
+                        dataTable = $("#table-faculty").DataTable({
                             "dom": 'rtip',
                             responsive: true
                         });
@@ -71,13 +57,13 @@
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
                         });
-                        $('select#student_type').on('change', function(e){
+                        $('select#department').on('change', function(e){
                             var status = $(this).val();
-                            dataTable.columns([2]).search(status).draw();
+                            dataTable.columns([4]).search(status).draw();
                         });
-                        $('select#program').on('change', function(e){
+                        $('select#role').on('change', function(e){
                             var status = $(this).val();
-                            dataTable.columns([3]).search(status).draw();
+                            dataTable.columns([5]).search(status).draw();
                         });
                         new $.fn.dataTable.FixedHeader(dataTable);
                     },
@@ -89,10 +75,6 @@
         }
         $(document).ready(function(){
             load('pending');
-            $('ul.application .nav-item').on('click', function(){
-                $('ul.application .nav-item').removeClass('active');
-                $(this).addClass('active');
-            });
         });
     </script>
 </body>

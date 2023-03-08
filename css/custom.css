@@ -385,6 +385,10 @@ table#table-pending tr td{
     vertical-align: middle;
 }
 
+table#table-faculty tr td{
+    vertical-align: middle;
+}
+
 .faculty h4{
     font-size: 1.3rem !important;
 }
@@ -822,6 +826,32 @@ div.question-group .form-label{
 
 .apply-settings{
     width: 100%;
+}
+
+.fab {
+    display: inline-block;
+    background-color: #107869;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+  
+.fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+  
+.fab i {
+    font-size: 24px;
+    line-height: 60px;
 }
 
 @media (min-width: 576px) {
