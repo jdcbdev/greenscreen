@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2023 at 10:53 AM
+-- Generation Time: Mar 08, 2023 at 08:12 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `greenscreen`
 --
+CREATE DATABASE IF NOT EXISTS `greenscreen` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `greenscreen`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `academic_rank`
+--
+
+DROP TABLE IF EXISTS `academic_rank`;
+CREATE TABLE `academic_rank` (
+  `id` int(11) NOT NULL,
+  `rank` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `academic_rank`
+--
+
+INSERT INTO `academic_rank` (`id`, `rank`) VALUES
+(1, 'Instructor'),
+(2, 'Asst. Professor'),
+(3, 'Asso. Professor'),
+(4, 'Professor');
 
 -- --------------------------------------------------------
 
@@ -27,6 +51,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `account`
 --
 
+DROP TABLE IF EXISTS `account`;
 CREATE TABLE `account` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -41,7 +66,48 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `email`, `password`, `type`, `created_at`, `updated_at`) VALUES
-(1, 'jaydee', 'jaydee', 'student', '2023-01-01 03:56:36', '2023-01-01 03:56:36');
+(1, 'jaydee', 'jaydee', 'student', '2023-01-01 03:56:36', '2023-01-01 03:56:36'),
+(2, 'admin', 'admin', 'admin', '2023-03-08 13:23:47', '2023-03-08 13:23:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admission_role`
+--
+
+DROP TABLE IF EXISTS `admission_role`;
+CREATE TABLE `admission_role` (
+  `id` int(11) NOT NULL,
+  `role` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admission_role`
+--
+
+INSERT INTO `admission_role` (`id`, `role`) VALUES
+(1, 'Admission Officer'),
+(2, 'Interviewer');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `department`
+--
+
+DROP TABLE IF EXISTS `department`;
+CREATE TABLE `department` (
+  `id` int(11) NOT NULL,
+  `deptname` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `department`
+--
+
+INSERT INTO `department` (`id`, `deptname`) VALUES
+(1, 'Computer Science'),
+(2, 'Information Technology');
 
 -- --------------------------------------------------------
 
@@ -49,6 +115,7 @@ INSERT INTO `account` (`id`, `email`, `password`, `type`, `created_at`, `updated
 -- Table structure for table `faculty`
 --
 
+DROP TABLE IF EXISTS `faculty`;
 CREATE TABLE `faculty` (
   `id` int(11) NOT NULL,
   `firstname` varchar(255) NOT NULL,
@@ -76,6 +143,7 @@ INSERT INTO `faculty` (`id`, `firstname`, `lastname`, `email`, `academic_rank`, 
 -- Table structure for table `programs`
 --
 
+DROP TABLE IF EXISTS `programs`;
 CREATE TABLE `programs` (
   `id` int(11) NOT NULL,
   `code` varchar(100) NOT NULL,
@@ -102,6 +170,7 @@ INSERT INTO `programs` (`id`, `code`, `description`, `years`, `level`, `cet`, `s
 -- Table structure for table `refbrgy`
 --
 
+DROP TABLE IF EXISTS `refbrgy`;
 CREATE TABLE `refbrgy` (
   `id` int(11) NOT NULL,
   `brgyCode` varchar(255) DEFAULT NULL,
@@ -42200,6 +42269,7 @@ INSERT INTO `refbrgy` (`id`, `brgyCode`, `brgyDesc`, `regCode`, `provCode`, `cit
 -- Table structure for table `refcitymun`
 --
 
+DROP TABLE IF EXISTS `refcitymun`;
 CREATE TABLE `refcitymun` (
   `id` int(255) NOT NULL,
   `psgcCode` varchar(255) DEFAULT NULL,
@@ -43869,6 +43939,7 @@ INSERT INTO `refcitymun` (`id`, `psgcCode`, `citymunDesc`, `regDesc`, `provCode`
 -- Table structure for table `refclassorg`
 --
 
+DROP TABLE IF EXISTS `refclassorg`;
 CREATE TABLE `refclassorg` (
   `id` int(11) NOT NULL,
   `classorg` text NOT NULL
@@ -43894,6 +43965,7 @@ INSERT INTO `refclassorg` (`id`, `classorg`) VALUES
 -- Table structure for table `refeducation`
 --
 
+DROP TABLE IF EXISTS `refeducation`;
 CREATE TABLE `refeducation` (
   `id` int(11) NOT NULL,
   `education` varchar(255) NOT NULL
@@ -43922,6 +43994,7 @@ INSERT INTO `refeducation` (`id`, `education`) VALUES
 -- Table structure for table `refemployment`
 --
 
+DROP TABLE IF EXISTS `refemployment`;
 CREATE TABLE `refemployment` (
   `id` int(11) NOT NULL,
   `employment` varchar(255) NOT NULL
@@ -43946,6 +44019,7 @@ INSERT INTO `refemployment` (`id`, `employment`) VALUES
 -- Table structure for table `refoccupation`
 --
 
+DROP TABLE IF EXISTS `refoccupation`;
 CREATE TABLE `refoccupation` (
   `id` int(11) NOT NULL,
   `occupation` varchar(255) NOT NULL
@@ -43986,6 +44060,7 @@ INSERT INTO `refoccupation` (`id`, `occupation`) VALUES
 -- Table structure for table `refprovince`
 --
 
+DROP TABLE IF EXISTS `refprovince`;
 CREATE TABLE `refprovince` (
   `id` int(11) NOT NULL,
   `psgcCode` varchar(255) DEFAULT NULL,
@@ -44094,6 +44169,7 @@ INSERT INTO `refprovince` (`id`, `psgcCode`, `provDesc`, `regCode`, `provCode`) 
 -- Table structure for table `refregion`
 --
 
+DROP TABLE IF EXISTS `refregion`;
 CREATE TABLE `refregion` (
   `id` int(11) NOT NULL,
   `psgcCode` varchar(255) DEFAULT NULL,
@@ -44130,6 +44206,7 @@ INSERT INTO `refregion` (`id`, `psgcCode`, `regDesc`, `regCode`) VALUES
 -- Table structure for table `refscgorg`
 --
 
+DROP TABLE IF EXISTS `refscgorg`;
 CREATE TABLE `refscgorg` (
   `id` int(11) NOT NULL,
   `scgorg` text NOT NULL
@@ -44156,6 +44233,7 @@ INSERT INTO `refscgorg` (`id`, `scgorg`) VALUES
 -- Table structure for table `refstrand`
 --
 
+DROP TABLE IF EXISTS `refstrand`;
 CREATE TABLE `refstrand` (
   `id` int(11) NOT NULL,
   `strand` text NOT NULL
@@ -44180,6 +44258,7 @@ INSERT INTO `refstrand` (`id`, `strand`) VALUES
 -- Table structure for table `student`
 --
 
+DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student` (
   `id` int(11) NOT NULL,
   `account_id` int(11) NOT NULL,
@@ -44206,11 +44285,29 @@ INSERT INTO `student` (`id`, `account_id`, `first_name`, `middle_name`, `last_na
 --
 
 --
+-- Indexes for table `academic_rank`
+--
+ALTER TABLE `academic_rank`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `account`
 --
 ALTER TABLE `account`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `admission_role`
+--
+ALTER TABLE `admission_role`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `department`
+--
+ALTER TABLE `department`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `faculty`
@@ -44296,10 +44393,28 @@ ALTER TABLE `student`
 --
 
 --
+-- AUTO_INCREMENT for table `academic_rank`
+--
+ALTER TABLE `academic_rank`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `admission_role`
+--
+ALTER TABLE `admission_role`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `department`
+--
+ALTER TABLE `department`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `faculty`
