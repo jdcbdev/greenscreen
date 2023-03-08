@@ -29,15 +29,96 @@
             ?>
             <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-md-4">
                 <div class="w-100">
-                    <h5 class="col-12 fw-bold mb-3">Faculty</h5>
+                    <h5 class="col-12 fw-bold mb-1 mt-3 mt-md-0">Faculty</h5>
                     <div class="table-responsive py-3 table-container">
                         
                     </div>
-                    <a href="#" class="fab" title="Add New Faculty">
+                    <a type="button" class="fab" title="Add New Faculty" data-bs-toggle="modal" data-bs-target="#myModal">
                         <i class="fa fa-plus"></i>
                     </a>
                 </div>
             </main>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add New Faculty</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="needs-validation" action="" method="post" name="add-faculty" id="add-faculty">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="firstname" class="form-label">First Name<span class="text-muted"></span></label>
+                                    <input type="text" class="form-control" id="firstname" placeholder="" name="firstname" required="">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="lastname" class="form-label">Last Name<span class="text-muted"></span></label>
+                                    <input type="text" class="form-control" id="lastname" placeholder="" name="lastname" required="">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="email" class="form-label">School or Personal Email<span class="text-muted"></span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="" name="email" required="">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="rank" class="form-label">Academic Rank<span class="text-muted"></span></label>
+                                    <select type="text" class="form-control form-select" id="rank" placeholder="" name="rank" required="">
+                                        <option value="none">--Select--</option>
+                                        <?php
+                                            require_once '../classes/reference.class.php';
+                                            $ref_obj = new Reference();
+                                            $ref = $ref_obj->get_academic_rank();
+                                            foreach($ref as $row){
+                                        ?>
+                                                <option value="<?=$row['rank']?>"><?=$row['rank']?></option>
+                                        <?php
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="deptname" class="form-label">Department<span class="text-muted"></span></label>
+                                    <select type="text" class="form-control form-select" id="deptname" placeholder="" name="deptname" required="">
+                                        <option value="none">--Select--</option>
+                                        <?php
+                                            require_once '../classes/reference.class.php';
+                                            $ref_obj = new Reference();
+                                            $ref = $ref_obj->get_college_department();
+                                            foreach($ref as $row){
+                                        ?>
+                                                <option value="<?=$row['deptname']?>"><?=$row['deptname']?></option>
+                                        <?php
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="role" class="form-label">Admission Role<span class="text-muted"></span></label>
+                                    <select type="text" class="form-control form-select" id="role" placeholder="" name="role" required="">
+                                        <option value="none">--Select--</option>
+                                        <?php
+                                            require_once '../classes/reference.class.php';
+                                            $ref_obj = new Reference();
+                                            $ref = $ref_obj->get_admission_role();
+                                            foreach($ref as $row){
+                                        ?>
+                                                <option value="<?=$row['role']?>"><?=$row['role']?></option>
+                                        <?php
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary background-color-green">Add New Faculty</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script>

@@ -104,6 +104,33 @@ class Reference{
         return $data;
     }
 
+    function get_academic_rank(){
+        $sql = "SELECT * FROM academic_rank;";
+        $query=$this->db->connect()->prepare($sql);
+        if($query->execute()){
+            $data = $query->fetchAll();
+        }
+        return $data;
+    }
+
+    function get_college_department(){
+        $sql = "SELECT * FROM department;";
+        $query=$this->db->connect()->prepare($sql);
+        if($query->execute()){
+            $data = $query->fetchAll();
+        }
+        return $data;
+    }
+
+    function get_admission_role(){
+        $sql = "SELECT * FROM admission_role;";
+        $query=$this->db->connect()->prepare($sql);
+        if($query->execute()){
+            $data = $query->fetchAll();
+        }
+        return $data;
+    }
+
 }
 
 ?>
