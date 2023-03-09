@@ -389,6 +389,22 @@ table#table-faculty tr td{
     vertical-align: middle;
 }
 
+table#table-interview tr td{
+    vertical-align: middle;
+}
+
+table#table-ranking tr td{
+    vertical-align: middle;
+}
+
+table#table-qualified tr td{
+    vertical-align: middle;
+}
+
+table#table-all tr td{
+    vertical-align: middle;
+}
+
 .faculty h4{
     font-size: 1.3rem !important;
 }
@@ -902,6 +918,35 @@ span.approved{
 .chart-container {
     height: 400px !important;
     overflow: scroll;
+}
+
+.modal-open {
+    padding-right: 0 !important;
+    /* overflow: visible !important; */
+}
+
+.photo-holder{
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.photo-1{
+    background-image: url('../img/upload_files/cet.jpg');
+}
+
+.photo-2{
+    background-image: url('../img/upload_files/shs.jpeg');
+}
+
+.modal {
+    z-index: 1040;
+}
+
+.modal-backdrop{
+    z-index: 1039;
 }
 
 @media (min-width: 576px) {

@@ -38,9 +38,9 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-user-check"></i></a>
-                    <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
+                    <a title="Verify" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Verify"><i class="fa-solid fa-user-check"></i></a>
+                    <a title="Edit" href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="Delete" href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
             </td>
             <td>Ballaho, Jaydee C.</td>
@@ -54,9 +54,9 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-user-check"></i></a>
-                    <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
+                    <a title="Verify" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Verify"><i class="fa-solid fa-user-check"></i></a>
+                    <a title="Edit" href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="Delete" href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
             </td>
             <td>Freecs, Gon.</td>
@@ -70,9 +70,9 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-user-check"></i></a>
-                    <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
+                    <a title="Verify" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Verify"><i class="fa-solid fa-user-check"></i></a>
+                    <a title="Edit" href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="Delete" href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
             </td>
             <td>Scarlet, Erza</td>
@@ -86,9 +86,9 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-user-check"></i></a>
-                    <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
+                    <a title="Verify" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Verify"><i class="fa-solid fa-user-check"></i></a>
+                    <a title="Edit" href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="Delete" href="" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
             </td>
             <td>Zoldyc, Killua</td>

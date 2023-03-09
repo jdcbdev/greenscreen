@@ -17,12 +17,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link <?php echo $screening; ?>" title="Screening">
-                    <i class='bx bx-phone-call'></i>
-                    <span class="links-name">Screening</span>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a href="../faculty/" class="nav-link <?php echo $faculty; ?>" title="Faculty">
                     <i class='bx bx-group' ></i>
                     <span class="links-name">Faculty</span>

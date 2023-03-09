@@ -21,7 +21,7 @@
         <input type="text" name="keyword" id="keyword" placeholder="Enter Student Name Here" class="form-control ms-md-2">
     </div>
 </div>
-<table class="table table-hover col-12" id="table-ranking">
+<table class="table table-hover col-12" id="table-qualified">
     <thead>
         <tr>
             <th scope="col">No.</th>
