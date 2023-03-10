@@ -318,20 +318,12 @@
                 }
             });
 
-            $('#Accepted').on('click', function(){
-                $('#ranking-submit').text("Accept Application")
+            $('#Confirmed').on('click', function(){
+                $('div.documents').show();
             });
 
-            $('#Rejected').on('click', function(){
-                $('#ranking-submit').text("Reject Application")
-            });
-
-            $('#Moved').on('click', function(){
-                $('#ranking-submit').text("Moved to Waiting List")
-            });
-
-            $('#Waiting-Accepted').on('click', function(){
-                $('#waiting-submit').text("Accept Application")
+            $('#Withdrawn').on('click', function(){
+                $('div.documents').hide();
             });
 
             $('#Waiting-Rejected').on('click', function(){
@@ -351,6 +343,14 @@
                     $('div.waiting-comments').show();
                 }else{
                     $('div.waiting-comments').hide();
+                }
+            });
+
+            $('#qualified-comments').on('change', function(){
+                if ($(this).is(":checked")) {
+                    $('div.qualified-comments').show();
+                }else{
+                    $('div.qualified-comments').hide();
                 }
             });
 

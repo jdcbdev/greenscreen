@@ -39,7 +39,7 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-user-pen"></i></a>
+                    <a title="Edit" href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
                 </div>
             </td>
             <td>Ballaho, Jaydee C.</td>
@@ -54,7 +54,7 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-user-pen"></i></a>
+                    <a title="Edit" href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
                 </div>
             </td>
             <td>Freecs, Gon.</td>
@@ -69,7 +69,7 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-user-pen"></i></a>
+                    <a title="Edit" href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
                 </div>
             </td>
             <td>Scarlet, Erza</td>
@@ -84,7 +84,7 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-user-pen"></i></a>
+                    <a title="Edit" href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
                 </div>
             </td>
             <td>Zoldyc, Killua</td>

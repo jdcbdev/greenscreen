@@ -41,7 +41,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary background-color-green" id="ranking-submit">Accept Application</button>
+            <button type="button" class="btn btn-primary background-color-green" id="waiting-submit">Update Application Status</button>
         </div>
         </div>
     </div>
