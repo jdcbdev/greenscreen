@@ -1,27 +1,26 @@
-<div class="row g-2 mb-2">
-    <div class="form-group col-12 col-sm-4 table-filter-option">
-        <label for="student_type">Type</label>
-        <select name="student_type" id="student_type" class="form-select ms-md-2">
-            <option value="">All</option>
+<div class="row g-2 mb-2 ">
+    <div id="MyButtons" class="d-flex mb-md-2 mb-lg-0 col-12 col-md-auto"></div>
+    <div class="form-group col-12 col-sm-auto flex-sm-grow-1 flex-lg-grow-0 ms-lg-auto">
+        <select name="student_type" id="student_type" class="form-select me-md-2">
+            <option value="">All Type</option>
             <option value="New Student">New Student</option>
             <option value="Shiftee">Shiftee</option>
             <option value="Transferee">Transferee</option>
         </select>
     </div>
-    <div class="form-group col-12 col-sm-3 table-filter-option">
-        <label for="program">Program</label>
-        <select name="program" id="program" class="form-select ms-md-2">
-            <option value="">All</option>
+    <div class="form-group col-12 col-sm-auto flex-sm-grow-1 flex-lg-grow-0">
+        <select name="program" id="program" class="form-select me-md-2">
+            <option value="">All Program</option>
             <option value="BSCS">BSCS</option>
             <option value="BSIT">BSIT</option>
         </select>
     </div>
-    <div class="form-group col-12 col-sm-5 table-filter-option">       
-        <label for="keyword">Search</label>
-        <input type="text" name="keyword" id="keyword" placeholder="Enter Student Name Here" class="form-control ms-md-2">
+    <div class="input-group search-keyword col-12 flex-lg-grow-1">
+        <input type="text" name="keyword" id="keyword" placeholder="Search Student" class="form-control">
+        <button class="btn btn-outline-secondary background-color-green" type="button"><i class="fas fa-search white"></i></button>
     </div>
 </div>
-<table class="table table-hover col-12" id="table-waiting">
+<table class="table table-hover responsive" id="table-waiting">
     <thead>
         <tr>
             <th scope="col">Action</th>
@@ -38,8 +37,10 @@
     <tbody>
         <tr>
             <td>
-                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Waiting"><i class="fa-solid fa-user-check"></i></a>
-                <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                <div class="action-button">
+                    <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Waiting"><i class="fa-solid fa-user-check"></i></a>
+                    <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                </div>
             </td>
             <td><i class="fa-solid fa-trophy me-2 green"> 1</i></td>
             <td>Ballaho, Jaydee C.</td>
@@ -52,8 +53,10 @@
         </tr>
         <tr>
             <td>
-                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Waiting"><i class="fa-solid fa-user-check"></i></a>
-                <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                <div class="action-button">
+                    <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Waiting"><i class="fa-solid fa-user-check"></i></a>
+                    <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                </div>
             </td>
             <td><i class="fa-solid fa-trophy me-2 green"> 2</i></td>
             <td>Freecs, Gon.</td>

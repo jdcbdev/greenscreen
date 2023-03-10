@@ -29,7 +29,7 @@
             ?>
             <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-md-4">
                 <div class="w-100">
-                    <h5 class="col-12 fw-bold mb-3">Applications</h5>
+                    <h5 class="col-12 fw-bold mb-3 mt-3 mt-md-0">Applications</h5>
                     <ul class="nav nav-tabs application">
                         <li class="nav-item active" id="li-pending">
                             <a class="nav-link">Pending <span class="counter">4</span></a>
@@ -76,9 +76,29 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-pending").DataTable({
-                            "dom": 'rtip',
-                            responsive: true
+                            dom: 'Brtp',
+                            responsive: true,
+                            fixedHeader: true,
+                            buttons: [
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'pdf',
+                                    text: 'PDF',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'print',
+                                    text: 'Print',
+                                    className: 'border-white'
+                                }
+                            ],
                         });
+                        dataTable.buttons().container().appendTo($('#MyButtons'));
+
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
@@ -91,7 +111,6 @@
                             var status = $(this).val();
                             dataTable.columns([3]).search(status).draw();
                         });
-                        new $.fn.dataTable.FixedHeader(dataTable);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
@@ -105,9 +124,29 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-interview").DataTable({
-                            "dom": 'rtip',
-                            responsive: true
+                            dom: 'Brtp',
+                            responsive: true,
+                            fixedHeader: true,
+                            buttons: [
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'pdf',
+                                    text: 'PDF',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'print',
+                                    text: 'Print',
+                                    className: 'border-white'
+                                }
+                            ],
                         });
+                        dataTable.buttons().container().appendTo($('#MyButtons'));
+
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
@@ -120,7 +159,6 @@
                             var status = $(this).val();
                             dataTable.columns([3]).search(status).draw();
                         });
-                        new $.fn.dataTable.FixedHeader(dataTable);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
@@ -134,9 +172,29 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-ranking").DataTable({
-                            "dom": 'rtip',
-                            responsive: true
+                            dom: 'Brtp',
+                            responsive: true,
+                            fixedHeader: true,
+                            buttons: [
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'pdf',
+                                    text: 'PDF',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'print',
+                                    text: 'Print',
+                                    className: 'border-white'
+                                }
+                            ],
                         });
+                        dataTable.buttons().container().appendTo($('#MyButtons'));
+
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
@@ -149,7 +207,6 @@
                             var status = $(this).val();
                             dataTable.columns([3]).search(status).draw();
                         });
-                        new $.fn.dataTable.FixedHeader(dataTable);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
@@ -163,9 +220,29 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-qualified").DataTable({
-                            "dom": 'rtip',
-                            responsive: true
+                            dom: 'Brtp',
+                            responsive: true,
+                            fixedHeader: true,
+                            buttons: [
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'pdf',
+                                    text: 'PDF',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'print',
+                                    text: 'Print',
+                                    className: 'border-white'
+                                }
+                            ],
                         });
+                        dataTable.buttons().container().appendTo($('#MyButtons'));
+
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
@@ -178,7 +255,6 @@
                             var status = $(this).val();
                             dataTable.columns([3]).search(status).draw();
                         });
-                        new $.fn.dataTable.FixedHeader(dataTable);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
@@ -192,9 +268,29 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-all").DataTable({
-                            "dom": 'rtip',
-                            responsive: true
+                            dom: 'Brtp',
+                            responsive: true,
+                            fixedHeader: true,
+                            buttons: [
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'pdf',
+                                    text: 'PDF',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'print',
+                                    text: 'Print',
+                                    className: 'border-white'
+                                }
+                            ],
                         });
+                        dataTable.buttons().container().appendTo($('#MyButtons'));
+
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
@@ -207,7 +303,6 @@
                             var status = $(this).val();
                             dataTable.columns([3]).search(status).draw();
                         });
-                        new $.fn.dataTable.FixedHeader(dataTable);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
@@ -221,9 +316,29 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-waiting").DataTable({
-                            "dom": 'rtip',
-                            responsive: true
+                            dom: 'Brtp',
+                            responsive: true,
+                            fixedHeader: true,
+                            buttons: [
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'pdf',
+                                    text: 'PDF',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'print',
+                                    text: 'Print',
+                                    className: 'border-white'
+                                }
+                            ],
                         });
+                        dataTable.buttons().container().appendTo($('#MyButtons'));
+
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
@@ -236,7 +351,6 @@
                             var status = $(this).val();
                             dataTable.columns([3]).search(status).draw();
                         });
-                        new $.fn.dataTable.FixedHeader(dataTable);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
@@ -250,9 +364,29 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-withdrawn").DataTable({
-                            "dom": 'rtip',
-                            responsive: true
+                            dom: 'Brtp',
+                            responsive: true,
+                            fixedHeader: true,
+                            buttons: [
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'pdf',
+                                    text: 'PDF',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'print',
+                                    text: 'Print',
+                                    className: 'border-white'
+                                }
+                            ],
                         });
+                        dataTable.buttons().container().appendTo($('#MyButtons'));
+                        
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
@@ -265,7 +399,6 @@
                             var status = $(this).val();
                             dataTable.columns([3]).search(status).draw();
                         });
-                        new $.fn.dataTable.FixedHeader(dataTable);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 

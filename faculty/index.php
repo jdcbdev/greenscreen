@@ -131,9 +131,14 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-faculty").DataTable({
-                            "dom": 'rtip',
+                            dom: 'rtipB',
+                            buttons: [
+                                'copy', 'excel', 'pdf', 'print'
+                            ],
                             responsive: true
                         });
+                        table.buttons().container().appendTo($('#myButtons'));
+                        
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();

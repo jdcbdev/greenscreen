@@ -20,7 +20,7 @@
         <input type="text" name="keyword" id="keyword" placeholder="Enter Faculty Name Here" class="form-control ms-md-2">
     </div>
 </div>
-<table class="table table-hover col-12" id="table-faculty">
+<table class="table table-hover responsive" id="table-faculty">
     <thead>
         <tr>
             <th scope="col">Action</th>

@@ -27,7 +27,7 @@
             <?php
                 require_once '../includes/sidebar.php';
             ?>
-            <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-md-4">
+            <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-md-4 mt-3 mt-md-0">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 align-items-stretch">
                     <div class="col d-flex flex-column">
                         <div class="card flex-grow-1">
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-8 my-4 d-flex flex-column">
+                    <div class="col-12 col-md-8 mb-4 mt-0 d-flex flex-column mt-md-4">
                         <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title card-title-total">CET Score</h5>
@@ -99,8 +99,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
-                        <table class="table table-hover col-12" id="table-faculty">
+                    <div class="table-responsive">
+                        <table class="table table-hover responsive" id="table-dashboard-student">
                             <thead>
                                 <tr>
                                     <th scope="col">No.</th>
@@ -202,64 +202,70 @@
         </div>
     </div>
 <script>
-    // Applications by Status
-    var statusChart = new Chart(document.getElementById('status-chart-1'), {
-        type: 'doughnut',
-        data: {
-        labels: ['Will Succeed', 'Will Struglle'],
-            datasets: [{
-                data: [295, 124],
-                backgroundColor: ['#3A98B9', '#EB455F'],
-            }]
-            },
-        options: {
+    $(document).ready(function() {
+        var table = $('#table-dashboard-student').DataTable({
             responsive: true,
-            maintainAspectRatio: true
-        }
-    });
-
-    // Define your data
-    var data = {
-        labels: ['50','60', '70', '80', '90', '100'],
-            datasets: [{
-                label: 'BSCS',
-                data: [ 0, 13, 40, 17, 26, 15],
-                borderColor: '#3A98B9',
-                fill: false
-            },
-            {
-                label: 'BSIT',
-                data: [ 0, 21, 28, 53, 22, 5],
-                borderColor: '#0E8388',
-                fill: false
-            }]
-    };
-    // Get the canvas element
-    var ctx = document.getElementById('myChart').getContext('2d');
-
-    // Create the chart
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: {
-            scales: {
-                x: {
-                    title: {
-                    display: true,
-                    text: 'CET Scores'
-                    }
+            fixedHeader: true,
+            "dom": 'rt'
+        });
+        
+        // Applications by Status
+        var statusChart = new Chart(document.getElementById('status-chart-1'), {
+            type: 'doughnut',
+            data: {
+            labels: ['Will Succeed', 'Will Struglle'],
+                datasets: [{
+                    data: [295, 124],
+                    backgroundColor: ['#3A98B9', '#EB455F'],
+                }]
                 },
-                y: {
-                    title: {
-                    display: true,
-                    text: 'Students'
+            options: {
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        });
+
+        // Define your data
+        var data = {
+            labels: ['50','60', '70', '80', '90', '100'],
+                datasets: [{
+                    label: 'BSCS',
+                    data: [ 0, 13, 40, 17, 26, 15],
+                    borderColor: '#3A98B9',
+                    fill: false
+                },
+                {
+                    label: 'BSIT',
+                    data: [ 0, 21, 28, 53, 22, 5],
+                    borderColor: '#0E8388',
+                    fill: false
+                }]
+        };
+
+        // Get the canvas element
+        var ctx = document.getElementById('myChart').getContext('2d');
+        // Create the chart
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                        display: true,
+                        text: 'CET Scores'
+                        }
+                    },
+                    y: {
+                        title: {
+                        display: true,
+                        text: 'Students'
+                        }
                     }
                 }
             }
-        }
+        });
     });
-
-
 </script>
 </body>
 </html>

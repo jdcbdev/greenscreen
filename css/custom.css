@@ -370,11 +370,11 @@ td div.action-button{
     align-items: center;
 }
 
-.table-filter-option{
+.table-filter-option {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .table-container{
@@ -410,6 +410,10 @@ table#table-waiting tr td{
 }
 
 table#table-withdrawn tr td{
+    vertical-align: middle;
+}
+
+table#table-dashboard-student tr td{
     vertical-align: middle;
 }
 
@@ -957,6 +961,24 @@ span.approved{
     z-index: 1039;
 }
 
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before{
+    background-color: #107869
+}
+
+.white{
+    color: white;
+}
+
+#keyword {
+    margin-left: 1px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.border-white{
+    border-right: 2px solid white;
+}
+
 @media (min-width: 576px) {
     .shortcut{
         display: block;
@@ -1001,11 +1023,6 @@ span.approved{
         height: 350px;
     }
 
-    .table-filter-option{
-        flex-direction: row;
-        align-items: center;
-    }
-
     .upload-container{
         height: 180px;
     }
@@ -1014,7 +1031,7 @@ span.approved{
         max-width: 100px;
     }
 
-    button.next-butto.submitn{
+    button.next-button.submit{
         max-width: 120px;
         width: 120px;
     }
@@ -1048,6 +1065,11 @@ span.approved{
 }
 
 @media (min-width: 992px) {
+    .search-keyword{
+        width: auto;
+        max-width: 200px;
+    }
+
     .logo-name{
         font-size: 1.4rem;
     }
@@ -1094,5 +1116,12 @@ span.approved{
     .faculty >*{
         flex: 0 0 auto;
         width: 33.3%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .search-keyword{
+        width: auto;
+        max-width: 300px;
     }
 }
