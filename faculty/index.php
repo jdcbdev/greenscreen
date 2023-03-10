@@ -131,13 +131,28 @@
                     {
                         $('div.table-responsive').html(result);
                         dataTable = $("#table-faculty").DataTable({
-                            dom: 'rtipB',
+                            dom: 'Brtp',
+                            responsive: true,
+                            fixedHeader: true,
                             buttons: [
-                                'copy', 'excel', 'pdf', 'print'
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'pdf',
+                                    text: 'PDF',
+                                    className: 'border-white'
+                                },
+                                {
+                                    extend: 'print',
+                                    text: 'Print',
+                                    className: 'border-white'
+                                }
                             ],
-                            responsive: true
                         });
-                        table.buttons().container().appendTo($('#myButtons'));
+                        dataTable.buttons().container().appendTo($('#MyButtons'));
                         
                         $('input#keyword').on('input', function(e){
                             var status = $(this).val();
@@ -151,7 +166,6 @@
                             var status = $(this).val();
                             dataTable.columns([5]).search(status).draw();
                         });
-                        new $.fn.dataTable.FixedHeader(dataTable);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
