@@ -32,6 +32,7 @@
             <th scope="col">SHS GPA</th>
             <th scope="col">Email Address</th>
             <th scope="col">Phone Number</th>
+            <th scope="col">Interviewer</th>
             <th scope="col">Status</th>
         </tr>
     </thead>
@@ -39,7 +40,9 @@
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="Rate Interview" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Interview"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                    <a title="View Assignment" href="" class="me-2 green"><i class="fa-solid fa-circle-info"></i></a>
                 </div>
             </td>
             <td>Ballaho, Jaydee C.</td>
@@ -49,12 +52,15 @@
             <td>91.5</td>
             <td>jaydee.ballaho@wmsu.edu.ph</td>
             <td>0965-649-9005</td>
+            <td>Mr. Jaydee Ballaho</td>
             <td>For Interview</td>
         </tr>
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="Rate Interview" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Interview"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                    <a title="View Assignment" href="" class="me-2 green"><i class="fa-solid fa-circle-info"></i></a>
                 </div>
             </td>
             <td>Freecs, Gon.</td>
@@ -64,12 +70,15 @@
             <td>94.5</td>
             <td>gon@wmsu.edu.ph</td>
             <td>0965-649-9006</td>
+            <td>Mr. Illumi Zoldyc</td>
             <td>For Interview</td>
         </tr>
         <tr>
             <td>
                 <div class="action-button">
-                    <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="Rate Interview" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Interview"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                    <a title="View Assignment" href="" class="me-2 green"><i class="fa-solid fa-circle-info"></i></a>
                 </div>
             </td>
             <td>Scarlet, Erza</td>
@@ -79,12 +88,15 @@
             <td>96</td>
             <td>es@wmsu.edu.ph</td>
             <td>0965-649-9007</td>
+            <td>Asst. Prof. Maha Zoldyc</td>
             <td>Done</td>
         </tr>
         <tr>
             <td>
                 <div class="action-button">
-                   <a href="" class="me-2 green"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="Rate Interview" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Interview"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                    <a title="View Assignment" href="" class="me-2 green"><i class="fa-solid fa-circle-info"></i></a>
                 </div>
             </td>
             <td>Zoldyc, Killua</td>
@@ -94,6 +106,7 @@
             <td>94</td>
             <td>kill@wmsu.edu.ph</td>
             <td>0965-649-9008</td>
+            <td>Asst. Prof. Morel</td>
             <td>For Interview</td>
         </tr>
     </tbody>

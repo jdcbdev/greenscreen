@@ -21,7 +21,7 @@
         <input type="text" name="keyword" id="keyword" placeholder="Enter Student Name Here" class="form-control ms-md-2">
     </div>
 </div>
-<table class="table table-hover col-12" id="table-ranking">
+<table class="table table-hover col-12" id="table-waiting">
     <thead>
         <tr>
             <th scope="col">Action</th>
@@ -38,7 +38,7 @@
     <tbody>
         <tr>
             <td>
-                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Ranking"><i class="fa-solid fa-user-check"></i></a>
+                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Waiting"><i class="fa-solid fa-user-check"></i></a>
                 <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
             </td>
             <td><i class="fa-solid fa-trophy me-2 green"> 1</i></td>
@@ -52,7 +52,7 @@
         </tr>
         <tr>
             <td>
-                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Ranking"><i class="fa-solid fa-user-check"></i></a>
+                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Waiting"><i class="fa-solid fa-user-check"></i></a>
                 <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
             </td>
             <td><i class="fa-solid fa-trophy me-2 green"> 2</i></td>
@@ -63,34 +63,6 @@
             <td>94.5</td>
             <td>gon@wmsu.edu.ph</td>
             <td>0965-649-9006</td>
-        </tr>
-        <tr>
-            <td>
-                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Ranking"><i class="fa-solid fa-user-check"></i></a>
-                <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
-            </td>
-            <td><i class="fa-solid fa-trophy me-2 green"> 3</i></td>
-            <td>Scarlet, Erza</td>
-            <td>Shiftee</td>
-            <td>BSCS</td>
-            <td>74.90</td>
-            <td>96</td>
-            <td>es@wmsu.edu.ph</td>
-            <td>0965-649-9007</td>
-        </tr>
-        <tr>
-            <td>
-                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Ranking"><i class="fa-solid fa-user-check"></i></a>
-                <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
-            </td>
-            <td><i class="fa-solid fa-trophy me-2 green"> 4</i></td>
-            <td>Zoldyc, Killua</td>
-            <td>Shiftee</td>
-            <td>BSCS</td>
-            <td>95.70</td>
-            <td>94</td>
-            <td>kill@wmsu.edu.ph</td>
-            <td>0965-649-9008</td>
         </tr>
     </tbody>
 </table>

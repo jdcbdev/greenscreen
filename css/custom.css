@@ -405,6 +405,10 @@ table#table-all tr td{
     vertical-align: middle;
 }
 
+table#table-waiting tr td{
+    vertical-align: middle;
+}
+
 .faculty h4{
     font-size: 1.3rem !important;
 }

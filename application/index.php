@@ -32,16 +32,22 @@
                     <h5 class="col-12 fw-bold mb-3">Applications</h5>
                     <ul class="nav nav-tabs application">
                         <li class="nav-item active" id="li-pending">
-                            <a class="nav-link">Pending <span class="counter">5</span></a>
+                            <a class="nav-link">Pending <span class="counter">4</span></a>
                         </li>
                         <li class="nav-item" id="li-interview">
-                            <a class="nav-link">Interview <span class="counter">2</span></a>
+                            <a class="nav-link">Interview <span class="counter">6</span></a>
                         </li>
                         <li class="nav-item" id="li-ranking">
                             <a class="nav-link">Ranking</a>
                         </li>
+                        <li class="nav-item" id="li-waiting">
+                            <a class="nav-link">Waiting List <span class="counter">2</span></a>
+                        </li>
                         <li class="nav-item" id="li-qualified">
-                            <a class="nav-link">Qualified <span class="counter">12</span></a>
+                            <a class="nav-link">Qualified <span class="counter">5</span></a>
+                        </li>
+                        <li class="nav-item" id="li-withdrawn">
+                            <a class="nav-link">Withdrawn <span class="counter">2</span></a>
                         </li>
                         <li class="nav-item" id="li-all">
                             <a class="nav-link">All</a>
@@ -53,6 +59,11 @@
                 </div>
             </main>
             <?php require_once './pending.modal.php'; ?>
+            <?php require_once './interview.modal.php'; ?>
+            <?php require_once './ranking.modal.php'; ?>
+            <?php require_once './waiting.modal.php'; ?>
+            <?php require_once './qualified.modal.php'; ?>
+            <?php require_once './withdrawn.modal.php'; ?>
         </div>
     </div>
     <script>
@@ -202,7 +213,65 @@
                         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
                     }  
                 });
-            } 
+            }else if(status == 'waiting'){
+                $.ajax({
+                    type: "GET",
+                    url: 'waiting.php',
+                    success: function(result)
+                    {
+                        $('div.table-responsive').html(result);
+                        dataTable = $("#table-waiting").DataTable({
+                            "dom": 'rtip',
+                            responsive: true
+                        });
+                        $('input#keyword').on('input', function(e){
+                            var status = $(this).val();
+                            dataTable.columns([1]).search(status).draw();
+                        });
+                        $('select#student_type').on('change', function(e){
+                            var status = $(this).val();
+                            dataTable.columns([2]).search(status).draw();
+                        });
+                        $('select#program').on('change', function(e){
+                            var status = $(this).val();
+                            dataTable.columns([3]).search(status).draw();
+                        });
+                        new $.fn.dataTable.FixedHeader(dataTable);
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                        alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                    }  
+                });
+            }else if(status == 'withdrawn'){
+                $.ajax({
+                    type: "GET",
+                    url: 'withdrawn.php',
+                    success: function(result)
+                    {
+                        $('div.table-responsive').html(result);
+                        dataTable = $("#table-withdrawn").DataTable({
+                            "dom": 'rtip',
+                            responsive: true
+                        });
+                        $('input#keyword').on('input', function(e){
+                            var status = $(this).val();
+                            dataTable.columns([1]).search(status).draw();
+                        });
+                        $('select#student_type').on('change', function(e){
+                            var status = $(this).val();
+                            dataTable.columns([2]).search(status).draw();
+                        });
+                        $('select#program').on('change', function(e){
+                            var status = $(this).val();
+                            dataTable.columns([3]).search(status).draw();
+                        });
+                        new $.fn.dataTable.FixedHeader(dataTable);
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                        alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                    }  
+                });
+            }
         }
         $(document).ready(function(){
             load('pending');
@@ -223,8 +292,16 @@
                 load('ranking');
             });
 
+            $('#li-waiting').on('click', function(){
+                load('waiting');
+            });
+
             $('#li-qualified').on('click', function(){
                 load('qualified');
+            });
+
+            $('#li-withdrawn').on('click', function(){
+                load('withdrawn');
             });
 
             $('#li-all').on('click', function(){
@@ -234,10 +311,46 @@
             $('#comments').on('change', function(){
                 if ($(this).is(":checked")) {
                     $('div.comments').show();
-                    $('#pending-submit').text("Return Application")
+                    $('#pending-submit').text("Decline Application")
                 }else{
                     $('div.comments').hide();
-                    $('#pending-submit').text("Verify Application")
+                    $('#pending-submit').text("Accept Application")
+                }
+            });
+
+            $('#Accepted').on('click', function(){
+                $('#ranking-submit').text("Accept Application")
+            });
+
+            $('#Rejected').on('click', function(){
+                $('#ranking-submit').text("Reject Application")
+            });
+
+            $('#Moved').on('click', function(){
+                $('#ranking-submit').text("Moved to Waiting List")
+            });
+
+            $('#Waiting-Accepted').on('click', function(){
+                $('#waiting-submit').text("Accept Application")
+            });
+
+            $('#Waiting-Rejected').on('click', function(){
+                $('#waiting-submit').text("Reject Application")
+            });
+
+            $('#ranking-comments').on('change', function(){
+                if ($(this).is(":checked")) {
+                    $('div.ranking-comments').show();
+                }else{
+                    $('div.ranking-comments').hide();
+                }
+            });
+
+            $('#waiting-comments').on('change', function(){
+                if ($(this).is(":checked")) {
+                    $('div.waiting-comments').show();
+                }else{
+                    $('div.waiting-comments').hide();
                 }
             });
 

@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="myModal-Verify" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal-Ranking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
         <div class="modal-header">
@@ -14,25 +14,29 @@
                         <input type="text" disabled="true" class="form-control" id="fullname" placeholder="" name="fullname" required="" value="Jaydee Ballaho">
                     </div>
                     <div class="col-12 col-md-12">
-                        <label for="uploaded-photos" class="form-label">Uploaded Photos<span class="text-muted"></span></label>
-                        <div class="photo-container row g-3">
-                            <div class="col-6" href="../img/upload_files/cet.jpg">
-                                <div class="photo-holder photo-1" title="Click photo to enlarge"></div>
-                            </div>
-                            <div class="col-6 photo-1" href="../img/upload_files/shs.jpeg">
-                                <div class="photo-holder photo-2" title="Click photo to enlarge"></div>
-                            </div>
+                        <label for="pqs-1" class="form-label col-12">Application Status<span class="text-muted"></span></label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="Accepted" value="Accepted" checked>
+                            <label class="form-check-label" for="Accepted">Accepted</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="Rejected" value="Rejected">
+                            <label class="form-check-label" for="Rejected">Rejected</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="Moved" value="Moved to Waiting List">
+                            <label class="form-check-label" for="Moved">Moved to Waiting List</label>
                         </div>
                     </div>
                     <div class="col-12 col-md-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="comments">
-                            <label class="form-check-label" for="comments">
+                            <input class="form-check-input" type="checkbox" value="1" id="ranking-comments">
+                            <label class="form-check-label" for="ranking-comments">
                                 With Comments
                             </label>
                         </div>
                     </div>
-                    <div class="col-12 col-md-12 comments" style="display:none">
+                    <div class="col-12 col-md-12 ranking-comments" style="display:none">
                         <label for="exampleFormControlTextarea1" class="form-label">Enter your comments below</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
@@ -41,7 +45,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary background-color-green" id="pending-submit">Accept Application</button>
+            <button type="button" class="btn btn-primary background-color-green" id="ranking-submit">Accept Application</button>
         </div>
         </div>
     </div>

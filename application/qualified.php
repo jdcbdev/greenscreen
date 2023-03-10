@@ -24,7 +24,8 @@
 <table class="table table-hover col-12" id="table-qualified">
     <thead>
         <tr>
-            <th scope="col">No.</th>
+            <th scope="col">Action</th>
+            <th scope="col">Rank No.</th>
             <th scope="col">Name</th>
             <th scope="col">Type</th>
             <th scope="col">Program</th>
@@ -32,13 +33,16 @@
             <th scope="col">SHS GPA</th>
             <th scope="col">Email Address</th>
             <th scope="col">Phone Number</th>
+            <th scope="col">Status</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                1.
+                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-qualified"><i class="fa-solid fa-user-check"></i></a>
+                <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
             </td>
+            <td><i class="fa-solid fa-trophy me-2 green"> 1</i></td>
             <td>Ballaho, Jaydee C.</td>
             <td>New Student</td>
             <td>BSCS</td>
@@ -46,11 +50,14 @@
             <td>91.5</td>
             <td>jaydee.ballaho@wmsu.edu.ph</td>
             <td>0965-649-9005</td>
+            <td>Pending Confirmation</td>
         </tr>
         <tr>
             <td>
-                2.
+                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-qualified"><i class="fa-solid fa-user-check"></i></a>
+                <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
             </td>
+            <td><i class="fa-solid fa-trophy me-2 green"> 2</i></td>
             <td>Freecs, Gon.</td>
             <td>New Student</td>
             <td>BSIT</td>
@@ -58,11 +65,14 @@
             <td>94.5</td>
             <td>gon@wmsu.edu.ph</td>
             <td>0965-649-9006</td>
+            <td>Confirmed Enrollment</td>
         </tr>
         <tr>
             <td>
-                3.
+                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-qualified"><i class="fa-solid fa-user-check"></i></a>
+                <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
             </td>
+            <td><i class="fa-solid fa-trophy me-2 green"> 3</i></td>
             <td>Scarlet, Erza</td>
             <td>Shiftee</td>
             <td>BSCS</td>
@@ -70,11 +80,14 @@
             <td>96</td>
             <td>es@wmsu.edu.ph</td>
             <td>0965-649-9007</td>
+            <td>Confirmed Enrollment</td>
         </tr>
         <tr>
             <td>
-                4.
+                <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-qualified"><i class="fa-solid fa-user-check"></i></a>
+                <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
             </td>
+            <td><i class="fa-solid fa-trophy me-2 green"> 4</i></td>
             <td>Zoldyc, Killua</td>
             <td>Shiftee</td>
             <td>BSCS</td>
@@ -82,6 +95,7 @@
             <td>94</td>
             <td>kill@wmsu.edu.ph</td>
             <td>0965-649-9008</td>
+            <td>Confirmed Enrollment</td>
         </tr>
     </tbody>
 </table>
