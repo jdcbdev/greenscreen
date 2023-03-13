@@ -984,6 +984,20 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataT
     margin-right: 10px;
 }
 
+span.table-successful{
+    background-color: #3A98B9;
+    padding: 5px;
+    color: white;
+    border-radius: 6px;
+}
+
+span.table-struggling{
+    background-color: #EB455F;
+    padding: 5px;
+    color: white;
+    border-radius: 6px;
+}
+
 @media (min-width: 576px) {
     .shortcut{
         display: block;

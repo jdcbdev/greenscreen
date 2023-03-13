@@ -79,7 +79,7 @@
                         <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title card-title-total">Total Predictions</h5>
-                                <canvas id="status-chart-1""></canvas>
+                                <canvas id="status-chart-1"></canvas>
                                 <p class="mb-0 mt-auto">
                                     <a class="view-all" href="">View Report</a>
                                 </p>
@@ -89,8 +89,32 @@
                     <div class="col-12 col-md-8 mb-4 mt-0 d-flex flex-column mt-md-4">
                         <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title card-title-total">CET Score</h5>
-                                <canvas id="myChart""></canvas>
+                                <h5 class="card-title card-title-total">Prediction VS Actual</h5>
+                                <canvas id="status-chart-2"></canvas>
+                                <p class="mb-0 mt-auto">
+                                    <a class="view-all" href="">View Report</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-stretch">
+                    <div class="col-12 col-md-6 mb-4 d-flex flex-column">
+                        <div class="card flex-grow-1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title card-title-total">CET OAPR</h5>
+                                <canvas id="myChart"></canvas>
+                                <p class="mb-0 mt-auto">
+                                    <a class="view-all" href="">View Report</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4 mt-0 d-flex flex-column">
+                        <div class="card flex-grow-1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title card-title-total">SHS GPA</h5>
+                                <canvas id="status-chart-3"></canvas>
                                 <p class="mb-0 mt-auto">
                                     <a class="view-all" href="">View Report</a>
                                 </p>
@@ -209,11 +233,11 @@
             "dom": 'rt'
         });
         
-        // Applications by Status
+        // Pie
         var statusChart = new Chart(document.getElementById('status-chart-1'), {
             type: 'doughnut',
             data: {
-            labels: ['Will Succeed', 'Will Struglle'],
+            labels: ['Will Succeed', 'Will Struggle'],
                 datasets: [{
                     data: [295, 124],
                     backgroundColor: ['#3A98B9', '#EB455F'],
@@ -225,9 +249,9 @@
             }
         });
 
-        // Define your data
+        // CET Line Graph
         var data = {
-            labels: ['50','60', '70', '80', '90', '100'],
+            labels: ['41-50','51-60', '61-70', '71-80', '81-90', '91-100'],
                 datasets: [{
                     label: 'BSCS',
                     data: [ 0, 13, 40, 17, 26, 15],
@@ -259,12 +283,86 @@
                     y: {
                         title: {
                         display: true,
-                        text: 'Students'
+                        text: 'No. of Students'
                         }
                     }
                 }
             }
         });
+
+        //Bar Graph
+        var statusChart = new Chart(document.getElementById('status-chart-2'), {
+            type: 'bar',
+            data: {
+            labels: ['Successful (Predicted)', 'Successful (Actual)', 'Struggling (Predicted)', 'Struggling (Actual)'],
+                    datasets: [{
+                        label: 'Predicted VS Actual',
+                        data: [95, 88, 23, 30],
+                        backgroundColor: ['#3A98B9', '#3E54AC', '#EB455F', '#EB4747'],
+                    }]
+                },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    x: {
+                        title: {
+                        display: true,
+                        text: ''
+                        }
+                    },
+                    y: {
+                        title: {
+                        display: true,
+                        text: 'No. of Students'
+                        }
+                    }
+                }
+            }
+        });
+ 
+        //SHS GPA Line Graph
+        // Define your data
+        var data = {
+            labels: ['75-80','81-85', '86-90', '91-95', '96-100'],
+                datasets: [{
+                    label: 'BSCS',
+                    data: [2, 14, 55, 24, 34, 15],
+                    borderColor: '#3A98B9',
+                    fill: false
+                },
+                {
+                    label: 'BSIT',
+                    data: [3, 11, 27, 46, 19, 8],
+                    borderColor: '#0E8388',
+                    fill: false
+                }]
+        };
+
+        // Get the canvas element
+        var ctx = document.getElementById('status-chart-3').getContext('2d');
+        // Create the chart
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                        display: true,
+                        text: 'CET Scores'
+                        }
+                    },
+                    y: {
+                        title: {
+                        display: true,
+                        text: 'No. of Students'
+                        }
+                    }
+                }
+            }
+        });
+
     });
 </script>
 </body>

@@ -12,13 +12,13 @@
             </li>
             <li class="nav-item">
                 <a href="../application" class="nav-link <?php echo $application; ?>" title="Applications">
-                    <i class='bx bx-send'></i>
+                    <i class='bx bx-paper-plane'></i>
                     <span class="links-name">Applications</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="../monitoring" class="nav-link <?php echo $monitoring; ?>" title="Monitoring">
-                    <i class="fa-solid fa-chart-column"></i>
+                    <i class='bx bx-notepad'></i>
                     <span class="links-name">Monitoring</span>
                 </a>
             </li>
