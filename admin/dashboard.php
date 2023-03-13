@@ -251,16 +251,16 @@
 
         // CET Line Graph
         var data = {
-            labels: ['41-50','51-60', '61-70', '71-80', '81-90', '91-100'],
+            labels: ['41-50', '51-60', '61-70', '71-80', '81-90', '91-100'],
                 datasets: [{
                     label: 'BSCS',
-                    data: [ 0, 13, 40, 17, 26, 15],
+                    data: [0, 0, 40, 27, 32, 15],
                     borderColor: '#3A98B9',
                     fill: false
                 },
                 {
                     label: 'BSIT',
-                    data: [ 0, 21, 28, 53, 22, 5],
+                    data: [0, 0, 28, 53, 28, 7],
                     borderColor: '#0E8388',
                     fill: false
                 }]
@@ -277,7 +277,7 @@
                     x: {
                         title: {
                         display: true,
-                        text: 'CET Scores'
+                        text: 'CET OAPR'
                         }
                     },
                     y: {
@@ -324,7 +324,7 @@
         //SHS GPA Line Graph
         // Define your data
         var data = {
-            labels: ['75-80','81-85', '86-90', '91-95', '96-100'],
+            labels: ['75-80', '81-85', '86-90', '91-95', '96-100'],
                 datasets: [{
                     label: 'BSCS',
                     data: [2, 14, 55, 24, 34, 15],
@@ -350,7 +350,7 @@
                     x: {
                         title: {
                         display: true,
-                        text: 'CET Scores'
+                        text: 'SHS GPA'
                         }
                     },
                     y: {
