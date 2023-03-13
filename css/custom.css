@@ -979,6 +979,11 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataT
     border-right: 2px solid white;
 }
 
+.fa-chart-column{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
 @media (min-width: 576px) {
     .shortcut{
         display: block;

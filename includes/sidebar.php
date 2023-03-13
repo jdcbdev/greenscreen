@@ -17,9 +17,21 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="../monitoring" class="nav-link <?php echo $monitoring; ?>" title="Monitoring">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span class="links-name">Monitoring</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="../faculty/" class="nav-link <?php echo $faculty; ?>" title="Faculty">
                     <i class='bx bx-group' ></i>
                     <span class="links-name">Faculty</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="../admin/archive.php" class="nav-link <?php echo $archive; ?>" title="Archive">
+                    <i class='bx bx-box'></i>
+                    <span class="links-name">Archive</span>
                 </a>
             </li>
             <li class="nav-item">
