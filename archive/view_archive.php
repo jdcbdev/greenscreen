@@ -36,7 +36,7 @@
             <td>
                 <div class="action-button">
                     <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-qualified"><i class="fa-solid fa-user-check"></i></a>
-                    <a href="" class="green" title="Delete"><i class="fa-solid fa-trash-can"></i></a>
+                    <a title="Delete Application" href="#" class="green"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
             </td>
             <td>Ballaho, Jaydee C.</td>

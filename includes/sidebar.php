@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../admin/archive.php" class="nav-link <?php echo $archive; ?>" title="Archive">
+                <a href="../archive" class="nav-link <?php echo $archive; ?>" title="Archive">
                     <i class='bx bx-box'></i>
                     <span class="links-name">Archive</span>
                 </a>
