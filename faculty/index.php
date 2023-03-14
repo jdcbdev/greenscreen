@@ -158,11 +158,11 @@
                             var status = $(this).val();
                             dataTable.columns([1]).search(status).draw();
                         });
-                        $('select#department').on('change', function(e){
+                        $('select#department_prog').on('change', function(e){
                             var status = $(this).val();
                             dataTable.columns([4]).search(status).draw();
                         });
-                        $('select#role').on('change', function(e){
+                        $('select#admission_role').on('change', function(e){
                             var status = $(this).val();
                             dataTable.columns([5]).search(status).draw();
                         });

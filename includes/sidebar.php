@@ -23,9 +23,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../faculty/" class="nav-link <?php echo $faculty; ?>" title="Faculty">
+                <a href="../faculty" class="nav-link <?php echo $faculty; ?>" title="Faculty">
                     <i class='bx bx-group' ></i>
                     <span class="links-name">Faculty</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="../reports" class="nav-link <?php echo $reports; ?>" title="Reports">
+                    <i class='bx bx-file'></i>
+                    <span class="links-name">Reports</span>
                 </a>
             </li>
             <li class="nav-item">

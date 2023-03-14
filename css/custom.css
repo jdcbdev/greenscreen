@@ -417,6 +417,14 @@ table#table-dashboard-student tr td{
     vertical-align: middle;
 }
 
+table#table-archive tr td{
+    vertical-align: middle;
+}
+
+table#table-reports tr td{
+    vertical-align: middle;
+}
+
 .faculty h4{
     font-size: 1.3rem !important;
 }
@@ -997,6 +1005,24 @@ span.table-struggling{
     color: white;
     border-radius: 6px;
 }
+
+/* Group Box Styles */
+.groupbox {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+ }
+  
+.groupbox legend {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    padding: 0 5px;
+    margin: -10px 0 0 -5px;
+    background-color: #fff;
+}
+  
 
 @media (min-width: 576px) {
     .shortcut{

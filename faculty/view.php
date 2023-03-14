@@ -1,22 +1,21 @@
 <div class="row g-2 mb-2 ">
     <div id="MyButtons" class="d-flex mb-md-2 mb-lg-0 col-12 col-md-auto"></div>
     <div class="form-group col-12 col-sm-auto flex-sm-grow-1 flex-lg-grow-0 ms-lg-auto">
-        <select name="student_type" id="student_type" class="form-select me-md-2">
-            <option value="">All Type</option>
-            <option value="New Student">New Student</option>
-            <option value="Shiftee">Shiftee</option>
-            <option value="Transferee">Transferee</option>
+        <select name="department_prog" id="department_prog" class="form-select me-md-2">
+            <option value="">All Department</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Information Technology">Information Technology</option>
         </select>
     </div>
     <div class="form-group col-12 col-sm-auto flex-sm-grow-1 flex-lg-grow-0">
-        <select name="program" id="program" class="form-select me-md-2">
-            <option value="">All Program</option>
-            <option value="BSCS">BSCS</option>
-            <option value="BSIT">BSIT</option>
+        <select name="admission_role" id="admission_role" class="form-select me-md-2">
+            <option value="">All Admission Role</option>
+            <option value="Admission Officer">Admission Officer</option>
+            <option value="Interviewer">Interviewer</option>
         </select>
     </div>
     <div class="input-group search-keyword col-12 flex-lg-grow-1">
-        <input type="text" name="keyword" id="keyword" placeholder="Search Student" class="form-control">
+        <input type="text" name="keyword" id="keyword" placeholder="Search Faculty" class="form-control">
         <button class="btn btn-outline-secondary background-color-green" type="button"><i class="fas fa-search white"></i></button>
     </div>
 </div>

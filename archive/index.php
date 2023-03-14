@@ -43,11 +43,11 @@
             if(status == 'pending'){
                 $.ajax({
                     type: "GET",
-                    url: 'view_archive.php',
+                    url: 'view.php',
                     success: function(result)
                     {
                         $('div.table-responsive').html(result);
-                        dataTable = $("#table-faculty").DataTable({
+                        dataTable = $("#table-archive").DataTable({
                             dom: 'Brtp',
                             responsive: true,
                             fixedHeader: true,

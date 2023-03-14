@@ -8,6 +8,7 @@
     $programs = "";
     $students = "";
     $faculty = "";
+    $reports = "";
     $archive = "";
     $settings = "";
     $profile = "";

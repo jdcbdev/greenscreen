@@ -2,7 +2,7 @@
     <div id="MyButtons" class="d-flex mb-md-2 mb-lg-0 col-12 col-md-auto"></div>
     <div class="form-group col-12 col-sm-auto flex-sm-grow-1 flex-lg-grow-0 ms-lg-auto">
         <select name="student_type" id="student_type" class="form-select me-md-2">
-            <option value="">School Year</option>
+            <option value="">All School Year</option>
             <option value="2020-2021">2020-2021</option>
             <option value="2021-2022">2021-2022</option>
         </select>
