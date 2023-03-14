@@ -41,8 +41,8 @@
             <td>2021-2022</td>
             <td>Admitted</td>
             <td>Gon Freecs</td>
-            <td>Successful</td>
-            <td>Successful</td>
+            <td><span class="table-successful">Successful</span></td>
+            <td><span class="table-successful">Successful</span></td>
             <td>1.25</td>
             <td>1.50</td>
             <td>94.60</td>
@@ -64,8 +64,8 @@
             <td>2021-2022</td>
             <td>Admitted</td>
             <td>Gon Freecs</td>
-            <td>Struggling</td>
-            <td>Successful</td>
+            <td><span class="table-struggling">Struggling</span></td>
+            <td><span class="table-successful">Successful</span></td>
             <td>1.50</td>
             <td>1.25</td>
             <td>89.50</td>
@@ -73,6 +73,29 @@
             <td>Maharlike, Talon-Talon, Zamboanga City, Zamboanga del Sur</td>
             <td>GAS</td>
             <td>95.0</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="action-button">
+                    <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
+                </div>
+            </td>
+            <td>Milby, Ken</td>
+            <td>mk@wmsu.edu.ph</td>
+            <td>New Student</td>
+            <td>BSCS</td>
+            <td>2021-2022</td>
+            <td>Admitted</td>
+            <td>Jaydee Ballaho</td>
+            <td><span class="table-successful">Successful</span></td>
+            <td><span class="table-successful">Successful</span></td>
+            <td>1.25</td>
+            <td>1.50</td>
+            <td>87.20</td>
+            <td>Male</td>
+            <td>Maharlike, Talon-Talon, Zamboanga City, Zamboanga del Sur</td>
+            <td>STEM</td>
+            <td>92.0</td>
         </tr>
     </tbody>
 </table>

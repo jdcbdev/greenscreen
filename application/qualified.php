@@ -30,6 +30,8 @@
             <th scope="col">Program</th>
             <th scope="col">CET OAPR</th>
             <th scope="col">SHS GPA</th>
+            <th scope="col">Interview Score</th>
+            <th scope="col">Prediction</th>
             <th scope="col">Email Address</th>
             <th scope="col">Phone Number</th>
             <th scope="col">Status</th>
@@ -49,6 +51,8 @@
             <td>BSCS</td>
             <td>92.56</td>
             <td>91.5</td>
+            <td>100</td>
+            <td><span class="table-successful">Successful</span></td>
             <td>jaydee.ballaho@wmsu.edu.ph</td>
             <td>0965-649-9005</td>
             <td>Pending Confirmation</td>
@@ -66,6 +70,8 @@
             <td>BSIT</td>
             <td>89.16</td>
             <td>94.5</td>
+            <td>90</td>
+            <td><span class="table-successful">Successful</span></td>
             <td>gon@wmsu.edu.ph</td>
             <td>0965-649-9006</td>
             <td>Confirmed Enrollment</td>
@@ -83,6 +89,8 @@
             <td>BSCS</td>
             <td>74.90</td>
             <td>96</td>
+            <td>90</td>
+            <td><span class="table-struggling">Struggling</span></td>
             <td>es@wmsu.edu.ph</td>
             <td>0965-649-9007</td>
             <td>Confirmed Enrollment</td>
@@ -100,6 +108,8 @@
             <td>BSCS</td>
             <td>95.70</td>
             <td>94</td>
+            <td>95</td>
+            <td><span class="table-successful">Successful</span></td>
             <td>kill@wmsu.edu.ph</td>
             <td>0965-649-9008</td>
             <td>Confirmed Enrollment</td>

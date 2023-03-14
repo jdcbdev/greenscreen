@@ -43,8 +43,8 @@
             <td>jaydee.ballaho@wmsu.edu.ph</td>
             <td>BSCS</td>
             <td>2021-2022</td>
-            <td>Successful</td>
-            <td>Successful</td>
+            <td><span class="table-successful">Successful</span></td>
+            <td><span class="table-successful">Successful</span></td>
         </tr>
         <tr>
         <td>
@@ -57,8 +57,8 @@
         <td>john.jones@example.com</td>
         <td>BSCS</td>
         <td>2022-2023</td>
-        <td>Successful</td>
-        <td>Struggle</td>
+        <td><span class="table-successful">Successful</span></td>
+        <td><span class="table-struggling">Struggling</span></td>
         </tr>
         <tr>
             <td>
@@ -71,8 +71,8 @@
             <td>silva.zoldyc@wmsu.edu.ph</td>
             <td>BSIT</td>
             <td>2021-2022</td>
-            <td>Struggle</td>
-            <td>Struggle</td>
+            <td><span class="table-struggling">Struggling</span></td>
+            <td><span class="table-successful">Successful</span></td>
         </tr>
     </tbody>
 </table>

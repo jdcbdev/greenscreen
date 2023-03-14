@@ -30,6 +30,7 @@
             <th scope="col">Prediction</th>
             <th scope="col">CC 101</th>
             <th scope="col">CC 102</th>
+            <th scope="col">Actual Result</th>
         </tr>
     </thead>
     <tbody>
@@ -47,11 +48,12 @@
             <td><span class="table-successful">Successful</span></td>
             <td>2.0</td>
             <td>1.75</td>
+            <td><span class="table-successful">Successful</span></td>
         </tr>
         <tr>
             <td>
                 <div class="action-button">
-                    <a title="View Application" href="#" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Verify"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-viewmonitoring"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
                 </div>
             </td>
@@ -62,11 +64,12 @@
             <td><span class="table-struggling">Struggling</span></td>
             <td>2.25</td>
             <td>2.50</td>
+            <td><span class="table-struggling">Struggling</span></td>
         </tr>
         <tr>
             <td>
                 <div class="action-button">
-                    <a title="View Application" href="#" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-Verify"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a title="View Application" href="" class="me-2 green" data-bs-toggle="modal" data-bs-target="#myModal-viewmonitoring"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a title="View Profile" href="" class="me-2 green"><i class="fa-solid fa-eye"></i></a>
                 </div>
             </td>
@@ -77,6 +80,7 @@
             <td><span class="table-successful">Successful</span></td>
             <td>1.50</td>
             <td>2.0</td>
+            <td><span class="table-successful">Successful</span></td>
         </tr>
     </tbody>
 </table>

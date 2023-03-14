@@ -30,6 +30,8 @@
             <th scope="col">Program</th>
             <th scope="col">CET OAPR</th>
             <th scope="col">SHS GPA</th>
+            <th scope="col">Interview Score</th>
+            <th scope="col">Prediction</th>
             <th scope="col">Email Address</th>
             <th scope="col">Phone Number</th>
         </tr>
@@ -48,6 +50,8 @@
             <td>BSCS</td>
             <td>92.56</td>
             <td>91.5</td>
+            <td>100</td>
+            <td><span class="table-successful">Successful</span></td>
             <td>jaydee.ballaho@wmsu.edu.ph</td>
             <td>0965-649-9005</td>
         </tr>
@@ -64,6 +68,8 @@
             <td>BSIT</td>
             <td>89.16</td>
             <td>94.5</td>
+            <td>90</td>
+            <td><span class="table-successful">Successful</span></td>
             <td>gon@wmsu.edu.ph</td>
             <td>0965-649-9006</td>
         </tr>
