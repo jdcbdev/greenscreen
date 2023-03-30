@@ -42,6 +42,20 @@
                                 Please enter a valid email address.
                             </div>
                         </div>
+                        <div class="col-sm-6">
+                            <label for="last-school" class="form-label">Last School Attended</label>
+                            <input type="text" class="form-control" id="last-school" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Valid last school attended is required.
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="last-course" class="form-label">Course (Full Name)</label>
+                            <input type="text" class="form-control" id="last-course" placeholder="E.g. Bachelor of Science in Architecture" value="" required>
+                            <div class="invalid-feedback">
+                                Valid last course attended is required.
+                            </div>
+                        </div>
                         <div class="col-12">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="addpasswordress" placeholder="" required>

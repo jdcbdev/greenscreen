@@ -117,8 +117,12 @@ footer p a:hover{
     color: white;
 }
 
-upload-container{
+.upload-container{
     height: 150px;
+}
+
+.progress-bar-application p{
+    font-size: 10px;
 }
 
 .profile-progress-container.wrapper::before {
@@ -1022,6 +1026,11 @@ span.table-struggling{
     margin: -10px 0 0 -5px;
     background-color: #fff;
 }
+
+.document-listing{
+    border: 1px solid lightgray;
+    padding: 20px 10px 10px;
+}
   
 
 @media (min-width: 576px) {
@@ -1064,6 +1073,10 @@ span.table-struggling{
 }
 
 @media (min-width: 768px) {
+    .progress-bar-application p{
+        font-size: 14px;
+    }
+    
     .course-1, .course-2{
         height: 350px;
     }

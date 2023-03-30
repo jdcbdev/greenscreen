@@ -23,7 +23,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top background-color-green">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../home/">
+                <a class="navbar-brand" href="./home.php">
                     <img class="logo-icon" src="../img/greenscreen_logo.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

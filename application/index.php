@@ -459,10 +459,6 @@
                 $('div.documents').hide();
             });
 
-            $('#Waiting-Rejected').on('click', function(){
-                $('#waiting-submit').text("Reject Application")
-            });
-
             $('#ranking-comments').on('change', function(){
                 if ($(this).is(":checked")) {
                     $('div.ranking-comments').show();

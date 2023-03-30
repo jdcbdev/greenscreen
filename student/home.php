@@ -8,8 +8,8 @@
       header('location: ../admin/dashboard.php');
   }else if(isset($_SESSION['logged_id']) && $_SESSION['user_type'] == 'faculty'){
       header('location: ../faculty/dashboard.php');
-  }else if(isset($_SESSION['logged_id']) && $_SESSION['user_type'] == 'student'){
-      header('location: ../student/index.php');
+  }else if(!isset($_SESSION['logged_id'])){
+      header('location: ../account/signin.php');
   }
 
   $page_title = 'GreenScreen - A Decision Support System';
